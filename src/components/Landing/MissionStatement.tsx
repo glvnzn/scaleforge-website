@@ -1,6 +1,6 @@
 const MissionStatement = () => {
   return (
-    <section id="mission-statement-section">
+    <section id="mission-statement-section" className="relative min-h-[704px]">
       <h1>Our Mission</h1>
       <p>
         At ScaleForge, our mission is to forge the future of ambitious software

@@ -1,6 +1,6 @@
 const CareerOverview = () => {
   return (
-    <section id="mission-statement-section">
+    <section id="mission-statement-section" className="relative min-h-[916px]">
       <h1>Join Our Dynamic Team</h1>
       <p>
         Ready to take the next step? Join our dynamic team of passionate

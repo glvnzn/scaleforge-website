@@ -2,18 +2,19 @@ import Image from "next/image";
 
 const Navbar = () => {
   return (
-    <header className="absolute inset-x-0 top-0 z-50">
+    <header className="absolute inset-x-0 top-0 z-50 text-white">
       <nav
-        className="flex items-center justify-between p-6 lg:px-8"
+        className="flex items-center justify-between p-[28px] lg:px-8"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
+          <a href="#">
             <span className="sr-only">ScaleForge</span>
             <Image
-              src="/sf-logo-dark.svg"
+              src="/sf-logo-white.svg"
               width={286}
               height={37}
+              className="max-h-[37px]"
               alt="ScaleForge Logo"
             />
           </a>
@@ -40,14 +41,17 @@ const Navbar = () => {
             </svg>
           </button>
         </div>
-        <div className="hidden lg:flex lg:gap-x-12 lg:justify-end">
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+        <div className="hidden lg:flex lg:gap-x-[40px] lg:justify-end font-rubik items-center">
+          <a href="#" className="font-semibold text-[20px] leading-[24px]">
             About Us
           </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+          <a href="#" className="font-semibold text-[20px] leading-[24px]">
             Careers
           </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+          <a
+            href="#"
+            className="font-semibold text-[20px] leading-[24px] rounded border py-[12px] px-[20px] bg-rosso-red border-none border-black"
+          >
             Contact Us
           </a>
         </div>

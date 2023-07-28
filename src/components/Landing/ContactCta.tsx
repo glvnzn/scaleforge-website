@@ -1,6 +1,6 @@
 const ContactCta = () => {
   return (
-    <section id="contact-cta-section">
+    <section id="contact-cta-section" className="relative min-h-[910px]">
       <h1>Get In Touch</h1>
       <p>
         Have a question or need more information? Contact us today, and our
