@@ -21,14 +21,14 @@ const Footer = () => {
               width={24}
               height={24}
               className="max-h-[24px]"
-              alt="ScaleForge Logo"
+              alt="Facebook White Logo"
             />
             <Image
               src="/ig-logo-white.svg"
               width={24}
               height={24}
               className="max-h-[24px]"
-              alt="ScaleForge Logo"
+              alt="Instagram White Logo"
             />
           </div>
         </div>

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const MissionStatement = () => {
   return (
     <section
@@ -18,7 +20,15 @@ const MissionStatement = () => {
           Learn more about us
         </button>
       </div>
-      <div className="min-w-[614px]">Image</div>
+      <div className="min-w-[614px]">
+        <Image
+          src="/feature-img-mission.webp"
+          height={704}
+          width={614}
+          className="h-[704px] w-auto"
+          alt="Our Mission Feature Image"
+        />
+      </div>
     </section>
   );
 };
