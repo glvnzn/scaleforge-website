@@ -1,4 +1,3 @@
-import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import type { Metadata } from "next";
 import { Rubik } from "next/font/google";
@@ -58,10 +57,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${rubik.variable} ${sfMono.variable}`}>
+      <body
+        className={`${rubik.variable} ${sfMono.variable} bg-black text-white`}
+      >
         <Navbar />
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );
