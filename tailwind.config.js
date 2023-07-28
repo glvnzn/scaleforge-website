@@ -12,6 +12,14 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        "rosso-red": "#d70d01",
+        black: "#0d0d0d",
+        "bright-yellow": "#fcb226",
+        carrot: "#f27a0a",
+        "mystic-red": "#fd5303",
+        white: "#ffffff",
+      },
       fontFamily: {
         rubik: ["var(--font-rubik)"],
         "sf-mono": ["var(--font-sf-mono)"],
