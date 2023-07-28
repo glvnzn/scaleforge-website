@@ -14,6 +14,7 @@ module.exports = {
       },
       fontFamily: {
         rubik: ["var(--font-rubik)"],
+        "sf-mono": ["var(--font-sf-mono)"],
       },
     },
   },
