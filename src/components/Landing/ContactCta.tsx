@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const ContactCta = () => {
   return (
     <section
@@ -21,8 +23,20 @@ const ContactCta = () => {
           conversation and connect with us today.
         </p>
         <div className="flex flex-row gap-4">
-          <p>FB Icon</p>
-          <p>Insta Icon</p>
+          <Image
+            src="/fb-logo.svg"
+            width={40}
+            height={40}
+            className="max-h-[40px]"
+            alt="ScaleForge Logo"
+          />
+          <Image
+            src="/ig-logo.svg"
+            width={40}
+            height={40}
+            className="max-h-[40px]"
+            alt="ScaleForge Logo"
+          />
         </div>
       </div>
     </section>
