@@ -10,7 +10,7 @@ const CareerOverview = () => {
             <h4 className="font-rubik font-medium text-[56px] leading-[66px] mb-[24px]">
               Join Our Dynamic Team
             </h4>
-            <p className="font-sf-mono font-normal text-[20px] leading-[30px] max-w-[702px]">
+            <p className="font-sf-mono font-normal text-[20px] leading-[30px] max-w-[702px] opacity-80">
               Ready to take the next step? Join our dynamic team of passionate
               professionals, where innovation and collaboration combine to
               achieve extraordinary results.
