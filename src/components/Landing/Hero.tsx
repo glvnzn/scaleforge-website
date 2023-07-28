@@ -10,7 +10,7 @@ const Hero = () => {
           Unlock the full potential of your business by leveraging our expert
           scalability solutions to drive growth and adaptability.
         </p>
-        <button className="font-rubik font-semibold	text-[20px] leading-[24px] rounded border py-[20px] px-[20px] bg-rosso-red border-none border-black">
+        <button className="font-rubik font-semibold	text-[20px] leading-[24px] rounded border py-[12px] px-[20px] bg-rosso-red border-none border-black">
           Get in touch
         </button>
       </div>
