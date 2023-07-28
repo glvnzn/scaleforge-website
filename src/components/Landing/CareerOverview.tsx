@@ -2,7 +2,7 @@ const CareerOverview = () => {
   return (
     <section
       id="mission-statement-section"
-      className="relative min-h-[916px] mt-[128px]"
+      className="relative min-h-auto py-[128px]"
     >
       <div className="max-w-[1120px] mx-auto">
         <div className="flex flex-row justify-between mb-[80px]">
