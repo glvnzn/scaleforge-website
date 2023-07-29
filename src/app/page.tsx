@@ -1,17 +1,12 @@
-import {
-  CareerOverview,
-  ContactCta,
-  Hero,
-  MissionStatement,
-} from "@/components/Landing";
+import LandingPage from "@/components/Landing";
+import { client } from "../../tina/__generated__/client";
 
-export default function Home() {
+export default async function Home() {
+  const result = await client.queries.page({ relativePath: "home.md" });
+
   return (
     <main>
-      <Hero />
-      <MissionStatement />
-      <CareerOverview />
-      <ContactCta />
+      <LandingPage {...result} />
     </main>
   );
 }

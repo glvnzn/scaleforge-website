@@ -15,15 +15,21 @@ export default defineConfig({
   media: {
     tina: {
       mediaRoot: "",
-      publicFolder: "public",
+      publicFolder: "public/uploads",
     },
   },
   schema: {
     collections: [
       {
-        name: "post",
-        label: "Posts",
-        path: "content/posts",
+        name: "page",
+        label: "Page",
+        path: "content/pages",
+        format: "md",
+        ui: {
+          router: (props) => {
+            return "/";
+          },
+        },
         fields: [
           {
             type: "string",
@@ -33,16 +39,62 @@ export default defineConfig({
             required: true,
           },
           {
-            type: "rich-text",
-            name: "body",
-            label: "Body",
-            isBody: true,
+            name: "blocks",
+            label: "Blocks",
+            type: "object",
+            list: true,
+            templates: [
+              {
+                name: "welcomeHero",
+                label: "Welcome Hero",
+                fields: [
+                  {
+                    name: "message",
+                    type: "rich-text",
+                    required: true,
+                  },
+                  {
+                    name: "action",
+                    label: "Action",
+                    type: "string",
+                    required: true,
+                  },
+                  // {
+                  //   name: "links",
+                  //   label: "Links",
+                  //   type: "object",
+                  //   list: true,
+                  //   fields: [
+                  //     {
+                  //       name: "link",
+                  //       type: "string",
+                  //     },
+                  //     {
+                  //       name: "label",
+                  //       type: "string",
+                  //     },
+                  //     {
+                  //       name: "style",
+                  //       type: "string",
+                  //       options: ["simple", "button"],
+                  //     },
+                  //   ],
+                  // },
+                ],
+              },
+            ],
           },
+          // {
+          //   type: "rich-text",
+          //   name: "body",
+          //   label: "Body",
+          //   isBody: true,
+          // },
         ],
-        ui: {
-          // This is an DEMO router. You can remove this to fit your site
-          router: ({ document }) => `/demo/blog/${document._sys.filename}`,
-        },
+        // ui: {
+        //   // This is an DEMO router. You can remove this to fit your site
+        //   router: ({ document }) => `/demo/blog/${document._sys.filename}`,
+        // },
       },
     ],
   },
