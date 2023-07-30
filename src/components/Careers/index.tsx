@@ -1,4 +1,5 @@
 import CareerHero from "./CareerHero";
+import Openings from "./Openings";
 import Testimonials from "./Testimonials";
 
 const CareersPage = () => {
@@ -6,6 +7,7 @@ const CareersPage = () => {
     <div className="pt-[104px]">
       <CareerHero />
       <Testimonials />
+      <Openings />
     </div>
   );
 };

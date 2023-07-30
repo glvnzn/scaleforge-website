@@ -47,6 +47,7 @@ const Testimonials = () => {
                     height={64}
                     width={64}
                     alt="Pew Image Icon"
+                    className="rounded-full"
                   />
                   <div className="flex justify-left text-left flex-col">
                     <p className="font-sf-mono font-bold text-[20px] leading-[30px]">
