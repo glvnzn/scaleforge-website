@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import type { Metadata } from "next";
 import { Rubik } from "next/font/google";
 import localFont from "next/font/local";
+
 import "./globals.css";
 
 const rubik = Rubik({
