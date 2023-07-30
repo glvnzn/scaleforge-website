@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
@@ -8,7 +9,7 @@ const Navbar = () => {
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <a href="#">
+          <Link href="/">
             <span className="sr-only">ScaleForge</span>
             <Image
               src="/sf-logo-white.svg"
@@ -17,7 +18,7 @@ const Navbar = () => {
               className="max-h-[37px]"
               alt="ScaleForge Logo"
             />
-          </a>
+          </Link>
         </div>
         <div className="flex lg:hidden">
           <button
@@ -42,18 +43,24 @@ const Navbar = () => {
           </button>
         </div>
         <div className="hidden lg:flex lg:gap-x-[40px] lg:justify-end font-rubik items-center">
-          <a href="#" className="font-semibold text-[20px] leading-[24px]">
+          <Link
+            href="/about-us"
+            className="font-semibold text-[20px] leading-[24px]"
+          >
             About Us
-          </a>
-          <a href="#" className="font-semibold text-[20px] leading-[24px]">
+          </Link>
+          <Link
+            href="/careers"
+            className="font-semibold text-[20px] leading-[24px]"
+          >
             Careers
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            href="/contact-us"
             className="font-semibold text-[20px] leading-[24px] rounded border py-[12px] px-[20px] bg-rosso-red border-none border-black"
           >
             Contact Us
-          </a>
+          </Link>
         </div>
       </nav>
       {/* <!-- Mobile menu, show/hide based on menu open state. --> */}

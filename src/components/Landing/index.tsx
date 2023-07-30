@@ -17,7 +17,7 @@ const LandingPage = (props: {
   const { data } = useTina(props);
 
   return (
-    <div>
+    <div className="mt-[104px]">
       {data.page.blocks?.map((block) => {
         switch (block?.__typename) {
           case "PageBlocksWelcomeHero": {

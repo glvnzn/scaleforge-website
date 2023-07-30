@@ -4,9 +4,9 @@ import { PageBlocksWelcomeHero } from "../../../tina/__generated__/types";
 
 const Hero = (props: PageBlocksWelcomeHero) => {
   return (
-    <section id="hero-section" className="relative min-h-[742px] mt-[104px]">
+    <section id="hero-section">
       <div
-        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[994px] text-center"
+        className="flex flex-col text-center items-center max-w-[994px] mx-auto py-[128px]"
         data-tina-field={tinaField(props, "message")}
       >
         <TinaMarkdown

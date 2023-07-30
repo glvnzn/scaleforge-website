@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const CareerOverview = () => {
   return (
     <section
@@ -24,7 +26,13 @@ const CareerOverview = () => {
         </div>
         <div className="flex flex-row gap-[32px] text-black">
           <div className="bg-white max-w-[352px] rounded-[12px] border-none p-[40px] flex flex-col">
-            <div className="mb-[64px]">Icon</div>
+            <Image
+              src="/building-icon.svg"
+              width={44}
+              height={44}
+              className="max-h-[44px] mb-[64px]"
+              alt="Building Icon"
+            />
             <p className="mb-[24px] font-sf-mono font-bold text-[28px] leading-[42px]">
               Senior Frontend Engineer
             </p>
@@ -46,7 +54,13 @@ const CareerOverview = () => {
             </div>
           </div>
           <div className="bg-white max-w-[352px] rounded-[12px] border-none p-[40px] flex flex-col">
-            <div className="mb-[64px]">Icon</div>
+            <Image
+              src="/building-icon.svg"
+              width={44}
+              height={44}
+              className="max-h-[44px] mb-[64px]"
+              alt="Building Icon"
+            />
             <p className="mb-[24px] font-sf-mono font-bold text-[28px] leading-[42px]">
               Backend Engineer
             </p>
@@ -68,7 +82,13 @@ const CareerOverview = () => {
             </div>
           </div>
           <div className="bg-white max-w-[352px] rounded-[12px] border-none p-[40px] flex flex-col">
-            <div className="mb-[64px]">Icon</div>
+            <Image
+              src="/building-icon.svg"
+              width={44}
+              height={44}
+              className="max-h-[44px] mb-[64px]"
+              alt="Building Icon"
+            />
             <p className="mb-[24px] font-sf-mono font-bold text-[28px] leading-[42px]">
               Project Manager
             </p>
