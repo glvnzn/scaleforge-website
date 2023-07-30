@@ -1,0 +1,29 @@
+{
+  "team": [
+    {
+      "name": "Roger Madjos",
+      "position": "Director of Engineering",
+      "image": "/team/roger.png"
+    },
+    {
+      "name": "Khem Arvin Oco",
+      "position": "Backend Engineer",
+      "image": "/team/khem.png"
+    },
+    {
+      "name": "Ceazar Masula",
+      "position": "Backend Engineer",
+      "image": "/team/ceazar.png"
+    },
+    {
+      "name": "Alexander Luie James Sarita",
+      "position": "Frontend Engineer",
+      "image": "/team/alex.png"
+    },
+    {
+      "name": "Kent Bryan Maglinao",
+      "position": "Backend Engineer",
+      "image": "/team/mags.png"
+    }
+  ]
+}

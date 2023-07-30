@@ -1,7 +1,7 @@
 const Values = () => {
   return (
-    <section id="values-section">
-      <div className="flex flex-col text-center items-center max-w-[1106px] mx-auto my-[128px]">
+    <section id="values-section" className="py-[128px]">
+      <div className="flex flex-col text-center items-center max-w-[1106px] mx-auto ">
         <h1 className="font-rubik font-semibold	text-[80px] leading-[88px] mb-[48px]">
           Values That Keep Us Together
         </h1>
