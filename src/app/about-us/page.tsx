@@ -1,11 +1,9 @@
-import { AboutUs, Team, Values } from "@/components/AboutUs";
+import AboutUs from "@/components/AboutUs";
 
 const AboutPage = () => {
   return (
     <div>
       <AboutUs />
-      <Values />
-      <Team />
     </div>
   );
 };

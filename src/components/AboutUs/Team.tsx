@@ -2,7 +2,6 @@ import Image from "next/image";
 import data from "./team.json";
 
 const Team = () => {
-  console.log("🚀 ~ file: Team.tsx:4 ~ Team ~ data:", data);
   return (
     <section id="about-us-hero-section" className="my-[128px]">
       <div className="flex flex-col text-center items-center max-w-[956px] mx-auto ">

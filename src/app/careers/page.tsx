@@ -1,5 +1,11 @@
-const Careers = () => {
-  return <div>Careers</div>;
+import Careers from "@/components/Careers";
+
+const CareersPage = () => {
+  return (
+    <div>
+      <Careers />
+    </div>
+  );
 };
 
-export default Careers;
+export default CareersPage;
