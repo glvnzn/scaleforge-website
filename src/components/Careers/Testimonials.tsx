@@ -48,7 +48,7 @@ const Testimonials = () => {
                     width={64}
                     alt="Pew Image Icon"
                   />
-                  <div className="flex justify-center items-center flex-col">
+                  <div className="flex justify-left text-left flex-col">
                     <p className="font-sf-mono font-bold text-[20px] leading-[30px]">
                       Carmella Joy Ventanilla
                     </p>

@@ -3,7 +3,7 @@ import data from "./team.json";
 
 const Team = () => {
   return (
-    <section id="about-us-hero-section" className="my-[128px]">
+    <section id="about-us-team-section" className="my-[128px]">
       <div className="flex flex-col text-center items-center max-w-[956px] mx-auto ">
         <h1 className="font-rubik font-semibold	text-[80px] leading-[88px] mb-[48px]">
           Our Team
