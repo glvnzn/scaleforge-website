@@ -23,9 +23,11 @@ const LandingPage = (props: {
           case "PageBlocksWelcomeHero": {
             return <Hero {...block} />;
           }
+          case "PageBlocksOurMission": {
+            return <MissionStatement {...block} />;
+          }
         }
       })}
-      <MissionStatement />
       <CareerOverview />
       <ContactCta />
     </div>

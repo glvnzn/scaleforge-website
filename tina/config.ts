@@ -46,7 +46,7 @@ export default defineConfig({
             templates: [
               {
                 name: "welcomeHero",
-                label: "Welcome Hero",
+                label: "Landing - Welcome Hero",
                 fields: [
                   {
                     name: "message",
@@ -80,6 +80,28 @@ export default defineConfig({
                   //     },
                   //   ],
                   // },
+                ],
+              },
+              {
+                name: "ourMission",
+                label: "Landing - Our Mission",
+                fields: [
+                  {
+                    name: "message",
+                    type: "rich-text",
+                    required: true,
+                  },
+                  {
+                    name: "action",
+                    label: "Action",
+                    type: "string",
+                    required: true,
+                  },
+                  {
+                    type: "image",
+                    label: "Featured Hero image",
+                    name: "imgSrc",
+                  },
                 ],
               },
             ],
