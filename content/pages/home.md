@@ -13,9 +13,11 @@ blocks:
       expansion, magnifying their impact, and propelling them towards the next
       level of success
     action: Learn more about us
-    imgSrc: /feature-img-mission.webp
+    imgSrc: /uploads/feature-img-mission.webp
     _template: ourMission
 ---
+
+
 
 
 
