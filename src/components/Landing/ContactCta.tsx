@@ -3,8 +3,8 @@ import Image from "next/image";
 const ContactCta = () => {
   return (
     <section id="contact-cta-section" className="min-h-[910px] py-[128px]">
-      <div className="flex flex-row gap-[0px] justify-end">
-        <div className="relative">
+      <div className="flex flex-row gap-[0px] items-center max-w-[1120px] mx-auto">
+        <div className="flex-none">
           <h1 className="font-rubik font-semibold	text-[80px] leading-[88px]">
             Get In <span className="text-gradient">Touch</span>
           </h1>
@@ -43,7 +43,7 @@ const ContactCta = () => {
             height={702}
             width={760}
             alt="Overlay logo"
-            className="opacity-20"
+            className="opacity-20 w-[760px] h-[702]"
           />
         </div>
       </div>

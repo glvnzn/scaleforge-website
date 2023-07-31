@@ -7,48 +7,50 @@ const MissionStatement = (props: PageBlocksOurMission) => {
   return (
     <section
       id="mission-statement-section"
-      className="flex justify-center items-center h-auto gap-[152px] min-h-[704px] bg-white text-black"
+      className="min-h-[704px] bg-white text-black"
     >
-      <div
-        className="max-w-[520px]"
-        data-tina-field={tinaField(props, "message")}
-      >
-        <TinaMarkdown
-          content={props.message}
-          components={{
-            h3: (props) => (
-              <h3
-                className="font-rubik font-semibold text-[64px] leading-[76px] mb-[16px]"
-                {...props}
-              />
-            ),
-            bold: (props) => <span className="text-gradient" {...props} />,
-            p: (props) => (
-              <p
-                className="font-sf-mono font-normal text-[24px] leading-[36px] mb-[32px]"
-                {...props}
-              />
-            ),
-          }}
-        />
-        <button
-          data-tina-field={tinaField(props, "action")}
-          className="text-white font-rubik font-semibold	text-[20px] leading-[24px] rounded border py-[12px] px-[20px] bg-rosso-red border-none border-black"
+      <div className="flex flex-row gap-[152px] items-center max-w-[1120px] mx-auto">
+        <div
+          className="flex-none max-w-[520px]"
+          data-tina-field={tinaField(props, "message")}
         >
-          {props.action}
-        </button>
-      </div>
-      <div
-        className="min-w-[614px]"
-        data-tina-field={tinaField(props, "imgSrc")}
-      >
-        <Image
-          src={`${props.imgSrc}`}
-          height={704}
-          width={614}
-          className="h-[704px] w-auto"
-          alt="Our Mission Feature Image"
-        />
+          <TinaMarkdown
+            content={props.message}
+            components={{
+              h3: (props) => (
+                <h3
+                  className="font-rubik font-semibold text-[64px] leading-[76px] mb-[16px]"
+                  {...props}
+                />
+              ),
+              bold: (props) => <span className="text-gradient" {...props} />,
+              p: (props) => (
+                <p
+                  className="font-sf-mono font-normal text-[24px] leading-[36px] mb-[32px]"
+                  {...props}
+                />
+              ),
+            }}
+          />
+          <button
+            data-tina-field={tinaField(props, "action")}
+            className="text-white font-rubik font-semibold	text-[20px] leading-[24px] rounded border py-[12px] px-[20px] bg-rosso-red border-none border-black"
+          >
+            {props.action}
+          </button>
+        </div>
+        <div
+          className="flex-none w-[614px]"
+          data-tina-field={tinaField(props, "imgSrc")}
+        >
+          <Image
+            src={`${props.imgSrc}`}
+            height={704}
+            width={614}
+            className="h-[704px] w-auto"
+            alt="Our Mission Feature Image"
+          />
+        </div>
       </div>
     </section>
   );

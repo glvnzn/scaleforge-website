@@ -27,7 +27,10 @@ const Hero = (props: PageBlocksWelcomeHero) => {
             ),
           }}
         />
-        <button className="font-rubik font-semibold	text-[20px] leading-[24px] rounded border py-[12px] px-[20px] bg-rosso-red border-none border-black">
+        <button
+          data-tina-field={tinaField(props, "action")}
+          className="font-rubik font-semibold	text-[20px] leading-[24px] rounded border py-[12px] px-[20px] bg-rosso-red border-none border-black"
+        >
           {props.action}
         </button>
       </div>
