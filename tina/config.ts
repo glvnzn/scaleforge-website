@@ -145,6 +145,7 @@ export default defineConfig({
                 fields: [
                   {
                     name: "message",
+                    label: "Message",
                     type: "rich-text",
                     required: true,
                   },
@@ -184,6 +185,27 @@ export default defineConfig({
                         },
                       },
                     ],
+                  },
+                ],
+              },
+              {
+                name: "aboutUsTeam",
+                label: "About Us - Our Team",
+                fields: [
+                  {
+                    name: "title",
+                    label: "Title",
+                    type: "string",
+                    required: true,
+                  },
+                  {
+                    name: "description",
+                    label: "Description",
+                    type: "string",
+                    ui: {
+                      component: "textarea",
+                    },
+                    required: true,
                   },
                 ],
               },
