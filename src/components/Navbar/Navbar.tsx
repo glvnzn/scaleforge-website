@@ -3,6 +3,7 @@
 import { Disclosure } from "@headlessui/react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navigation = [
   { name: "About us", href: "/about-us", current: true, type: "link" },
@@ -15,6 +16,12 @@ function classNames(...classes: string[]) {
 }
 
 const Navbar = () => {
+  const pathName = usePathname();
+
+  const isActive = (navItemPath: string) => {
+    return pathName === navItemPath;
+  };
+
   return (
     <Disclosure as="nav" className="bg-black">
       {({ open }) => (
@@ -45,7 +52,7 @@ const Navbar = () => {
                       key={item.name}
                       href={item.href}
                       className={classNames(
-                        item.current && item.type === "link"
+                        isActive(item.href) && item.type === "link"
                           ? "border-b-rosso-red border-b-2"
                           : "hover:border-b-rosso-red hover:border-b-2",
                         item.type === "button"
