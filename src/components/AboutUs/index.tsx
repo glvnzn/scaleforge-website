@@ -4,7 +4,7 @@ import Values from "./Values";
 
 const AboutUsPage = () => {
   return (
-    <div className="mt-[104px]">
+    <div>
       <AboutUs />
       <Values />
       <Team />

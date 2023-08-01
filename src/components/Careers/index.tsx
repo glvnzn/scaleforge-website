@@ -4,7 +4,7 @@ import Testimonials from "./Testimonials";
 
 const CareersPage = () => {
   return (
-    <div className="pt-[104px]">
+    <div>
       <CareerHero />
       <Testimonials />
       <Openings />
