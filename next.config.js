@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  experimental: {
+    urlImports: ["https://assets.tina.io"],
+  },
   async rewrites() {
     return [
       {
