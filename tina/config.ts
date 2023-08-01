@@ -27,7 +27,12 @@ export default defineConfig({
         format: "md",
         ui: {
           router: (props) => {
-            return "/";
+            switch (props.document._sys.relativePath) {
+              case "home.md":
+                return "/";
+              case "about-us.md":
+                return "/about-us";
+            }
           },
         },
         fields: [
@@ -129,6 +134,18 @@ export default defineConfig({
                     type: "image",
                     label: "Featured Hero image",
                     name: "imgSrc",
+                    required: true,
+                  },
+                ],
+              },
+              // About Us Page configs
+              {
+                name: "aboutUsHero",
+                label: "About Us - Hero",
+                fields: [
+                  {
+                    name: "message",
+                    type: "rich-text",
                     required: true,
                   },
                 ],

@@ -1,5 +1,5 @@
 ---
-title: "Empower Your Business With Our\_Expert Scalability Solutions"
+title: Landing Page (Home)
 blocks:
   - message: "# Empower Your Business With **Our\_Expert Scalability Solutions**\n\nUnlock the full potential of your business by leveraging our expert scalability solutions to drive growth and adaptability.\n"
     action: Get in touch
@@ -19,13 +19,15 @@ blocks:
     action: Contact Us
     subMessage: >
       Stay updated with the latest news, industry insights, and company updates
-      by following us on our social media channels. 
+      by following us on our social media channels.
 
 
       Join the conversation and connect with us today.
     imgSrc: /uploads/sf-icon.svg
     _template: contactCta
 ---
+
+
 
 
 

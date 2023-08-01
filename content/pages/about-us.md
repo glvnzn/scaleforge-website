@@ -1,0 +1,9 @@
+---
+title: About Us Page
+blocks:
+  - message: "# About Us\n\nScaleForge has emerged as an independent entity from its roots within High Output Ventures (HOV). Originally established as a small team under HOV in 2014, ScaleForge has grown tremendously, harnessing its expertise and passion for transformative and expert scalability solutions to empower businesses on their path to success. From the very beginning, ScaleForge quickly gained recognition for taking on critical engineering projects and cutting—edge industry practices. As our accomplishments multiplied, we recognized the need for an independent identity to fully express our unique mission and capabilities.\n\\\n\_\n\\\n\_\nIn 2023, ScaleForge embarked on an exciting new chapter, spinning off as an independent software company while maintaining a close partnership with HOV. This transition allows us to fully focus on our core mission of shaping the future of the software industry through scalability solutions and delivering exceptional results for our clients.\n"
+    _template: aboutUsHero
+---
+
+
+
