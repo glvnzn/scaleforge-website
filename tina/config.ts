@@ -179,6 +179,9 @@ export default defineConfig({
                         name: "description",
                         type: "string",
                         required: true,
+                        ui: {
+                          component: "textarea",
+                        },
                       },
                     ],
                   },
@@ -186,17 +189,165 @@ export default defineConfig({
               },
             ],
           },
-          // {
-          //   type: "rich-text",
-          //   name: "body",
-          //   label: "Body",
-          //   isBody: true,
-          // },
         ],
-        // ui: {
-        //   // This is an DEMO router. You can remove this to fit your site
-        //   router: ({ document }) => `/demo/blog/${document._sys.filename}`,
-        // },
+      },
+      // Jobs
+      {
+        name: "job",
+        label: "Job",
+        path: "content/jobs",
+        format: "md",
+        ui: {
+          filename: {
+            readonly: true,
+            slugify: (values) => {
+              return `${values?.title?.toLowerCase().replace(/ /g, "-")}`;
+            },
+          },
+        },
+        fields: [
+          {
+            name: "title",
+            label: "Title",
+            type: "string",
+          },
+          {
+            name: "company",
+            label: "Company Name",
+            type: "string",
+          },
+          {
+            name: "level",
+            label: "Experience Level",
+            type: "string",
+            options: [
+              "Entry",
+              "Junior",
+              "Mid-level",
+              "Experienced",
+              "Senior",
+              "Executive",
+            ],
+          },
+          {
+            name: "location",
+            label: "Location",
+            type: "string",
+          },
+          {
+            name: "type",
+            label: "Employment Type",
+            type: "string",
+            options: [
+              "Internship",
+              "Part-time",
+              "Full-time",
+              "Contract",
+              "Freelance",
+            ],
+          },
+          {
+            name: "description",
+            label: "Description",
+            type: "string",
+            ui: {
+              component: "textarea",
+            },
+          },
+          {
+            name: "body",
+            label: "Body",
+            type: "rich-text",
+            isBody: true,
+          },
+          {
+            name: "author",
+            label: "Author",
+            type: "reference",
+            collections: ["employee"],
+          },
+        ],
+      },
+      // Employees
+      {
+        name: "employee",
+        label: "Employee",
+        path: "content/employees",
+        format: "md",
+        ui: {
+          filename: {
+            readonly: true,
+            slugify: (values) => {
+              return `${values?.name?.toLowerCase().replace(/ /g, "-")}`;
+            },
+          },
+        },
+        fields: [
+          {
+            name: "name",
+            label: "Name",
+            type: "string",
+            required: true,
+          },
+          {
+            name: "position",
+            label: "Position",
+            type: "string",
+          },
+          {
+            name: "email",
+            label: "Email",
+            type: "string",
+          },
+          {
+            name: "handles",
+            label: "Handles",
+            type: "object",
+            list: true,
+            ui: {
+              itemProps: (item) => {
+                return { label: item.name };
+              },
+            },
+            fields: [
+              {
+                name: "name",
+                label: "Handle Name",
+                type: "string",
+                options: ["Github", "LinkedIn", "X (formerly Twitter)"],
+              },
+              {
+                name: "link",
+                label: "Link",
+                type: "string",
+              },
+            ],
+          },
+          {
+            name: "image",
+            label: "Image",
+            type: "image",
+          },
+          {
+            name: "status",
+            label: "Status",
+            type: "string",
+            options: [
+              "Full-Time",
+              "Part-Time",
+              "Temporary/Contract",
+              "Permanent",
+              "Probationary",
+              "Intern/Trainee",
+              "Consultant/Freelancer",
+              "Seasonal",
+              "On Leave",
+              "Retired",
+              "Terminated/Resigned",
+            ],
+            required: true,
+          },
+        ],
       },
     ],
   },
