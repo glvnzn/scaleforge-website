@@ -150,6 +150,40 @@ export default defineConfig({
                   },
                 ],
               },
+              {
+                name: "coreValues",
+                label: "About Us - Core Values",
+                fields: [
+                  {
+                    name: "title",
+                    type: "string",
+                    required: true,
+                  },
+                  {
+                    name: "values",
+                    label: "Core Values",
+                    type: "object",
+                    list: true,
+                    ui: {
+                      itemProps: (item) => {
+                        return { label: item.label };
+                      },
+                    },
+                    fields: [
+                      {
+                        name: "label",
+                        type: "string",
+                        required: true,
+                      },
+                      {
+                        name: "description",
+                        type: "string",
+                        required: true,
+                      },
+                    ],
+                  },
+                ],
+              },
             ],
           },
           // {

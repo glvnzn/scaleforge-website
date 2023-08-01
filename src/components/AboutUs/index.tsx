@@ -22,9 +22,11 @@ const AboutUsPage = (props: {
           case "PageBlocksAboutUsHero": {
             return <AboutUs {...block} />;
           }
+          case "PageBlocksCoreValues": {
+            return <Values {...block} />;
+          }
         }
       })}
-      <Values />
       <Team />
     </div>
   );
