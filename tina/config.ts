@@ -101,6 +101,35 @@ export default defineConfig({
                     type: "image",
                     label: "Featured Hero image",
                     name: "imgSrc",
+                    required: true,
+                  },
+                ],
+              },
+              {
+                name: "contactCta",
+                label: "Landing - Contact Us",
+                fields: [
+                  {
+                    name: "message",
+                    type: "rich-text",
+                    required: true,
+                  },
+                  {
+                    name: "action",
+                    label: "Action",
+                    type: "string",
+                    required: true,
+                  },
+                  {
+                    name: "subMessage",
+                    type: "rich-text",
+                    required: true,
+                  },
+                  {
+                    type: "image",
+                    label: "Featured Hero image",
+                    name: "imgSrc",
+                    required: true,
                   },
                 ],
               },

@@ -26,10 +26,12 @@ const LandingPage = (props: {
           case "PageBlocksOurMission": {
             return <MissionStatement {...block} />;
           }
+          case "PageBlocksContactCta": {
+            return <ContactCta {...block} />;
+          }
         }
       })}
       <CareerOverview />
-      <ContactCta />
     </div>
   );
 };

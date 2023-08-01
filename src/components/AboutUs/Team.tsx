@@ -23,7 +23,7 @@ const Team = () => {
                 src={item.image}
                 width={256}
                 height={296}
-                className="h-[296px] w-[256px] mb-[32px]"
+                className="h-[296px] w-[256px] mb-[32px] object-cover"
                 alt="Roger Madjos"
               />
               <p className="font-sf-mono font-bold text-[28px] leading-[42px]">

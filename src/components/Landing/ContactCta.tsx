@@ -1,25 +1,53 @@
 import Image from "next/image";
+import { tinaField } from "tinacms/dist/react";
+import { TinaMarkdown } from "tinacms/dist/rich-text";
+import { PageBlocksContactCta } from "../../../tina/__generated__/types";
 
-const ContactCta = () => {
+const ContactCta = (props: PageBlocksContactCta) => {
   return (
     <section id="contact-cta-section" className="min-h-[910px] py-[128px]">
       <div className="flex flex-row gap-[0px] items-center max-w-[1120px] mx-auto">
-        <div className="flex-none">
-          <h1 className="font-rubik font-semibold	text-[80px] leading-[88px]">
-            Get In <span className="text-gradient">Touch</span>
-          </h1>
-          <p className="font-sf-mono font-normal text-[32px] leading-[48px] max-w-[649px] mb-[32px]">
-            Have a question or need more information? Contact us today, and our
-            friendly team will be happy to assist you.
-          </p>
-          <button className="font-semibold text-[20px] leading-[24px] rounded py-[12px] px-[20px] bg-rosso-red border-none border-black mb-[64px]">
-            Contact us
+        <div
+          className="flex-none"
+          data-tina-field={tinaField(props, "message")}
+        >
+          <TinaMarkdown
+            content={props.message}
+            components={{
+              h1: (props) => (
+                <h1
+                  className="font-rubik font-semibold	text-[80px] leading-[88px]"
+                  {...props}
+                />
+              ),
+              bold: (props) => <span className="text-gradient" {...props} />,
+              p: (props) => (
+                <p
+                  className="font-sf-mono font-normal text-[32px] leading-[48px] max-w-[649px] mb-[32px]"
+                  {...props}
+                />
+              ),
+            }}
+          />
+          <button
+            data-tina-field={tinaField(props, "action")}
+            className="font-semibold text-[20px] leading-[24px] rounded py-[12px] px-[20px] bg-rosso-red border-none border-black mb-[64px]"
+          >
+            {props.action}
           </button>
-          <p className="font-sf-mono font-normal text-[20px] leading-[30px] max-w-[606px] mb-[24px] ">
-            Stay updated with the latest news, industry insights, and company
-            updates by following us on our social media channels. Join the
-            conversation and connect with us today.
-          </p>
+          <div data-tina-field={tinaField(props, "subMessage")}>
+            <TinaMarkdown
+              content={props.subMessage}
+              components={{
+                p: (props) => (
+                  <p
+                    className="font-sf-mono font-normal text-[20px] leading-[30px] max-w-[606px] mb-[24px] "
+                    {...props}
+                  />
+                ),
+              }}
+            />
+          </div>
           <div className="flex flex-row gap-4">
             <Image
               src="/fb-logo.svg"
@@ -37,9 +65,12 @@ const ContactCta = () => {
             />
           </div>
         </div>
-        <div className="flex-none w-[760px]">
+        <div
+          className="flex-none w-[760px]"
+          data-tina-field={tinaField(props, "imgSrc")}
+        >
           <Image
-            src="/sf-icon.svg"
+            src={`${props.imgSrc}`}
             height={702}
             width={760}
             alt="Overlay logo"
