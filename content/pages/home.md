@@ -12,8 +12,8 @@ blocks:
       organizations by providing expert scalability solutions that empower
       expansion, magnifying their impact, and propelling them towards the next
       level of success
-    action: Learn more about us!
-    imgSrc: /uploads/featured-team.png
+    action: Learn more about us
+    imgSrc: /uploads/Bae Suzy.jpg
     _template: ourMission
   - message: "# Get In\_Touch\n\nHave a question or need more information? Contact us today, and our friendly team will be happy to assist you.\n"
     action: Contact Us
@@ -26,6 +26,7 @@ blocks:
     imgSrc: /uploads/sf-icon.svg
     _template: contactCta
 ---
+
 
 
 
