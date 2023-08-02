@@ -6,32 +6,35 @@ import "swiper/css/navigation";
 import Image from "next/image";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { PageBlocksStories } from "../../../tina/__generated__/types";
-
+import { tinaField } from "tinacms/dist/react";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
+import { PageBlocksStories } from "../../../tina/__generated__/types";
 
 const Testimonials = (props: PageBlocksStories) => {
   return (
     <section id="careers-testimonials-section" className="bg-white text-black">
       <div className="flex flex-col text-center items-center max-w-[788px] mx-auto py-[128px] prose">
-        <TinaMarkdown
-          content={props.heading}
-          components={{
-            h1: (props) => (
-              <h1
-                className="font-rubik font-semibold	text-[80px] leading-[88px] mb-[32px]"
-                {...props}
-              />
-            ),
-            bold: (props) => <span className="text-gradient" {...props} />,
-            p: (props) => (
-              <p
-                className="font-sf-mono font-normal text-[24px] leading-[36px] mb-[80px]"
-                {...props}
-              />
-            ),
-          }}
-        />
+        <div data-tina-field={tinaField(props, "heading")}>
+          <TinaMarkdown
+            content={props.heading}
+            components={{
+              h1: (props) => (
+                <h1
+                  className="font-rubik font-semibold	text-[80px] leading-[88px] mb-[32px]"
+                  {...props}
+                />
+              ),
+              bold: (props) => <span className="text-gradient" {...props} />,
+              p: (props) => (
+                <p
+                  className="font-sf-mono font-normal text-[24px] leading-[36px] mb-[80px]"
+                  {...props}
+                />
+              ),
+            }}
+          />
+        </div>
+
         <div>
           <Swiper
             navigation
@@ -46,11 +49,20 @@ const Testimonials = (props: PageBlocksStories) => {
               props.stories?.map((story, i) => {
                 return (
                   <SwiperSlide key={`${i}-${story?.author}`}>
-                    <div className="w-[880px] bg-[rgba(0,0,0,.1)] mx-auto rounded-[12px] p-[40px]">
-                      <p className="font-sf-mono font-normal text-[20px] leading-[30px] mb-[40px]">
+                    <div
+                      className="w-[880px] bg-[rgba(0,0,0,.1)] mx-auto rounded-[12px] p-[40px]"
+                      data-tina-field={story && tinaField(story)}
+                    >
+                      <p
+                        className="font-sf-mono font-normal text-[20px] leading-[30px] mb-[40px]"
+                        data-tina-field={story && tinaField(story, "body")}
+                      >
                         {story?.body}
                       </p>
-                      <div className="flex flex-row gap-[16px] justify-center items-center">
+                      <div
+                        className="flex flex-row gap-[16px] justify-center items-center"
+                        data-tina-field={story && tinaField(story, "author")}
+                      >
                         <Image
                           src={`${story?.author?.image}`}
                           height={64}
