@@ -1,6 +1,8 @@
 import Image from "next/image";
+import { tinaField } from "tinacms/dist/react";
+import { PageBlocksCareersOverview } from "../../../tina/__generated__/types";
 
-const CareerOverview = () => {
+const CareerOverview = (props: PageBlocksCareersOverview) => {
   return (
     <section
       id="career-overview-section"
@@ -9,18 +11,25 @@ const CareerOverview = () => {
       <div className="max-w-[1120px] mx-auto">
         <div className="flex flex-row justify-between mb-[80px]">
           <div className="flex flex-col">
-            <h4 className="font-rubik font-medium text-[56px] leading-[66px] mb-[24px]">
-              Join Our Dynamic Team
+            <h4
+              data-tina-field={tinaField(props, "title")}
+              className="font-rubik font-medium text-[56px] leading-[66px] mb-[24px]"
+            >
+              {props.title}
             </h4>
-            <p className="font-sf-mono font-normal text-[20px] leading-[30px] max-w-[702px] opacity-80">
-              Ready to take the next step? Join our dynamic team of passionate
-              professionals, where innovation and collaboration combine to
-              achieve extraordinary results.
+            <p
+              data-tina-field={tinaField(props, "description")}
+              className="font-sf-mono font-normal text-[20px] leading-[30px] max-w-[702px] opacity-80"
+            >
+              {props.description}
             </p>
           </div>
           <div>
-            <button className="text-white font-rubik font-semibold text-[20px] leading-[24px] rounded border py-[12px] px-[20px] bg-rosso-red border-none border-black">
-              See all job positions
+            <button
+              data-tina-field={tinaField(props, "action")}
+              className="text-white font-rubik font-semibold text-[20px] leading-[24px] rounded border py-[12px] px-[20px] bg-rosso-red border-none border-black"
+            >
+              {props.action}
             </button>
           </div>
         </div>

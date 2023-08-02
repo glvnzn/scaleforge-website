@@ -26,12 +26,14 @@ const LandingPage = (props: {
           case "PageBlocksOurMission": {
             return <MissionStatement {...block} />;
           }
+          case "PageBlocksCareersOverview": {
+            return <CareerOverview {...block} />;
+          }
           case "PageBlocksContactCta": {
             return <ContactCta {...block} />;
           }
         }
       })}
-      <CareerOverview />
     </div>
   );
 };

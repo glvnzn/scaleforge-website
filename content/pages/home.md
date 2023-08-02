@@ -15,6 +15,13 @@ blocks:
     action: Learn more about us
     imgSrc: /uploads/sf-feat-team.png
     _template: ourMission
+  - title: Join Our Dynamic Team
+    description: >-
+      Ready to take the next step? Join our dynamic team of passionate
+      professionals, where innovation and collaboration combine to achieve
+      extraordinary results.
+    action: See all job positions
+    _template: careersOverview
   - message: "# Get In\_Touch\n\nHave a question or need more information? Contact us today, and our friendly team will be happy to assist you.\n"
     action: Contact Us
     subMessage: >
@@ -26,6 +33,7 @@ blocks:
     imgSrc: /uploads/sf-icon.svg
     _template: contactCta
 ---
+
 
 
 

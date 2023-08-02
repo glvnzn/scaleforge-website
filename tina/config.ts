@@ -138,6 +138,33 @@ export default defineConfig({
                   },
                 ],
               },
+              {
+                name: "careersOverview",
+                label: "Landing - Featured Jobs",
+                fields: [
+                  {
+                    name: "title",
+                    label: "Title",
+                    type: "string",
+                    required: true,
+                  },
+                  {
+                    name: "description",
+                    label: "Description",
+                    type: "string",
+                    ui: {
+                      component: "textarea",
+                    },
+                    required: true,
+                  },
+                  {
+                    name: "action",
+                    label: "Action",
+                    type: "string",
+                    required: true,
+                  },
+                ],
+              },
               // About Us Page configs
               {
                 name: "aboutUsHero",
