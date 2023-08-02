@@ -32,6 +32,8 @@ export default defineConfig({
                 return "/";
               case "about-us.md":
                 return "/about-us";
+              case "careers.md":
+                return "/careers";
             }
           },
         },
@@ -64,27 +66,6 @@ export default defineConfig({
                     type: "string",
                     required: true,
                   },
-                  // {
-                  //   name: "links",
-                  //   label: "Links",
-                  //   type: "object",
-                  //   list: true,
-                  //   fields: [
-                  //     {
-                  //       name: "link",
-                  //       type: "string",
-                  //     },
-                  //     {
-                  //       name: "label",
-                  //       type: "string",
-                  //     },
-                  //     {
-                  //       name: "style",
-                  //       type: "string",
-                  //       options: ["simple", "button"],
-                  //     },
-                  //   ],
-                  // },
                 ],
               },
               {
@@ -233,6 +214,77 @@ export default defineConfig({
                       component: "textarea",
                     },
                     required: true,
+                  },
+                ],
+              },
+              // Careers Page configs
+              {
+                name: "careersHero",
+                label: "Careers - Hero",
+                fields: [
+                  {
+                    name: "message",
+                    type: "rich-text",
+                    required: true,
+                  },
+                  {
+                    name: "reasons",
+                    label: "Why work with us",
+                    type: "object",
+                    list: true,
+                    ui: {
+                      itemProps: (item) => {
+                        return { label: item.label };
+                      },
+                    },
+                    fields: [
+                      {
+                        name: "label",
+                        type: "string",
+                        required: true,
+                      },
+                      {
+                        name: "description",
+                        type: "string",
+                        required: true,
+                        ui: {
+                          component: "textarea",
+                        },
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "testimonials",
+                label: "Careers - Testimonials",
+                fields: [
+                  {
+                    name: "messages",
+                    type: "object",
+                    list: true,
+                    required: true,
+                    ui: {
+                      itemProps: (item) => {
+                        return { label: item.author };
+                      },
+                    },
+                    fields: [
+                      {
+                        name: "message",
+                        type: "string",
+                        required: true,
+                        ui: {
+                          component: "textarea",
+                        },
+                      },
+                      {
+                        name: "author",
+                        label: "Author",
+                        type: "reference",
+                        collections: ["employee"],
+                      },
+                    ],
                   },
                 ],
               },

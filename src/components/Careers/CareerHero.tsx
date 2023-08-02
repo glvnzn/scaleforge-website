@@ -1,22 +1,32 @@
 import Image from "next/image";
+import { tinaField } from "tinacms/dist/react";
+import { TinaMarkdown } from "tinacms/dist/rich-text";
+import { PageBlocksCareersHero } from "../../../tina/__generated__/types";
 
-const CareerHero = () => {
+const CareerHero = (props: PageBlocksCareersHero) => {
   return (
     <section id="careers-hero-section" className="my-[128px]">
-      <div className="flex flex-col text-center items-center max-w-[1106px] mx-auto mb-[100px]">
-        <h1 className="font-rubik font-semibold	text-[80px] leading-[88px] mb-[48px]">
-          Join Our Team
-        </h1>
-        <p className="font-sf-mono font-normal text-[24px] leading-[36px]">
-          At ScaleForge, we are passionate about transforming businesses through
-          innovative technology solutions. We believe that our success is built
-          upon the collective brilliance and dedication of our diverse team.
-        </p>
-        <br />
-        <p className="font-sf-mono font-normal text-[24px] leading-[36px]">
-          If you are driven by the desire to create meaningful impact, we invite
-          you to explore exciting career opportunities with us.
-        </p>
+      <div
+        data-tina-field={tinaField(props, "message")}
+        className="flex flex-col text-center items-center max-w-[1106px] mx-auto mb-[100px]"
+      >
+        <TinaMarkdown
+          content={props.message}
+          components={{
+            h1: (props) => (
+              <h1
+                className="font-rubik font-semibold	text-[80px] leading-[88px] mb-[48px]"
+                {...props}
+              />
+            ),
+            p: (props) => (
+              <p
+                className="font-sf-mono font-normal text-[24px] leading-[36px]"
+                {...props}
+              />
+            ),
+          }}
+        />
       </div>
       <div className="flex flex-col text-center items-center max-w-[1136px] mx-auto ">
         <h5 className="font-rubik font-medium	text-[48px] leading-[56px] mb-[64px]">

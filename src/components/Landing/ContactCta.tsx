@@ -57,7 +57,7 @@ const ContactCta = (props: PageBlocksContactCta) => {
               alt="Facebook Logo"
             />
             <Image
-              src="/ig-logo.svg"
+              src="/li-logo.svg"
               width={40}
               height={40}
               className="max-h-[40px]"
