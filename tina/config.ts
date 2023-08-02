@@ -256,24 +256,22 @@ export default defineConfig({
                 ],
               },
               {
-                name: "testimonials",
+                name: "stories",
                 label: "Careers - Testimonials",
                 fields: [
                   {
-                    name: "messages",
+                    name: "heading",
+                    type: "rich-text",
+                    required: true,
+                  },
+                  {
+                    name: "stories",
                     type: "object",
                     list: true,
-                    required: true,
-                    ui: {
-                      itemProps: (item) => {
-                        return { label: item.author };
-                      },
-                    },
                     fields: [
                       {
-                        name: "message",
+                        name: "body",
                         type: "string",
-                        required: true,
                         ui: {
                           component: "textarea",
                         },
@@ -295,7 +293,7 @@ export default defineConfig({
       // Jobs
       {
         name: "job",
-        label: "Job",
+        label: "Job Listing",
         path: "content/jobs",
         format: "md",
         ui: {
@@ -388,17 +386,20 @@ export default defineConfig({
             name: "name",
             label: "Name",
             type: "string",
+            isTitle: true,
             required: true,
           },
           {
             name: "position",
             label: "Position",
             type: "string",
+            required: true,
           },
           {
             name: "email",
             label: "Email",
             type: "string",
+            required: true,
           },
           {
             name: "handles",
@@ -428,6 +429,7 @@ export default defineConfig({
             name: "image",
             label: "Image",
             type: "image",
+            required: true,
           },
           {
             name: "status",

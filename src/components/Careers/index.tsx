@@ -21,11 +21,13 @@ const CareersPage = (props: {
       {data.page.blocks?.map((block) => {
         switch (block?.__typename) {
           case "PageBlocksCareersHero": {
-            return <CareerHero {...block} />;
+            return <CareerHero key={block?.__typename} {...block} />;
+          }
+          case "PageBlocksStories": {
+            return <Testimonials key={block?.__typename} {...block} />;
           }
         }
       })}
-      <Testimonials />
       <Openings />
     </div>
   );

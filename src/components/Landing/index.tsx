@@ -21,16 +21,16 @@ const LandingPage = (props: {
       {data.page.blocks?.map((block) => {
         switch (block?.__typename) {
           case "PageBlocksWelcomeHero": {
-            return <Hero {...block} />;
+            return <Hero key={block?.__typename} {...block} />;
           }
           case "PageBlocksOurMission": {
-            return <MissionStatement {...block} />;
+            return <MissionStatement key={block?.__typename} {...block} />;
           }
           case "PageBlocksCareersOverview": {
-            return <CareerOverview {...block} />;
+            return <CareerOverview key={block?.__typename} {...block} />;
           }
           case "PageBlocksContactCta": {
-            return <ContactCta {...block} />;
+            return <ContactCta key={block?.__typename} {...block} />;
           }
         }
       })}

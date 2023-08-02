@@ -20,13 +20,13 @@ const AboutUsPage = (props: {
       {data.page.blocks?.map((block) => {
         switch (block?.__typename) {
           case "PageBlocksAboutUsHero": {
-            return <AboutUs {...block} />;
+            return <AboutUs key={block?.__typename} {...block} />;
           }
           case "PageBlocksCoreValues": {
-            return <Values {...block} />;
+            return <Values key={block?.__typename} {...block} />;
           }
           case "PageBlocksAboutUsTeam": {
-            return <Team {...block} />;
+            return <Team key={block?.__typename} {...block} />;
           }
         }
       })}
