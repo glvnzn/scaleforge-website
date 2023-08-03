@@ -2,6 +2,7 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useEffect, useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 import { Controller, useForm } from "react-hook-form";
 import { contactFormSchema } from "./ContactFormSchema";
 
@@ -24,6 +25,7 @@ const ContactForm = () => {
     resolver: zodResolver(contactFormSchema),
   });
   const [isSubmitSuccess, setIsSubmitSuccess] = useState(false);
+  const [isRecaptchaOkay, setIsRecaptchaOkay] = useState(false);
 
   useEffect(() => {
     reset({
@@ -53,6 +55,10 @@ const ContactForm = () => {
       setIsSubmitSuccess(true);
     }
   });
+
+  function onChange(value: any) {
+    if (value) setIsRecaptchaOkay(true);
+  }
 
   return (
     <div className="max-w-[604px] mx-auto">
@@ -186,8 +192,15 @@ const ContactForm = () => {
         </div>
 
         <div className="flex justify-center">
+          <ReCAPTCHA
+            sitekey={`${process.env.RECAPTCHA_SITE_KEY}`}
+            onChange={onChange}
+          />
+        </div>
+
+        <div className="flex justify-center">
           <button
-            disabled={!isValid || isSubmitting}
+            disabled={!isValid || isSubmitting || !isRecaptchaOkay}
             type="submit"
             className="mt-[40px] font-rubik font-semibold	text-[20px] leading-[24px] rounded border py-[12px] px-[20px] bg-rosso-red border-none border-black disabled:opacity-50 disabled:pointer-events-none"
           >
