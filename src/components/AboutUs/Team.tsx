@@ -29,7 +29,11 @@ const Team = (props: {
         {props.employees.edges?.map((item) => {
           if (item) {
             return (
-              <div key={item.node?.name} className="w-[256px]">
+              <div
+                key={item.node?.name}
+                className="w-[256px]"
+                data-tina-field={item.node && tinaField(item.node, "name")}
+              >
                 <Image
                   src={`${item.node?.image}`}
                   width={256}

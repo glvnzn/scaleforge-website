@@ -7,7 +7,7 @@ const AboutPage = async () => {
 
   return (
     <div>
-      <AboutUs page={pages} employees={employees.data.employeeConnection} />
+      <AboutUs page={pages} employees={employees} />
     </div>
   );
 };

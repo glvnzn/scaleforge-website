@@ -3,6 +3,7 @@
 import { useTina } from "tinacms/dist/react";
 import {
   EmployeeConnectionQuery,
+  InputMaybe,
   PageQuery,
 } from "../../../tina/__generated__/types";
 import AboutUs from "./AboutUs";
@@ -17,9 +18,21 @@ const AboutUsPage = (props: {
     };
     query: string;
   };
-  employees: EmployeeConnectionQuery["employeeConnection"];
+  employees: {
+    data: EmployeeConnectionQuery;
+    variables: {
+      before?: InputMaybe<string> | undefined;
+      after?: InputMaybe<string> | undefined;
+      first?: any;
+      last?: any;
+      sort?: any;
+      filter?: any;
+    };
+    query: string;
+  };
 }) => {
   const { data } = useTina(props.page);
+  const { data: empData } = useTina(props.employees);
 
   return (
     <div>
@@ -36,7 +49,7 @@ const AboutUsPage = (props: {
               <Team
                 key={block?.__typename}
                 teamBlock={block}
-                employees={props.employees}
+                employees={empData.employeeConnection}
               />
             );
           }
