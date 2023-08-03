@@ -1,44 +1,51 @@
 import Image from "next/image";
 import { tinaField } from "tinacms/dist/react";
-import { PageBlocksAboutUsTeam } from "../../../tina/__generated__/types";
-import data from "./team.json";
+import {
+  EmployeeConnectionQuery,
+  PageBlocksAboutUsTeam,
+} from "../../../tina/__generated__/types";
 
-const Team = (props: PageBlocksAboutUsTeam) => {
+const Team = (props: {
+  teamBlock: PageBlocksAboutUsTeam;
+  employees: EmployeeConnectionQuery["employeeConnection"];
+}) => {
   return (
     <section id="about-us-team-section" className="my-[128px]">
       <div className="flex flex-col text-center items-center max-w-[956px] mx-auto ">
         <h1
           className="font-rubik font-semibold	text-[80px] leading-[88px] mb-[48px]"
-          data-tina-field={tinaField(props, "title")}
+          data-tina-field={tinaField(props.teamBlock, "title")}
         >
-          {props.title}
+          {props.teamBlock.title}
         </h1>
         <p
           className="font-sf-mono font-normal text-[24px] leading-[36px]"
-          data-tina-field={tinaField(props, "description")}
+          data-tina-field={tinaField(props.teamBlock, "description")}
         >
-          {props.description}
+          {props.teamBlock.description}
         </p>
       </div>
       <div className="flex flex-wrap justify-center gap-x-[32px] gap-y-[80px] max-w-[1120px] mx-auto mt-[80px]">
-        {data.team.map((item) => {
-          return (
-            <div key={item.name} className="w-[256px]">
-              <Image
-                src={item.image}
-                width={256}
-                height={296}
-                className="h-[296px] w-[256px] mb-[32px] object-cover"
-                alt="Roger Madjos"
-              />
-              <p className="font-sf-mono font-bold text-[28px] leading-[42px]">
-                {item.name}
-              </p>
-              <p className="font-sf-mono font-normal text-[20px] leading-[30px] text-gradient">
-                {item.position}
-              </p>
-            </div>
-          );
+        {props.employees.edges?.map((item) => {
+          if (item) {
+            return (
+              <div key={item.node?.name} className="w-[256px]">
+                <Image
+                  src={`${item.node?.image}`}
+                  width={256}
+                  height={296}
+                  className="h-[296px] w-[256px] mb-[32px] object-cover"
+                  alt="Roger Madjos"
+                />
+                <p className="font-sf-mono font-bold text-[28px] leading-[42px]">
+                  {item.node?.name}
+                </p>
+                <p className="font-sf-mono font-normal text-[20px] leading-[30px] text-gradient">
+                  {item.node?.position}
+                </p>
+              </div>
+            );
+          }
         })}
       </div>
     </section>

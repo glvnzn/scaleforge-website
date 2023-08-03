@@ -1,19 +1,25 @@
 "use client";
 
 import { useTina } from "tinacms/dist/react";
-import { PageQuery } from "../../../tina/__generated__/types";
+import {
+  EmployeeConnectionQuery,
+  PageQuery,
+} from "../../../tina/__generated__/types";
 import AboutUs from "./AboutUs";
 import Team from "./Team";
 import Values from "./Values";
 
 const AboutUsPage = (props: {
-  data: PageQuery;
-  variables: {
-    relativePath: string;
+  page: {
+    data: PageQuery;
+    variables: {
+      relativePath: string;
+    };
+    query: string;
   };
-  query: string;
+  employees: EmployeeConnectionQuery["employeeConnection"];
 }) => {
-  const { data } = useTina(props);
+  const { data } = useTina(props.page);
 
   return (
     <div>
@@ -26,7 +32,13 @@ const AboutUsPage = (props: {
             return <Values key={block?.__typename} {...block} />;
           }
           case "PageBlocksAboutUsTeam": {
-            return <Team key={block?.__typename} {...block} />;
+            return (
+              <Team
+                key={block?.__typename}
+                teamBlock={block}
+                employees={props.employees}
+              />
+            );
           }
         }
       })}

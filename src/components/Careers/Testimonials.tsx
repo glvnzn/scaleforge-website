@@ -34,7 +34,6 @@ const Testimonials = (props: PageBlocksStories) => {
             }}
           />
         </div>
-
         <div>
           <Swiper
             navigation
