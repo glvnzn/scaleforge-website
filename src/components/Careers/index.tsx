@@ -44,6 +44,7 @@ const CareersPage = (props: {
             return <CareerHero key={block?.__typename} {...block} />;
           }
           case "PageBlocksStories": {
+            // @ts-ignore
             return <Testimonials key={block?.__typename} {...block} />;
           }
         }
