@@ -60,6 +60,10 @@ const ContactForm = (props: { recaptchaSiteKey: string }) => {
     if (value) setIsRecaptchaOkay(true);
   }
 
+  function onExpired() {
+    setIsRecaptchaOkay(false);
+  }
+
   return (
     <div className="max-w-[604px] mx-auto">
       <form
@@ -192,12 +196,16 @@ const ContactForm = (props: { recaptchaSiteKey: string }) => {
         </div>
 
         <div className="flex justify-center">
-          <ReCAPTCHA sitekey={props.recaptchaSiteKey} onChange={onChange} />
+          <ReCAPTCHA
+            sitekey={props.recaptchaSiteKey}
+            onChange={onChange}
+            onExpired={onExpired}
+          />
         </div>
 
         <div className="flex justify-center">
           <button
-            disabled={!isValid || isSubmitting || !isRecaptchaOkay}
+            disabled={isSubmitting || !isRecaptchaOkay}
             type="submit"
             className="mt-[40px] font-rubik font-semibold	text-[20px] leading-[24px] rounded border py-[12px] px-[20px] bg-rosso-red border-none border-black disabled:opacity-50 disabled:pointer-events-none"
           >
