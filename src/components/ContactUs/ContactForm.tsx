@@ -15,7 +15,7 @@ interface IFormData {
   message: string;
 }
 
-const ContactForm = () => {
+const ContactForm = (props: { recaptchaSiteKey: string }) => {
   const {
     handleSubmit,
     control,
@@ -192,10 +192,7 @@ const ContactForm = () => {
         </div>
 
         <div className="flex justify-center">
-          <ReCAPTCHA
-            sitekey="6Le12HonAAAAAJLnF6gpmeutjKTD_eCHmWgfYFUJ"
-            onChange={onChange}
-          />
+          <ReCAPTCHA sitekey={props.recaptchaSiteKey} onChange={onChange} />
         </div>
 
         <div className="flex justify-center">
