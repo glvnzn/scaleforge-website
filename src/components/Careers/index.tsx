@@ -5,16 +5,36 @@ import Openings from "./Openings";
 import Testimonials from "./Testimonials";
 
 import { useTina } from "tinacms/dist/react";
-import { PageQuery } from "../../../tina/__generated__/types";
+import {
+  Exact,
+  InputMaybe,
+  JobConnectionQuery,
+  PageQuery,
+} from "../../../tina/__generated__/types";
 
 const CareersPage = (props: {
-  data: PageQuery;
-  variables: {
-    relativePath: string;
+  pages: {
+    data: PageQuery;
+    variables: {
+      relativePath: string;
+    };
+    query: string;
   };
-  query: string;
+  jobs: {
+    data: JobConnectionQuery;
+    variables: Exact<{
+      before?: InputMaybe<string> | undefined;
+      after?: InputMaybe<string> | undefined;
+      first?: any | undefined;
+      last?: any | undefined;
+      sort?: any | undefined;
+      filter?: any | undefined;
+    }>;
+    query: string;
+  };
 }) => {
-  const { data } = useTina(props);
+  const { data } = useTina(props.pages);
+  const { data: jobsData } = useTina(props.jobs);
 
   return (
     <div>
@@ -28,7 +48,7 @@ const CareersPage = (props: {
           }
         }
       })}
-      <Openings />
+      <Openings jobs={jobsData.jobConnection} />
     </div>
   );
 };
