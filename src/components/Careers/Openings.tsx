@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { tinaField } from "tinacms/dist/react";
 import { JobConnectionQuery } from "../../../tina/__generated__/types";
 
@@ -25,10 +26,13 @@ const Openings = (props: { jobs: JobConnectionQuery["jobConnection"] }) => {
                   <div
                     key={job.node?.id}
                     className="bg-white rounded-[12px] p-[40px] justify-left text-left"
-                    data-tina-field={job.node && tinaField(job.node, "title")}
                   >
                     <div className="flex flex-row justify-between">
-                      <div>
+                      <div
+                        data-tina-field={
+                          job.node && tinaField(job.node, "title")
+                        }
+                      >
                         <h6 className="font-rubik font-medium text-[40px] leading-[48px]">
                           {job.node?.title}
                         </h6>
@@ -61,12 +65,18 @@ const Openings = (props: { jobs: JobConnectionQuery["jobConnection"] }) => {
                         </div>
                       </div>
                       <div className="my-auto">
-                        <Image
-                          src={`/chevron-right-icon.svg`}
-                          height={20}
-                          width={10}
-                          alt="Chevron Right Icon"
-                        />
+                        <Link
+                          href={`/careers/${job.node?._sys.breadcrumbs.join(
+                            "/"
+                          )}`}
+                        >
+                          <Image
+                            src={`/chevron-right-icon.svg`}
+                            height={20}
+                            width={10}
+                            alt="Chevron Right Icon"
+                          />
+                        </Link>
                       </div>
                     </div>
                   </div>
