@@ -12,7 +12,7 @@ const ContactHero = () => {
           with us.
         </p>
       </div>
-      <ContactForm recaptchaSiteKey={`${process.env.RECAPTCHA_SITE_KEY}`} />
+      <ContactForm />
     </section>
   );
 };
