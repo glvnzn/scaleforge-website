@@ -7,6 +7,27 @@ module.exports = {
   ],
   theme: {
     extend: {
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            ".prose h1, h2, h3, h4, h5, h6": {
+              marginTop: "0px",
+              marginBottom: "24px",
+            },
+            ".prose ul": {
+              paddingBottom: "20px",
+              "> li": {
+                paddingLeft: ".1rem",
+                marginBottom: "-1em",
+              },
+              "> li::marker": {
+                color: "rgba(13,13,13, .8)",
+                fontSize: "larger", // Change the dot color here
+              },
+            },
+          },
+        },
+      }),
       colors: {
         "rosso-red": "#d70d01",
         black: "#0d0d0d",
@@ -21,5 +42,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
