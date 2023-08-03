@@ -1,23 +1,9 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useEffect, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
-import { z } from "zod";
-
-const schema = z.object({
-  firstName: z
-    .string()
-    .min(3, "First Name must be at least 3 characters")
-    .max(50),
-  lastName: z
-    .string()
-    .min(3, "Last Name must be at least 3 characters")
-    .max(50),
-  email: z.string().email("Invalid email address"),
-  phoneNumber: z.string(),
-  organization: z.string(),
-  message: z.string(),
-});
+import { contactFormSchema } from "./ContactFormSchema";
 
 interface IFormData {
   firstName: string;
@@ -32,12 +18,41 @@ const ContactForm = () => {
   const {
     handleSubmit,
     control,
-    formState: { errors },
+    formState: { errors, isValid, isSubmitting },
+    reset,
   } = useForm<IFormData>({
-    resolver: zodResolver(schema),
+    resolver: zodResolver(contactFormSchema),
   });
+  const [isSubmitSuccess, setIsSubmitSuccess] = useState(false);
 
-  const onSubmit = handleSubmit((data) => console.log(data));
+  useEffect(() => {
+    reset({
+      firstName: "",
+      lastName: "",
+      email: "",
+      phoneNumber: "",
+      organization: "",
+      message: "",
+    });
+  }, [isSubmitSuccess, reset]);
+
+  const onSubmit = handleSubmit(async (data) => {
+    const result = await fetch("/api/send", {
+      method: "POST",
+      body: JSON.stringify({
+        firstName: data.firstName,
+        lastName: data.lastName,
+        email: data.email,
+        phoneNumber: data.phoneNumber,
+        organization: data.organization,
+        message: data.message,
+      }),
+    });
+
+    if (result.status === 200) {
+      setIsSubmitSuccess(true);
+    }
+  });
 
   return (
     <div className="max-w-[604px] mx-auto">
@@ -172,10 +187,11 @@ const ContactForm = () => {
 
         <div className="flex justify-center">
           <button
+            disabled={!isValid || isSubmitting}
             type="submit"
-            className="mt-[40px] font-rubik font-semibold	text-[20px] leading-[24px] rounded border py-[12px] px-[20px] bg-rosso-red border-none border-black"
+            className="mt-[40px] font-rubik font-semibold	text-[20px] leading-[24px] rounded border py-[12px] px-[20px] bg-rosso-red border-none border-black disabled:opacity-50 disabled:pointer-events-none"
           >
-            Submit
+            {isSubmitting ? "Submitting..." : "Submit"}
           </button>
         </div>
       </form>
