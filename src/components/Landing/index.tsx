@@ -37,6 +37,7 @@ const LandingPage = (props: {
             return <MissionStatement key={block?.__typename} {...block} />;
           }
           case "PageBlocksCareersOverview": {
+            // @ts-ignore
             return <CareerOverview key={block?.__typename} {...block} />;
           }
           case "PageBlocksContactCta": {
