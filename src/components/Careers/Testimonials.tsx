@@ -13,8 +13,8 @@ import { PageBlocksStories } from "../../../tina/__generated__/types";
 const Testimonials = (props: PageBlocksStories) => {
   return (
     <section id="careers-testimonials-section" className="bg-white text-black">
-      <div className="flex flex-col text-center items-center max-w-[788px] mx-auto py-[128px] prose">
-        <div data-tina-field={tinaField(props, "heading")}>
+      <div className="flex flex-col text-center items-center max-w-[788px] mx-auto py-[128px] ">
+        <div data-tina-field={tinaField(props, "heading")} className="prose">
           <TinaMarkdown
             content={props.heading}
             components={{
@@ -36,6 +36,7 @@ const Testimonials = (props: PageBlocksStories) => {
         </div>
         <div>
           <Swiper
+            autoHeight
             navigation
             centeredSlides
             modules={[Navigation]}
@@ -59,14 +60,14 @@ const Testimonials = (props: PageBlocksStories) => {
                         {story?.body}
                       </p>
                       <div
-                        className="flex flex-row gap-[16px] justify-center items-center"
+                        className="flex flex-row gap-[16px] justify-center items-center "
                         data-tina-field={story && tinaField(story, "author")}
                       >
                         <Image
                           src={`${story?.author?.image}`}
                           height={64}
                           width={64}
-                          alt="Pew Image Icon"
+                          alt={`${story?.author?.name} Photo`}
                           className="rounded-full"
                         />
                         <div className="flex justify-left text-left flex-col">

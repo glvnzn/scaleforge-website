@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { tinaField } from "tinacms/dist/react";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
 import { PageBlocksWelcomeHero } from "../../../tina/__generated__/types";
@@ -27,12 +28,14 @@ const Hero = (props: PageBlocksWelcomeHero) => {
             ),
           }}
         />
-        <button
-          data-tina-field={tinaField(props, "action")}
-          className="font-rubik font-semibold	text-[20px] leading-[24px] rounded border py-[12px] px-[20px] bg-rosso-red border-none border-black"
-        >
-          {props.action}
-        </button>
+        <Link href="/contact-us">
+          <button
+            data-tina-field={tinaField(props, "action")}
+            className="font-rubik font-semibold	text-[20px] leading-[24px] rounded border py-[12px] px-[20px] bg-rosso-red border-none border-black"
+          >
+            {props.action}
+          </button>
+        </Link>
       </div>
     </section>
   );

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { tinaField } from "tinacms/dist/react";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
 import { PageBlocksOurMission } from "../../../tina/__generated__/types";
@@ -32,12 +33,14 @@ const MissionStatement = (props: PageBlocksOurMission) => {
               ),
             }}
           />
-          <button
-            data-tina-field={tinaField(props, "action")}
-            className="text-white font-rubik font-semibold	text-[20px] leading-[24px] rounded border py-[12px] px-[20px] bg-rosso-red border-none border-black"
-          >
-            {props.action}
-          </button>
+          <Link href="/about-us">
+            <button
+              data-tina-field={tinaField(props, "action")}
+              className="text-white font-rubik font-semibold	text-[20px] leading-[24px] rounded border py-[12px] px-[20px] bg-rosso-red border-none border-black"
+            >
+              {props.action}
+            </button>
+          </Link>
         </div>
         <div
           className="flex-none w-[614px]"

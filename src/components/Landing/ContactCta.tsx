@@ -40,12 +40,14 @@ const ContactCta = (props: {
               ),
             }}
           />
-          <button
-            data-tina-field={tinaField(props.block, "action")}
-            className="font-semibold text-[20px] leading-[24px] rounded py-[12px] px-[20px] bg-rosso-red border-none border-black mb-[64px]"
-          >
-            {props.block.action}
-          </button>
+          <Link href="/contact-us">
+            <button
+              data-tina-field={tinaField(props.block, "action")}
+              className="font-semibold text-[20px] leading-[24px] rounded py-[12px] px-[20px] bg-rosso-red border-none border-black mb-[64px]"
+            >
+              {props.block.action}
+            </button>
+          </Link>
           <div data-tina-field={tinaField(props.block, "subMessage")}>
             <TinaMarkdown
               content={props.block.subMessage}

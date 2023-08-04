@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { tinaField } from "tinacms/dist/react";
 import { PageBlocksCareersOverview } from "../../../tina/__generated__/types";
 
@@ -25,12 +26,14 @@ const CareerOverview = (props: PageBlocksCareersOverview) => {
             </p>
           </div>
           <div>
-            <button
-              data-tina-field={tinaField(props, "action")}
-              className="text-white font-rubik font-semibold text-[20px] leading-[24px] rounded border py-[12px] px-[20px] bg-rosso-red border-none border-black"
-            >
-              {props.action}
-            </button>
+            <Link href="/careers">
+              <button
+                data-tina-field={tinaField(props, "action")}
+                className="text-white font-rubik font-semibold text-[20px] leading-[24px] rounded border py-[12px] px-[20px] bg-rosso-red border-none border-black"
+              >
+                {props.action}
+              </button>
+            </Link>
           </div>
         </div>
         <div className="flex flex-row gap-[32px] text-black">
