@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Rubik } from "next/font/google";
 import localFont from "next/font/local";
 
+import client from "../../tina/__generated__/client";
 import "./globals.css";
 
 const rubik = Rubik({
@@ -52,19 +53,21 @@ export const metadata: Metadata = {
   description: "Empower Your Business With Our Expert Scalability Solutions",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const globals = await client.queries.global({ relativePath: "global.md" });
+
   return (
     <html lang="en">
       <body
         className={`${rubik.variable} ${sfMono.variable} bg-black text-white`}
       >
-        <Navbar />
+        <Navbar {...globals} />
         {children}
-        <Footer />
+        <Footer {...globals} />
       </body>
     </html>
   );

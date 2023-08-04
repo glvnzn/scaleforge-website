@@ -4,6 +4,8 @@ import { Disclosure } from "@headlessui/react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { tinaField, useTina } from "tinacms/dist/react";
+import { GlobalQuery } from "../../../tina/__generated__/types";
 
 const navigation = [
   { name: "About us", href: "/about-us", current: true, type: "link" },
@@ -15,12 +17,20 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-const Navbar = () => {
+const Navbar = (props: {
+  data: GlobalQuery;
+  variables: {
+    relativePath: string;
+  };
+  query: string;
+}) => {
   const pathName = usePathname();
 
   const isActive = (navItemPath: string) => {
     return pathName === navItemPath;
   };
+
+  const { data } = useTina(props);
 
   return (
     <Disclosure as="nav" className="bg-black">
@@ -29,14 +39,20 @@ const Navbar = () => {
           <div className="mx-auto max-w-[1120px]">
             <div className="relative flex h-[56px] lg:h-[104px] items-center justify-between">
               <div className="flex items-center justify-between sm:items-stretch sm:justify-start">
-                <div className="flex flex-shrink-0 items-center">
+                <div
+                  className="flex flex-shrink-0 items-center"
+                  data-tina-field={
+                    data.global.header &&
+                    tinaField(data.global.header, "imgSrc")
+                  }
+                >
                   <label className="block lg:hidden font-rubik font-semibold text-[20px] leading-[24px] pl-5">
                     Menu
                   </label>
                   <Link href="/">
-                    <span className="sr-only">ScaleForge</span>
+                    <span className="sr-only">{data.global.header?.name}</span>
                     <Image
-                      src="/sf-logo-white.svg"
+                      src={`${data.global.header?.imgSrc}`}
                       width={286}
                       height={37}
                       className="hidden lg:block max-h-[37px]"
@@ -47,23 +63,27 @@ const Navbar = () => {
               </div>
               <div className="hidden md:hidden lg:block">
                 <div className="flex font-rubik gap-x-[40px] items-center">
-                  {navigation.map((item) => (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      className={classNames(
-                        isActive(item.href) && item.type === "link"
-                          ? "border-b-rosso-red border-b-2"
-                          : "hover:border-b-rosso-red hover:border-b-2",
-                        item.type === "button"
-                          ? "font-semibold text-[20px] leading-[24px] rounded border py-[12px] px-[20px] bg-rosso-red border-none border-black"
-                          : "font-semibold text-[20px] leading-[24px] pb-1"
-                      )}
-                      aria-current={item.current ? "page" : undefined}
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
+                  {data.global.header?.nav?.map((item) => {
+                    if (item) {
+                      return (
+                        <Link
+                          key={item.label}
+                          href={`${item.href}`}
+                          className={classNames(
+                            isActive(`${item.href}`) && item.type === "Simple"
+                              ? "border-b-rosso-red border-b-2"
+                              : "hover:border-b-rosso-red hover:border-b-2",
+                            item.type === "Button"
+                              ? "font-semibold text-[20px] leading-[24px] rounded border py-[12px] px-[20px] bg-rosso-red border-none border-black"
+                              : "font-semibold text-[20px] leading-[24px] pb-1"
+                          )}
+                          data-tina-field={tinaField(item)}
+                        >
+                          {item.label}
+                        </Link>
+                      );
+                    }
+                  })}
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 lg:hidden">

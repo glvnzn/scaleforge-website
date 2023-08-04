@@ -452,6 +452,145 @@ export default defineConfig({
           },
         ],
       },
+      {
+        label: "Global",
+        name: "global",
+        path: "content/global",
+        format: "md",
+        ui: {
+          global: true,
+          allowedActions: {
+            create: false,
+            delete: false,
+          },
+        },
+        fields: [
+          {
+            type: "object",
+            label: "Header",
+            name: "header",
+            fields: [
+              {
+                type: "string",
+                label: "Name",
+                name: "name",
+                required: true,
+              },
+              {
+                type: "image",
+                label: "Logo",
+                name: "imgSrc",
+                required: true,
+              },
+              {
+                type: "object",
+                label: "Nav Links",
+                name: "nav",
+                list: true,
+                ui: {
+                  itemProps: (item) => {
+                    return { label: item?.label };
+                  },
+                  defaultItem: {
+                    href: "/home",
+                    label: "Home",
+                    type: "Simple",
+                  },
+                },
+                fields: [
+                  {
+                    type: "string",
+                    label: "Label",
+                    name: "label",
+                  },
+                  {
+                    type: "string",
+                    label: "Link",
+                    name: "href",
+                  },
+                  {
+                    type: "string",
+                    label: "Type",
+                    name: "type",
+                    options: ["Simple", "Button"],
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            type: "object",
+            label: "Social Links",
+            name: "social",
+            list: true,
+            ui: {
+              itemProps: (item) => {
+                return { label: item.name };
+              },
+            },
+            fields: [
+              {
+                type: "string",
+                label: "Name",
+                name: "name",
+                options: [
+                  "Facebook",
+                  "LinkedIn",
+                  "Instagram",
+                  "X formerly Twitter",
+                  "Github",
+                  "NPM",
+                ],
+              },
+              {
+                type: "string",
+                label: "Link",
+                name: "link",
+              },
+            ],
+          },
+          {
+            type: "object",
+            label: "Footer",
+            name: "footer",
+            fields: [
+              {
+                type: "string",
+                label: "Email",
+                name: "email",
+              },
+              {
+                type: "object",
+                label: "Nav Links",
+                name: "nav",
+                list: true,
+                ui: {
+                  itemProps: (item) => {
+                    return { label: item?.label };
+                  },
+                },
+                fields: [
+                  {
+                    type: "string",
+                    label: "Label",
+                    name: "label",
+                  },
+                  {
+                    type: "string",
+                    label: "Link",
+                    name: "href",
+                  },
+                ],
+              },
+              {
+                type: "string",
+                label: "Footer Note",
+                name: "note",
+              },
+            ],
+          },
+        ],
+      },
     ],
   },
 });

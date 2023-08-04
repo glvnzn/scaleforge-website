@@ -1,20 +1,30 @@
 "use client";
 
 import { useTina } from "tinacms/dist/react";
-import { PageQuery } from "../../../tina/__generated__/types";
+import { GlobalQuery, PageQuery } from "../../../tina/__generated__/types";
 import CareerOverview from "./CareerOverview";
 import ContactCta from "./ContactCta";
 import Hero from "./Hero";
 import MissionStatement from "./MissionStatement";
 
 const LandingPage = (props: {
-  data: PageQuery;
-  variables: {
-    relativePath: string;
+  pages: {
+    data: PageQuery;
+    variables: {
+      relativePath: string;
+    };
+    query: string;
   };
-  query: string;
+  globals: {
+    data: GlobalQuery;
+    variables: {
+      relativePath: string;
+    };
+    query: string;
+  };
 }) => {
-  const { data } = useTina(props);
+  const { data } = useTina(props.pages);
+  const { data: globalData } = useTina(props.globals);
 
   return (
     <div>
@@ -30,7 +40,13 @@ const LandingPage = (props: {
             return <CareerOverview key={block?.__typename} {...block} />;
           }
           case "PageBlocksContactCta": {
-            return <ContactCta key={block?.__typename} {...block} />;
+            return (
+              <ContactCta
+                key={block?.__typename}
+                block={block}
+                socials={globalData.global.social}
+              />
+            );
           }
         }
       })}

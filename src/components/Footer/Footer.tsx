@@ -1,35 +1,60 @@
-import Image from "next/image";
+"use client";
 
-const Footer = () => {
+import useSocialLogo from "@/app/hooks/useSocialLogo";
+import Image from "next/image";
+import Link from "next/link";
+import { tinaField, useTina } from "tinacms/dist/react";
+import { GlobalQuery } from "../../../tina/__generated__/types";
+
+const Footer = (props: {
+  data: GlobalQuery;
+  variables: {
+    relativePath: string;
+  };
+  query: string;
+}) => {
+  const { data } = useTina(props);
+  const { getImgUrlLightByName } = useSocialLogo();
+
   return (
     <footer className="mt-[64px]">
       <div className="flex justify-between max-w-[1120px] mx-auto mb-[80px]">
         <div className="flex flex-col">
           <Image
-            src="/sf-logo-white.svg"
+            data-tina-field={
+              data.global.header && tinaField(data.global.header, "imgSrc")
+            }
+            src={`${data.global.header?.imgSrc}`}
             width={234.48}
             height={37}
             className="max-h-[37px] mb-[24px]"
             alt="ScaleForge Logo"
           />
-          <p className="font-sf-mono font-normal text-[20px] leading-[30px] mb-[20px]">
-            support@scaleforge.tech
+          <p
+            className="font-sf-mono font-normal text-[20px] leading-[30px] mb-[20px]"
+            data-tina-field={
+              data.global.footer && tinaField(data.global.footer, "email")
+            }
+          >
+            {data.global.footer?.email}
           </p>
           <div className="flex flex-row gap-4">
-            <Image
-              src="/fb-logo-white.svg"
-              width={24}
-              height={24}
-              className="max-h-[24px]"
-              alt="Facebook White Logo"
-            />
-            <Image
-              src="/ig-logo-white.svg"
-              width={24}
-              height={24}
-              className="max-h-[24px]"
-              alt="Instagram White Logo"
-            />
+            {data.global.social?.map((soc) => {
+              if (soc) {
+                return (
+                  <Link key={soc.name} href={`${soc.link}`} target="_blank">
+                    <Image
+                      data-tina-field={tinaField(soc)}
+                      src={`${getImgUrlLightByName(`${soc?.name}`)}`}
+                      width={24}
+                      height={24}
+                      className="max-h-[24px]"
+                      alt="Facebook Light Logo"
+                    />
+                  </Link>
+                );
+              }
+            })}
           </div>
         </div>
         <div className="grid grid-cols-2 grid-flow-row gap-x-[24px] gap-y-[24px]">
@@ -50,9 +75,14 @@ const Footer = () => {
           </p>
         </div>
       </div>
-      <div className="mt-[32px] mb-[36px] text-center">
+      <div
+        className="mt-[32px] mb-[36px] text-center"
+        data-tina-field={
+          data.global.footer && tinaField(data.global.footer, "note")
+        }
+      >
         <p className="font-sf-mono font-normal text-[20px] leading-[30px]">
-          Copyright © 2023 ScaleForge. All Rights Reserved
+          {data.global.footer?.note}
         </p>
       </div>
     </footer>
