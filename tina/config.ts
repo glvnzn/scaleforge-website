@@ -144,6 +144,25 @@ export default defineConfig({
                     type: "string",
                     required: true,
                   },
+                  {
+                    name: "featuredJobs",
+                    label: "Featured Job Openings",
+                    type: "object",
+                    list: true,
+                    ui: {
+                      itemProps: (item) => {
+                        return { label: item.job };
+                      },
+                    },
+                    fields: [
+                      {
+                        name: "job",
+                        label: "Jobs",
+                        type: "reference",
+                        collections: ["job"],
+                      },
+                    ],
+                  },
                 ],
               },
               // About Us Page configs
