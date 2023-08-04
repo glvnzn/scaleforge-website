@@ -207,7 +207,7 @@ const ContactForm = (props: { recaptchaSiteKey: string }) => {
           <button
             disabled={isSubmitting || !isRecaptchaOkay}
             type="submit"
-            className="mt-[40px] font-rubik font-semibold	text-[20px] leading-[24px] rounded border py-[12px] px-[20px] bg-rosso-red border-none border-black disabled:opacity-50 disabled:pointer-events-none"
+            className="mt-[40px] font-rubik font-semibold	text-[20px] leading-[24px] rounded py-[12px] px-[20px] disabled:opacity-50 disabled:pointer-events-none  bg-rosso-red border-[1px] border-rosso-red hover:bg-[rgba(215,13,1,.8)] hover:border-[1px] hover:border-[rgba(215,13,1,.8)] focus:bg-rosso-red focus:border-[2px] focus:border-[rgba(255,255,255,.6)]"
           >
             {isSubmitting ? "Submitting..." : "Submit"}
           </button>
