@@ -270,6 +270,11 @@ export default defineConfig({
                           component: "textarea",
                         },
                       },
+                      {
+                        name: "image",
+                        label: "Icon",
+                        type: "image",
+                      },
                     ],
                   },
                 ],

@@ -18,14 +18,17 @@ blocks:
           Be part of cutting-edge projects that push the boundaries of
           technology and solve complex business challenges.
 
+        image: /lightbulb-icon.svg
       - label: Professional Growth
         description: >-
           Continuously enhance your skills and knowledge through training
           programs, mentorship, and challenging assignments.
+        image: /trophy-icon.svg
       - label: Work-Life Balance
         description: >-
           We value work-life balance and prioritize the well-being of our
           employees, promoting a healthy and fulfilling lifestyle.
+        image: /face-smile-icon.svg
     _template: careersHero
   - heading: "# **Success**\_Stories\n\nHear from our team members about their rewarding experiences working with us.\n"
     stories:
@@ -43,6 +46,8 @@ blocks:
         author: content/employees/glevinzon-dapal.md
     _template: stories
 ---
+
+
 
 
 

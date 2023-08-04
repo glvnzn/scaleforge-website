@@ -9,7 +9,10 @@ const CareerOverview = (props: PageBlocksCareersOverview) => {
       id="career-overview-section"
       className="relative min-h-auto py-[128px]"
     >
-      <div className="max-w-[1120px] mx-auto">
+      <div
+        className="max-w-[1120px] mx-auto"
+        data-tina-field={tinaField(props)}
+      >
         <div className="flex flex-row justify-between mb-[80px]">
           <div className="flex flex-col">
             <h4

@@ -34,54 +34,37 @@ const CareerHero = (props: PageBlocksCareersHero) => {
         </h5>
 
         <div className="flex flex-wrap justify-center gap-x-[40px] gap-y-[32px]">
-          <div className="rounded-[12px] w-[352px] min-h-[180px] bg-transparent text-white">
-            <Image
-              src="./lightbulb-icon.svg"
-              height={40}
-              width={40}
-              className="mx-auto mb-[16px]"
-              alt="Lightbulb Icon"
-            />
-            <p className="font-sf-mono font-bold text-[28px] leading-[42px] mb-[12px]">
-              Innovative Projects
-            </p>
-            <p className="font-sf-mono font-normal text-[24px] leading-[36px]">
-              Be part of cutting-edge projects that push the boundaries of
-              technology and solve complex business challenges.
-            </p>
-          </div>
-          <div className="rounded-[12px] w-[352px] min-h-[180px] bg-transparent text-white">
-            <Image
-              src="./trophy-icon.svg"
-              height={40}
-              width={40}
-              className="mx-auto mb-[16px]"
-              alt="Trophy Icon"
-            />
-            <p className="font-sf-mono font-bold text-[28px] leading-[42px] mb-[12px]">
-              Professional Growth
-            </p>
-            <p className="font-sf-mono font-normal text-[24px] leading-[36px]">
-              Continuously enhance your skills and knowledge through training
-              programs, mentorship, and challenging assignments.
-            </p>
-          </div>
-          <div className="rounded-[12px] w-[352px] min-h-[180px] bg-transparent text-white">
-            <Image
-              src="./face-smile-icon.svg"
-              height={40}
-              width={40}
-              className="mx-auto mb-[16px]"
-              alt="Face Smile Icon"
-            />
-            <p className="font-sf-mono font-bold text-[28px] leading-[42px] mb-[12px]">
-              Work-Life Balance
-            </p>
-            <p className="font-sf-mono font-normal text-[24px] leading-[36px]">
-              We value work-life balance and prioritize the well-being of our
-              employees, promoting a healthy and fulfilling lifestyle.
-            </p>
-          </div>
+          {props.reasons?.map((reason) => {
+            if (reason) {
+              return (
+                <div
+                  key={reason.label}
+                  className="rounded-[12px] w-[352px] min-h-[180px] bg-transparent text-white"
+                >
+                  <Image
+                    data-tina-field={tinaField(reason, "image")}
+                    src={`${reason.image}`}
+                    height={40}
+                    width={40}
+                    className="mx-auto mb-[16px]"
+                    alt="Lightbulb Icon"
+                  />
+                  <p
+                    data-tina-field={tinaField(reason, "label")}
+                    className="font-sf-mono font-bold text-[28px] leading-[42px] mb-[12px]"
+                  >
+                    {reason.label}
+                  </p>
+                  <p
+                    data-tina-field={tinaField(reason, "description")}
+                    className="font-sf-mono font-normal text-[24px] leading-[36px]"
+                  >
+                    {reason.description}
+                  </p>
+                </div>
+              );
+            }
+          })}
         </div>
       </div>
     </section>
