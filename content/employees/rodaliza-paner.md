@@ -2,7 +2,8 @@
 name: Rodaliza Paner
 position: Operations Specialist
 email: roda@hov.co
-image: /team/background.png
+image: /team//roda.png
 status: Full-Time
 ---
+
 
