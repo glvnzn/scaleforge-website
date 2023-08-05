@@ -2,7 +2,8 @@
 name: 'John Christopher Sotero '
 position: Frontend Engineer
 email: jcsotero.0608@gmail.com
-image: /team/background.png
+image: /team//csotero.png
 status: Full-Time
 ---
+
 
