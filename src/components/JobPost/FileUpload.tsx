@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { FC, useCallback } from "react";
-import { useDropzone } from "react-dropzone";
+import { useDropzone, FileWithPath } from "react-dropzone";
 
 interface IFileUpload {
   onFileUpload: (file: File) => void;
@@ -21,7 +21,7 @@ export const FileUpload: FC<IFileUpload> = ({ onFileUpload }) => {
     },
   });
 
-  const acceptedFileItems = acceptedFiles.map((file) => (
+  const acceptedFileItems = acceptedFiles.map((file: FileWithPath) => (
     <li key={file.path}>
       {file.path} - {file.size} bytes
     </li>
