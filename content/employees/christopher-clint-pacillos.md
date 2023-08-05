@@ -5,8 +5,9 @@ email: christopher@hov.co
 handles:
   - name: Github
     link: 'https://github.com/ccpacillos'
-image: /team/background.png
+image: /team/Chris_sf01.png
 status: Full-Time
 ---
+
 
 
