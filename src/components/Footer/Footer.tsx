@@ -57,22 +57,41 @@ const Footer = (props: {
             })}
           </div>
         </div>
-        <div className="grid grid-cols-2 grid-flow-row gap-x-[24px] gap-y-[24px]">
-          <p className="font-rubik font-semibold text-[20px] leading-[24px]">
-            About us
-          </p>
-          <p className="font-rubik font-semibold text-[20px] leading-[24px]">
-            Terms and Conditions
-          </p>
-          <p className="font-rubik font-semibold text-[20px] leading-[24px]">
-            Careers
-          </p>
-          <p className="font-rubik font-semibold text-[20px] leading-[24px]">
-            Privacy Policy
-          </p>
-          <p className="font-rubik font-semibold text-[20px] leading-[24px]">
-            Contact Us
-          </p>
+        <div className="grid grid-cols-2 grid-flow-row gap-x-[24px] ">
+          <div className="flex flex-col gap-y-[24px]">
+            {data.global.header?.nav?.map((item) => {
+              if (item) {
+                return (
+                  <Link
+                    key={item.label}
+                    href={`${item.href}`}
+                    data-tina-field={tinaField(item)}
+                  >
+                    <p className="font-rubik font-semibold text-[20px] leading-[24px]">
+                      {item.label}
+                    </p>
+                  </Link>
+                );
+              }
+            })}
+          </div>
+          <div className="flex flex-col gap-y-[24px]">
+            {data.global.footer?.nav?.map((item) => {
+              if (item) {
+                return (
+                  <Link
+                    key={item.label}
+                    href={`${item.href}`}
+                    data-tina-field={tinaField(item)}
+                  >
+                    <p className="font-rubik font-semibold text-[20px] leading-[24px]">
+                      {item.label}
+                    </p>
+                  </Link>
+                );
+              }
+            })}
+          </div>
         </div>
       </div>
       <div

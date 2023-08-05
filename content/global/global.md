@@ -20,12 +20,13 @@ header:
 footer:
   email: support@scaleforge.tech
   nav:
-    - label: ' Privacy Policy'
-      href: /privacy-policy
     - label: Terms and Conditions
       href: /terms-and-conditions
+    - label: ' Privacy Policy'
+      href: /privacy-policy
   note: Copyright © 2023 ScaleForge. All Rights Reserved
 ---
+
 
 
 
