@@ -24,7 +24,6 @@ blocks:
     featuredJobs:
       - job: content/jobs/senior-frontend-engineer.md
       - job: content/jobs/senior-frontend-engineer.md
-      - job: content/jobs/senior-frontend-engineer.md
     _template: careersOverview
   - message: "# Get In\_Touch\n\nHave a question or need more information? Contact us today, and our friendly team will be happy to assist you.\n"
     action: Contact Us
@@ -37,6 +36,7 @@ blocks:
     imgSrc: /uploads/sf-icon.svg
     _template: contactCta
 ---
+
 
 
 
