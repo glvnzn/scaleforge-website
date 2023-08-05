@@ -3,8 +3,10 @@ name: Christopher Clint Pacillos
 position: Engineering Manager
 email: christopher@hov.co
 handles:
-  - {}
+  - name: Github
+    link: 'https://github.com/ccpacillos'
 image: /team/background.png
 status: Full-Time
 ---
+
 
