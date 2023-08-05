@@ -2,21 +2,21 @@ import Image from "next/image";
 import { tinaField } from "tinacms/dist/react";
 import { JobQuery } from "../../../tina/__generated__/types";
 
-const JobHero = (props: JobQuery) => {
+const JobHero = (props: { jobData: JobQuery; viewApplyForm: boolean }) => {
   return (
-    <section id="careers-hero-section" className="my-[128px]">
-      <div className="flex flex-col text-center items-center max-w-[1106px] mx-auto mb-[100px]">
+    <section id="careers-hero-section" className="mt-[128px]">
+      <div className="flex flex-col text-center items-center max-w-[1106px] mx-auto">
         <h1
           className="font-rubik font-semibold	text-[80px] leading-[88px] mb-[24px]"
-          data-tina-field={tinaField(props.job, "title")}
+          data-tina-field={tinaField(props.jobData.job, "title")}
         >
-          {props.job.title}
+          {props.jobData.job.title}
         </h1>
-        <div className="flex flex-row justify-between items-center mb-[64px]">
+        <div className="flex flex-row justify-between items-center ">
           <div className="flex flex-row gap-[24px]">
             <div
               className="flex flex-row gap-[8px]"
-              data-tina-field={tinaField(props.job, "company")}
+              data-tina-field={tinaField(props.jobData.job, "company")}
             >
               <Image
                 src={`/building-1-icon.svg`}
@@ -26,12 +26,12 @@ const JobHero = (props: JobQuery) => {
                 alt="Building Icon"
               />
               <p className="font-sf-mono font-normal text-[16px] leading-[24px] opacity-60">
-                {props.job.company}
+                {props.jobData.job.company}
               </p>
             </div>
             <div
               className="flex flex-row gap-[8px]"
-              data-tina-field={tinaField(props.job, "level")}
+              data-tina-field={tinaField(props.jobData.job, "level")}
             >
               <Image
                 src={`/bar-chart-icon.svg`}
@@ -41,12 +41,12 @@ const JobHero = (props: JobQuery) => {
                 alt="Bar Chart Icon"
               />
               <p className="font-sf-mono font-normal text-[16px] leading-[24px] opacity-60">
-                {props.job.level}
+                {props.jobData.job.level}
               </p>
             </div>
             <div
               className="flex flex-row gap-[8px]"
-              data-tina-field={tinaField(props.job, "location")}
+              data-tina-field={tinaField(props.jobData.job, "location")}
             >
               <Image
                 src={`/marker-pin-icon.svg`}
@@ -56,21 +56,23 @@ const JobHero = (props: JobQuery) => {
                 alt="Marker Pin Icon"
               />
               <p className="font-sf-mono font-normal text-[16px] leading-[24px] opacity-60">
-                {props.job.location}
+                {props.jobData.job.location}
               </p>
               &nbsp; -&nbsp;
               <p className="font-sf-mono font-normal text-[16px] leading-[24px] opacity-60">
-                {props.job.type}
+                {props.jobData.job.type}
               </p>
             </div>
           </div>
         </div>
-        <p
-          className="font-sf-mono font-normal text-[24px] leading-[36px]"
-          data-tina-field={tinaField(props.job, "description")}
-        >
-          {props.job.description}
-        </p>
+        {!props.viewApplyForm && (
+          <p
+            className="font-sf-mono font-normal text-[24px] leading-[36px] mt-[64px]"
+            data-tina-field={tinaField(props.jobData.job, "description")}
+          >
+            {props.jobData.job.description}
+          </p>
+        )}
       </div>
     </section>
   );

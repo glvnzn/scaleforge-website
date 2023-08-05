@@ -39,7 +39,7 @@ const ContactForm = (props: { recaptchaSiteKey: string }) => {
   }, [isSubmitSuccess, reset]);
 
   const onSubmit = handleSubmit(async (data) => {
-    const result = await fetch("/api/send", {
+    const result = await fetch("/api/contact-us", {
       method: "POST",
       body: JSON.stringify({
         firstName: data.firstName,
@@ -65,7 +65,7 @@ const ContactForm = (props: { recaptchaSiteKey: string }) => {
   }
 
   return (
-    <div className="max-w-[604px] mx-auto">
+    <div className="w-[604px] mx-auto">
       <form
         className="flex flex-col justify-center items-left gap-y-[20px]"
         onSubmit={onSubmit}
