@@ -2,7 +2,8 @@
 name: John Paul Calvo
 position: Frontend Engineer
 email: calvojp92@gmail.com
-image: /team/background.png
+image: /team//jcalvo.png
 status: Full-Time
 ---
+
 
