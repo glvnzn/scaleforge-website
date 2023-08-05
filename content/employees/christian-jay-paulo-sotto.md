@@ -4,5 +4,9 @@ position: Frontend Engineer
 email: cjpaulo.work@gmail.com
 image: /team/background.png
 status: Full-Time
+handles:
+  - name: Github
+    link: 'https://github.com/lcjay2212'
 ---
+
 
