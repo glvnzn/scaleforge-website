@@ -2,7 +2,8 @@
 name: 'Jaymark Caton '
 position: Backend Engineer
 email: im.jaymark.caton@gmail.com
-image: /team/background.png
+image: /team//jaymark.png
 status: Full-Time
 ---
+
 
