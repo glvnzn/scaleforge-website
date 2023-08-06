@@ -8,7 +8,7 @@ import Hero from "./Hero";
 import MissionStatement from "./MissionStatement";
 
 const LandingPage = (props: {
-  pages: {
+  page: {
     data: PageQuery;
     variables: {
       relativePath: string;
@@ -23,7 +23,7 @@ const LandingPage = (props: {
     query: string;
   };
 }) => {
-  const { data } = useTina(props.pages);
+  const { data } = useTina(props.page);
   const { data: globalData } = useTina(props.globals);
 
   return (

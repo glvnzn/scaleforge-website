@@ -34,6 +34,8 @@ export default defineConfig({
                 return "/about-us";
               case "careers.md":
                 return "/careers";
+              case "our-team.md":
+                return "/our-team";
             }
           },
         },
@@ -51,6 +53,7 @@ export default defineConfig({
             type: "object",
             list: true,
             templates: [
+              // Landing Page
               {
                 name: "welcomeHero",
                 label: "Landing - Welcome Hero",
@@ -326,6 +329,18 @@ export default defineConfig({
                         collections: ["employee"],
                       },
                     ],
+                  },
+                ],
+              },
+              // Our Team
+              {
+                name: "ourTeamHero",
+                label: "Our Team - Hero",
+                fields: [
+                  {
+                    name: "message",
+                    type: "rich-text",
+                    required: true,
                   },
                 ],
               },

@@ -13,7 +13,7 @@ import {
 } from "../../../tina/__generated__/types";
 
 const CareersPage = (props: {
-  pages: {
+  page: {
     data: PageQuery;
     variables: {
       relativePath: string;
@@ -33,7 +33,7 @@ const CareersPage = (props: {
     query: string;
   };
 }) => {
-  const { data } = useTina(props.pages);
+  const { data } = useTina(props.page);
   const { data: jobsData } = useTina(props.jobs);
 
   return (
