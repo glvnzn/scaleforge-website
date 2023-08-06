@@ -35,8 +35,24 @@ blocks:
       expertise and a passion for excellence to every project. We take pride in
       our commitment to continuous learning and staying at the forefront of
       industry trends.
+    featuredEmployees:
+      - employee: content/employees/roger-madjos.md
+      - employee: content/employees/christopher-clint-pacillos.md
+      - employee: content/employees/john-michael-roa.md
+      - employee: content/employees/leo-malaya-jr..md
+      - employee: content/employees/faithtrex-brigole.md
+      - employee: content/employees/arriele-ancheta.md
+      - employee: content/employees/arjay-sitoy.md
     _template: aboutUsTeam
 ---
+
+
+
+
+
+
+
+
 
 
 

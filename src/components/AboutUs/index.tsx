@@ -11,28 +11,13 @@ import Team from "./Team";
 import Values from "./Values";
 
 const AboutUsPage = (props: {
-  page: {
-    data: PageQuery;
-    variables: {
-      relativePath: string;
-    };
-    query: string;
+  data: PageQuery;
+  variables: {
+    relativePath: string;
   };
-  employees: {
-    data: EmployeeConnectionQuery;
-    variables: {
-      before?: InputMaybe<string> | undefined;
-      after?: InputMaybe<string> | undefined;
-      first?: any;
-      last?: any;
-      sort?: any;
-      filter?: any;
-    };
-    query: string;
-  };
+  query: string;
 }) => {
-  const { data } = useTina(props.page);
-  const { data: empData } = useTina(props.employees);
+  const { data } = useTina(props);
 
   return (
     <div>
@@ -48,8 +33,8 @@ const AboutUsPage = (props: {
             return (
               <Team
                 key={block?.__typename}
+                // @ts-ignore
                 teamBlock={block}
-                employees={empData.employeeConnection}
               />
             );
           }

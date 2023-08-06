@@ -234,6 +234,25 @@ export default defineConfig({
                     },
                     required: true,
                   },
+                  {
+                    name: "featuredEmployees",
+                    label: "Featured Personnel",
+                    type: "object",
+                    list: true,
+                    ui: {
+                      itemProps: (item) => {
+                        return { label: item.employee};
+                      },
+                    },
+                    fields: [
+                      {
+                        name: "employee",
+                        label: "Employees",
+                        type: "reference",
+                        collections: ["employee"],
+                      },
+                    ],
+                  },
                 ],
               },
               // Careers Page configs
