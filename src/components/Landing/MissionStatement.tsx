@@ -8,11 +8,11 @@ const MissionStatement = (props: PageBlocksOurMission) => {
   return (
     <section
       id="mission-statement-section"
-      className="min-h-[704px] bg-white text-black"
+      className="bg-white text-black px-6 overflow-hidden"
     >
-      <div className="flex flex-row gap-[152px] items-center max-w-[1120px] mx-auto">
+      <div className="flex flex-row gap-[56px] lg:gap-[152px] items-center md:max-w-[1120px] mx-auto">
         <div
-          className="flex-none max-w-[520px]"
+          className="flex-1 md:flex-none max-w-[520px] py-[64px]"
           data-tina-field={tinaField(props, "message")}
         >
           <TinaMarkdown
@@ -20,14 +20,14 @@ const MissionStatement = (props: PageBlocksOurMission) => {
             components={{
               h3: (props) => (
                 <h3
-                  className="font-rubik font-semibold text-[64px] leading-[76px] mb-[16px]"
+                  className="font-rubik font-semibold text-[48px] leading-[56px] md:text-[64px] md:leading-[76px] mb-[16px]"
                   {...props}
                 />
               ),
               bold: (props) => <span className="text-gradient" {...props} />,
               p: (props) => (
                 <p
-                  className="font-sf-mono font-normal text-[24px] leading-[36px] mb-[32px]"
+                  className="font-sf-mono font-normal text-[16px] leading-[24px] md:text-[24px] md:leading-[36px] mb-[32px]"
                   {...props}
                 />
               ),
@@ -36,14 +36,14 @@ const MissionStatement = (props: PageBlocksOurMission) => {
           <Link href="/about-us">
             <button
               data-tina-field={tinaField(props, "action")}
-              className="text-white font-rubik font-semibold	text-[20px] leading-[24px] rounded py-[12px] px-[20px]  bg-rosso-red border-[1px] border-rosso-red hover:bg-[rgba(215,13,1,.8)] hover:border-[1px] hover:border-[rgba(215,13,1,.8)] focus:bg-rosso-red focus:border-[2px] focus:border-[rgba(255,255,255,.6)]"
+              className="w-full md:w-[unset] text-white font-rubik font-semibold	text-[20px] leading-[24px] rounded py-[12px] px-[20px]  bg-rosso-red border-[1px] border-rosso-red hover:bg-[rgba(215,13,1,.8)] hover:border-[1px] hover:border-[rgba(215,13,1,.8)] focus:bg-rosso-red focus:border-[2px] focus:border-[rgba(255,255,255,.6)]"
             >
               {props.action}
             </button>
           </Link>
         </div>
         <div
-          className="flex-none w-[614px]"
+          className="hidden md:block flex-none"
           data-tina-field={tinaField(props, "imgSrc")}
         >
           <Image

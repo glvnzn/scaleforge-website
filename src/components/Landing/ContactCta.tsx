@@ -16,10 +16,13 @@ const ContactCta = (props: {
   const { getImgUrlByName } = useSocialLogo();
 
   return (
-    <section id="contact-cta-section" className="min-h-[910px] py-[128px]">
-      <div className="flex flex-row gap-[0px] items-center max-w-[1120px] mx-auto">
+    <section
+      id="contact-cta-section"
+      className="py-[64px] md:py-[128px] overflow-hidden px-6"
+    >
+      <div className="flex flex-row gap-[0px] items-center md:max-w-[1120px] md:mx-auto">
         <div
-          className="flex-none"
+          className="flex-1 md:flex-none"
           data-tina-field={tinaField(props.block, "message")}
         >
           <TinaMarkdown
@@ -27,14 +30,14 @@ const ContactCta = (props: {
             components={{
               h1: (props) => (
                 <h1
-                  className="font-rubik font-semibold	text-[80px] leading-[88px]"
+                  className="font-rubik font-semibold	text-[48px] leading-[56px] md:text-[80px] md:leading-[88px]"
                   {...props}
                 />
               ),
               bold: (props) => <span className="text-gradient" {...props} />,
               p: (props) => (
                 <p
-                  className="font-sf-mono font-normal text-[32px] leading-[48px] max-w-[649px] mb-[32px]"
+                  className="font-sf-mono font-normal text-[16px] leading-[24px] md:text-[32px] md:leading-[48px] max-w-[649px] mb-[32px]"
                   {...props}
                 />
               ),
@@ -43,7 +46,7 @@ const ContactCta = (props: {
           <Link href="/contact-us">
             <button
               data-tina-field={tinaField(props.block, "action")}
-              className="font-semibold text-[20px] leading-[24px] rounded py-[12px] px-[20px] mb-[64px]  bg-rosso-red border-[1px] border-rosso-red hover:bg-[rgba(215,13,1,.8)] hover:border-[1px] hover:border-[rgba(215,13,1,.8)] focus:bg-rosso-red focus:border-[2px] focus:border-[rgba(255,255,255,.6)]"
+              className="w-full md:w-[unset] font-semibold text-[20px] leading-[24px] rounded py-[12px] px-[20px] mb-[40px] bg-rosso-red border-[1px] border-rosso-red hover:bg-[rgba(215,13,1,.8)] hover:border-[1px] hover:border-[rgba(215,13,1,.8)] focus:bg-rosso-red focus:border-[2px] focus:border-[rgba(255,255,255,.6)]"
             >
               {props.block.action}
             </button>
@@ -54,7 +57,7 @@ const ContactCta = (props: {
               components={{
                 p: (props) => (
                   <p
-                    className="font-sf-mono font-normal text-[20px] leading-[30px] max-w-[606px] mb-[24px] "
+                    className="font-sf-mono font-normal text-[14px] leading-[20px] md:text-[20px] md:leading-[30px] max-w-[606px] mb-[24px] "
                     {...props}
                   />
                 ),
@@ -81,7 +84,7 @@ const ContactCta = (props: {
           </div>
         </div>
         <div
-          className="flex-none w-[760px]"
+          className="hidden md:block flex-none w-[760px]"
           data-tina-field={tinaField(props.block, "imgSrc")}
         >
           <Image

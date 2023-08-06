@@ -17,9 +17,9 @@ const Footer = (props: {
   const { getImgUrlLightByName } = useSocialLogo();
 
   return (
-    <footer className="mt-[64px]">
-      <div className="flex justify-between max-w-[1120px] mx-auto mb-[80px]">
-        <div className="flex flex-col">
+    <footer className="mt-[64px] px-6">
+      <div className="flex flex-col md:flex-row justify-between max-w-[1120px] mx-auto mb-[80px]">
+        <div className="flex flex-col mb-16">
           <Image
             data-tina-field={
               data.global.header && tinaField(data.global.header, "imgSrc")
@@ -100,7 +100,7 @@ const Footer = (props: {
           data.global.footer && tinaField(data.global.footer, "note")
         }
       >
-        <p className="font-sf-mono font-normal text-[20px] leading-[30px]">
+        <p className="font-sf-mono font-normal text-[16px] leading-[24px] md:text-[20px] md:leading-[30px]">
           {data.global.footer?.note}
         </p>
       </div>

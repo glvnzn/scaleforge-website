@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {     // Small screens
+        'md': '426px',      // Medium screens
+        'lg': '1440px',
+      },
       typography: (theme) => ({
         DEFAULT: {
           css: {

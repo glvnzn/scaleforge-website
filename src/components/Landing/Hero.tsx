@@ -7,7 +7,7 @@ const Hero = (props: PageBlocksWelcomeHero) => {
   return (
     <section id="hero-section">
       <div
-        className="flex flex-col text-center items-center max-w-[994px] mx-auto py-[128px]"
+        className="flex flex-col text-center items-center max-w-[994px] mx-auto py-[64px] md:py-[80px] lg:py-[128px] px-6"
         data-tina-field={tinaField(props, "message")}
       >
         <TinaMarkdown
@@ -15,23 +15,23 @@ const Hero = (props: PageBlocksWelcomeHero) => {
           components={{
             h1: (props) => (
               <h1
-                className="font-rubik font-semibold	text-[80px] leading-[88px] mb-[16px]"
+                className="font-rubik font-semibold	text-[40px] md:text-[80px] leading-[48px] md:leading-[88px] mb-[16px]"
                 {...props}
               />
             ),
             bold: (props) => <span className="text-gradient" {...props} />,
             p: (props) => (
               <p
-                className="font-sf-mono font-normal text-[28px] leading-[42px] mb-[32px]"
+                className="font-sf-mono font-normal text-[16px] md:text-[28px] leading-[24px] md:leading-[42px] mb-[32px]"
                 {...props}
               />
             ),
           }}
         />
-        <Link href="/contact-us">
+        <Link href="/contact-us" className="w-full">
           <button
             data-tina-field={tinaField(props, "action")}
-            className="font-rubik font-semibold	text-[20px] leading-[24px] rounded  py-[12px] px-[20px]  bg-rosso-red border-[1px] border-rosso-red hover:bg-[rgba(215,13,1,.8)] hover:border-[1px] hover:border-[rgba(215,13,1,.8)] focus:bg-rosso-red focus:border-[2px] focus:border-[rgba(255,255,255,.6)]"
+            className="w-full md:w-[unset] font-rubik font-semibold	text-[20px] leading-[24px] rounded py-[12px] px-[20px] bg-rosso-red border-[1px] border-rosso-red hover:bg-[rgba(215,13,1,.8)] hover:border-[1px] hover:border-[rgba(215,13,1,.8)] focus:bg-rosso-red focus:border-[2px] focus:border-[rgba(255,255,255,.6)]"
           >
             {props.action}
           </button>

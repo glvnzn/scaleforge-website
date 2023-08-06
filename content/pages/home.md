@@ -1,7 +1,7 @@
 ---
 title: Landing Page (Home)
 blocks:
-  - message: "# Empower Your Business With **Our\_Expert Scalability Solutions**\n\nUnlock the full potential of your business by leveraging our expert scalability solutions to drive growth and adaptability.\n"
+  - message: "# Empower Your Business With Our\_**Expert Scalability Solutions**\n\nUnlock the full potential of your business by leveraging our expert scalability solutions to drive growth and adaptability.\n"
     action: Get in touch
     _template: welcomeHero
   - message: >
@@ -26,7 +26,7 @@ blocks:
       - job: content/jobs/senior-frontend-engineer.md
       - job: content/jobs/senior-frontend-engineer.md
     _template: careersOverview
-  - message: "# Get In\_Touch\n\nHave a question or need more information? Contact us today, and our friendly team will be happy to assist you.\n"
+  - message: "# Get In\_**Touch**\n\nHave a question or need more information? Contact us today, and our friendly team will be happy to assist you.\n"
     action: Contact Us
     subMessage: >
       Stay updated with the latest news, industry insights, and company updates
@@ -37,6 +37,7 @@ blocks:
     imgSrc: /uploads/sf-icon.svg
     _template: contactCta
 ---
+
 
 
 
