@@ -20,11 +20,11 @@ const JobPost = (props: {
   return (
     <div>
       <JobHero jobData={data} viewApplyForm={viewApplyForm} />
-      {viewApplyForm && <ApplyForm jobTitle={`${data.job.title}`}/>}
+      {viewApplyForm && <ApplyForm jobTitle={`${data.job.title}`} />}
       {!viewApplyForm && (
-        <section className="flex flex-col items-center bg-white text-black py-[128px] mt-[100px]">
+        <section className="flex flex-col items-center bg-white text-black py-[64px] md:py-[80px] lg:py-[128px]">
           <div
-            className="max-w-[1120px] mx-auto mb-[80px] prose font-sf-mono text-[20px] leading-[30px] text-[rgba(13,13,13, .8)]"
+            className="px-6 whitespace-normal overflow-ellipsis overflow-clip w-full md:max-w-[1120px] mx-auto mb-[64px] md:mb-[80px] prose font-sf-mono text-[20px] leading-[30px] text-[rgba(13,13,13, .8)]"
             data-tina-field={tinaField(data.job, "body")}
           >
             <TinaMarkdown
@@ -68,7 +68,7 @@ const JobPost = (props: {
                 ),
                 p: (props) => (
                   <p
-                    className="font-sf-mono font-normal text-[20px] leading-[30px]"
+                    className="font-sf-mono font-normal text-[16px] leading-[24px] md:text-[20px] md:leading-[30px]"
                     {...props}
                   />
                 ),

@@ -5,9 +5,9 @@ import { JobConnectionQuery } from "../../../tina/__generated__/types";
 
 const Openings = (props: { jobs: JobConnectionQuery["jobConnection"] }) => {
   return (
-    <section id="careers-openings-section" className="bg-black text-white">
+    <section id="careers-openings-section" className="bg-black text-white px-6">
       <div className="flex flex-col text-center items-center max-w-[994px] mx-auto py-[128px]">
-        <h1 className="font-rubik font-semibold	text-[80px] leading-[88px] mb-[32px]">
+        <h1 className="font-rubik font-semibold	text-[48px] leading-[56px] md:text-[80px] md:leading-[88px] mb-[32px]">
           Open Positions
         </h1>
         <p className="font-sf-mono font-normal text-[24px] leading-[36px] max-w-[792px]">
@@ -15,10 +15,10 @@ const Openings = (props: { jobs: JobConnectionQuery["jobConnection"] }) => {
           technology and innovation.
         </p>
         <br />
-        <p className="font-sf-mono font-normal text-[24px] leading-[36px] mb-[80px]">
+        <p className="font-sf-mono font-normal text-[16px] leading-[24px] md:text-[24px] md:leading-[36px] mb-[64px] md:mb-[80px]">
           Explore our current openings below:
         </p>
-        <div className="w-[1120px] text-black">
+        <div className="md:w-[976px] lg:w-[1120px] text-black">
           <div className="flex flex-col gap-y-[40px]">
             {props.jobs.edges?.map((job) => {
               if (job) {
@@ -33,10 +33,10 @@ const Openings = (props: { jobs: JobConnectionQuery["jobConnection"] }) => {
                           job.node && tinaField(job.node, "title")
                         }
                       >
-                        <h6 className="font-rubik font-medium text-[40px] leading-[48px]">
+                        <h6 className="font-rubik font-medium text-[32px] leading-[40px] md:text-[40px] md:leading-[48px]">
                           {job.node?.title}
                         </h6>
-                        <p className="font-sf-mono font-normal text-[24px] leading-[36px] mb-[44px]">
+                        <p className="font-sf-mono font-normal text-[16px] leading-[24px] md:text-[24px] md:leading-[36px] mb-[44px]">
                           {job.node?.level}
                         </p>
                         <div className="flex flex-row gap-4">
@@ -46,8 +46,9 @@ const Openings = (props: { jobs: JobConnectionQuery["jobConnection"] }) => {
                               height={20}
                               width={16}
                               alt="Marker Pin Icon"
+                              className="w-[16px] h-[16px] md:w-[20px] md:h-[20px]"
                             />
-                            <p className="font-sf-mono font-normal text-[16px] leading-[24px] opacity-60">
+                            <p className="font-sf-mono font-normal text-[14px] leading-[20px] md:text-[16px] md:leading-[24px] opacity-60">
                               {job.node?.location}
                             </p>
                           </div>
@@ -57,8 +58,9 @@ const Openings = (props: { jobs: JobConnectionQuery["jobConnection"] }) => {
                               height={20}
                               width={20}
                               alt="Clock Icon"
+                              className="w-[16px] h-[16px] md:w-[20px] md:h-[20px]"
                             />
-                            <p className="font-sf-mono font-normal text-[16px] leading-[24px] opacity-60">
+                            <p className="font-sf-mono font-normal text-[14px] leading-[20px] md:text-[16px] md:leading-[24px] opacity-60">
                               {job.node?.type}
                             </p>
                           </div>
@@ -74,6 +76,7 @@ const Openings = (props: { jobs: JobConnectionQuery["jobConnection"] }) => {
                             src={`/chevron-right-icon.svg`}
                             height={20}
                             width={10}
+                            className="w-[20px] h-[40px] md:w-[10px] md:h-[20px]"
                             alt="Chevron Right Icon"
                           />
                         </Link>

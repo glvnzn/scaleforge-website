@@ -13,21 +13,21 @@ import { PageBlocksStories } from "../../../tina/__generated__/types";
 const Testimonials = (props: PageBlocksStories) => {
   return (
     <section id="careers-testimonials-section" className="bg-white text-black">
-      <div className="flex flex-col text-center items-center max-w-[788px] mx-auto py-[128px] ">
+      <div className="flex flex-col text-center items-center max-w-[788px] md:mx-auto py-[64px] md:py-[80px] lg:py-[128px] ">
         <div data-tina-field={tinaField(props, "heading")} className="prose">
           <TinaMarkdown
             content={props.heading}
             components={{
               h1: (props) => (
                 <h1
-                  className="font-rubik font-semibold	text-[80px] leading-[88px] mb-[32px]"
+                  className="font-rubik font-semibold	text-[40px] leading-[48px] md:text-[80px] md:leading-[88px] mb-[32px]"
                   {...props}
                 />
               ),
               bold: (props) => <span className="text-gradient" {...props} />,
               p: (props) => (
                 <p
-                  className="font-sf-mono font-normal text-[24px] leading-[36px] mb-[80px]"
+                  className="font-sf-mono font-normal text-[16px] leading-[24px] md:text-[24px] md:leading-[36px] mb-[40px] md:mb-[80px]"
                   {...props}
                 />
               ),
@@ -36,6 +36,7 @@ const Testimonials = (props: PageBlocksStories) => {
         </div>
         <div>
           <Swiper
+            autoplay={{ delay: 5000 }}
             autoHeight
             navigation
             centeredSlides
@@ -50,11 +51,11 @@ const Testimonials = (props: PageBlocksStories) => {
                 return (
                   <SwiperSlide key={`${i}-${story?.author}`}>
                     <div
-                      className="w-[880px] bg-[rgba(0,0,0,.1)] mx-auto rounded-[12px] p-[40px]"
+                      className="w-[343px] md:w-[880px] bg-[rgba(0,0,0,.1)] mx-auto rounded-[12px] p-[40px]"
                       data-tina-field={story && tinaField(story)}
                     >
                       <p
-                        className="font-sf-mono font-normal text-[20px] leading-[30px] mb-[40px]"
+                        className="font-sf-mono font-normal text-[16px] leading-[24px] md:text-[20px] md:leading-[30px] mb-[40px]"
                         data-tina-field={story && tinaField(story, "body")}
                       >
                         {story?.body}
@@ -71,10 +72,10 @@ const Testimonials = (props: PageBlocksStories) => {
                           className="rounded-full"
                         />
                         <div className="flex justify-left text-left flex-col">
-                          <p className="font-sf-mono font-bold text-[20px] leading-[30px]">
+                          <p className="font-sf-mono font-bold text-[16px] leading-[24px] md:text-[20px] md:leading-[30px]">
                             {story?.author?.name}
                           </p>
-                          <p className="font-sf-mono font-normal text-[16px] leading-[24px]">
+                          <p className="font-sf-mono font-normal text-[14px] leading-[20px] md:text-[16px] md:leading-[24px]">
                             {story?.author?.position}
                           </p>
                         </div>
