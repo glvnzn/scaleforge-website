@@ -3,10 +3,13 @@ import { PageBlocksCoreValues } from "../../../tina/__generated__/types";
 
 const Values = (props: PageBlocksCoreValues) => {
   return (
-    <section id="about-us-values-section" className="py-[128px]">
+    <section
+      id="about-us-values-section"
+      className="my-[64px] md:my-[80px] lg:my-[128px]"
+    >
       <div className="flex flex-col text-center items-center max-w-[1106px] mx-auto ">
         <h1
-          className="font-rubik font-semibold	text-[80px] leading-[88px] mb-[48px]"
+          className="font-rubik font-semibold	text-[40px] leading-[48px] md:text-[80px] md:leading-[88px] mb-[48px]"
           data-tina-field={tinaField(props, "title")}
         >
           {props.title}
@@ -17,10 +20,10 @@ const Values = (props: PageBlocksCoreValues) => {
               return (
                 <div
                   key={value?.label}
-                  className="rounded-[12px] w-[352px] min-h-[78px] bg-white text-black"
+                  className="rounded-[12px] w-[352px] md:w-[304px] lg:w-[434px] min-h-[78px] bg-white text-black"
                   data-tina-field={tinaField(value)}
                 >
-                  <div className="p-[24px] rounded-t-[12px] w-[352px] min-h-[78px] bg-gradient-to-r from-[#D70D01] to-[#FD5303]">
+                  <div className="p-[24px] rounded-t-[12px] w-[352px] md:w-[304px] lg:w-[434px] min-h-[78px] bg-gradient-to-r from-[#D70D01] to-[#FD5303]">
                     <p className="text-left font-sf-mono font-bold text-[20px] leading-[30px] text-white">
                       {value?.label}
                     </p>
