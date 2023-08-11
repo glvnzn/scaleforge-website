@@ -32,6 +32,27 @@ blocks:
     _template: careersHero
   - heading: "# **Success**\_Stories\n\nHear from our team members about their rewarding experiences working with us.\n"
     stories:
+      - body: >-
+          I am thrilled to share my experience with ScaleForge, a company that
+          has not only elevated my technical skills but has also redefined my
+          understanding of work-life balance. From the very start, I noticed
+          ScaleForge's commitment to creating a harmonious work-life balance for
+          its employees. They understand that a well-rested and fulfilled
+          workforce leads to greater productivity and creativity. With flexible
+          work arrangements and a supportive culture, I have been able to excel
+          in my role while still having time for my family and personal
+          pursuits. ScaleForge's dedication to enhancing my technical skills has
+          been truly remarkable. Through continuous learning opportunities,
+          workshops, and access to cutting-edge technologies, I have grown both
+          personally and professionally. The encouragement to explore new areas
+          of expertise has empowered me to take on more challenging projects
+          with confidence. I am immensely grateful to be part of the ScaleForge
+          family, where work is more than just a job; it's a fulfilling journey
+          of growth and self-discovery. Thank you, ScaleForge, for prioritizing
+          work-life balance and investing in your employees' technical
+          development. It has been an invaluable experience that I wouldn't
+          trade for anything.
+        author: content/employees/alres-arena.md
       - body: "ScaleForge has completely transformed my work-life balance in the most remarkable way!I had often found myself under stress, with work intruding on my own time and contributing to tension and burnout prior to discovering the company.\_ However, since embracing ScaleForge's innovative solutions, such as their intelligent task prioritization and time management tools, I have work efficiently. I can achieve more in less time by optimising my work processes and setting boundaries with their seamless integration into my daily routine, leaving me with valuable time to spend with my loved ones and pursue my personal interests.\_ Thanks to ScaleForge I've been able to get back on schedule, find a reasonable balance of work and personal life, experience new joy and satisfaction in the two parts of my world."
         author: content/employees/jaymark-caton-.md
       - body: >-
@@ -46,6 +67,7 @@ blocks:
         author: content/employees/carmella-joy-ventanilla.md
     _template: stories
 ---
+
 
 
 
