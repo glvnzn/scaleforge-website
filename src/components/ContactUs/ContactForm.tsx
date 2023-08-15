@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { Controller, useForm } from "react-hook-form";
 import { contactFormSchema } from "./ContactFormSchema";
+import { toast } from "react-hot-toast";
+import Alert from "@/components/Alert";
 
 interface IFormData {
   firstName: string;
@@ -51,8 +53,13 @@ const ContactForm = (props: { recaptchaSiteKey: string }) => {
       }),
     });
 
-    if (result.status === 200) {
+    const resData = await result.json();
+
+    if (result.ok) {
       setIsSubmitSuccess(true);
+      toast.success("Submission successful! Thank you.");
+    } else {
+      toast.error(resData.error);
     }
   });
 
@@ -109,7 +116,6 @@ const ContactForm = (props: { recaptchaSiteKey: string }) => {
             )}
           </div>
         </div>
-
         <div className="flex flex-col font-sf-mono font-normal text-[16px] leading-[24px] gap-y-[8px]">
           <label htmlFor="name">Email Address</label>
           <Controller
@@ -128,7 +134,6 @@ const ContactForm = (props: { recaptchaSiteKey: string }) => {
             <p className="text-red-500">{errors.email.message}</p>
           )}
         </div>
-
         <div className="flex flex-col font-sf-mono font-normal text-[16px] leading-[24px] gap-y-[8px]">
           <label htmlFor="name">Phone number</label>
           <Controller
@@ -147,7 +152,6 @@ const ContactForm = (props: { recaptchaSiteKey: string }) => {
             <p className="text-red-500">{errors.phoneNumber.message}</p>
           )}
         </div>
-
         <div className="flex flex-col font-sf-mono font-normal text-[16px] leading-[24px] gap-y-[8px]">
           <label htmlFor="name">Organization</label>
           <Controller
@@ -166,7 +170,6 @@ const ContactForm = (props: { recaptchaSiteKey: string }) => {
             <p className="text-red-500">{errors.organization.message}</p>
           )}
         </div>
-
         <div className="flex flex-col font-sf-mono font-normal text-[16px] leading-[24px] gap-y-[8px]">
           <label htmlFor="name">Message</label>
           <Controller
@@ -185,7 +188,6 @@ const ContactForm = (props: { recaptchaSiteKey: string }) => {
             <p className="text-red-500">{errors.message.message}</p>
           )}
         </div>
-
         <div className="flex flex-row gap-[24px]">
           <input type="checkbox" required />
           <span className="font-sf-mono font-normal text-[16px] leading-[20px] text-white opacity-80">
@@ -194,7 +196,6 @@ const ContactForm = (props: { recaptchaSiteKey: string }) => {
             <u>Terms & Conditions</u>.
           </span>
         </div>
-
         <div className="flex justify-center">
           <ReCAPTCHA
             sitekey={props.recaptchaSiteKey}
@@ -202,7 +203,6 @@ const ContactForm = (props: { recaptchaSiteKey: string }) => {
             onExpired={onExpired}
           />
         </div>
-
         <div className="flex justify-center">
           <button
             disabled={isSubmitting || !isRecaptchaOkay}
@@ -213,6 +213,7 @@ const ContactForm = (props: { recaptchaSiteKey: string }) => {
           </button>
         </div>
       </form>
+      <Alert />
     </div>
   );
 };
