@@ -6,6 +6,8 @@ import ReCAPTCHA from "react-google-recaptcha";
 import { Controller, useForm } from "react-hook-form";
 import { applyFormSchema } from "./ApplyFormSchema";
 import { FileUpload } from "./FileUpload";
+import Alert from "@/components/Alert";
+import { toast } from "react-hot-toast";
 
 interface IFormData {
   firstName: string;
@@ -61,8 +63,13 @@ const ApplyForm = (props: { jobTitle?: string }) => {
       body: formData,
     });
 
-    if (result.status === 200) {
+    const resData = await result.json();
+
+    if (result.ok) {
       setIsSubmitSuccess(true);
+      toast.success("Submission successful! Thank you.");
+    } else {
+      toast.error(resData.error);
     }
   });
 
@@ -227,6 +234,7 @@ const ApplyForm = (props: { jobTitle?: string }) => {
             </button>
           </div>
         </form>
+        <Alert />
       </div>
     </section>
   );
