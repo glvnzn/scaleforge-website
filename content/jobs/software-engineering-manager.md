@@ -21,7 +21,7 @@ As an Engineering Manager, you will play a pivotal role in translating product r
 * Transform complex functional requirements into actionable epics and story cards, fostering a smooth and iterative development process
 * Clearly define project scopes and ensure a shared understanding among all parties involved
 
-##### **Responsibilities:**
+**Responsibilities:**
 
 Project Lead:
 
@@ -36,7 +36,7 @@ Project Management:
 * Manage the team's workload, task prioritization, and resource allocation, while effectively mitigating risks and setbacks
 * Maintain a keen eye on timelines, ensuring the team stays on track to meet project milestones
 
-##### Qualifications:
+**Qualifications:**
 
 * Bachelor's degree in Information Technology, Computer Science or any related field
 * Proven experience as an Engineering Manager or similar role, with a track record of successful project delivery.
