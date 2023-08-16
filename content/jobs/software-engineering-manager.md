@@ -2,7 +2,7 @@
 title: Software Engineering Manager
 company: ScaleForge
 level: Experienced
-location: Remote
+location: 100% Remote
 type: Full-time
 description: >-
   Are you an experienced and dynamic Engineering Manager with a passion for
@@ -13,7 +13,6 @@ author: content/employees/rodaliza-paner.md
 ---
 
 As an Engineering Manager, you will play a pivotal role in translating product requirements into technical solutions, ensuring seamless project execution, and nurturing the growth of our engineering team.
-
 
 Role and Responsibilities:
 
