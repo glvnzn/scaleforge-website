@@ -44,7 +44,7 @@ Project Management:
 * Excellent communication skills, enabling effective collaboration across teams and stakeholders
 * Demonstrated leadership abilities, including team management and mentorship
 
-To apply, please submit your resume to hiring@scaleforge.tech. We will review applications on a rolling basis and contact qualified candidates for interviews.
+To apply, please submit your resume to hiring@scaleforge.tech or click "Apply Now" button below. We will review applications on a rolling basis and contact qualified candidates for interviews.
 
 ScaleForge is an equal opportunity employer and values diversity in the workplace. We encourage all qualified individuals to apply.
 
