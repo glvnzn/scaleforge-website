@@ -22,6 +22,7 @@ blocks:
       extraordinary results.
     action: See all job positions
     featuredJobs:
+      - job: content/jobs/software-engineering-manager.md
       - job: content/jobs/backend-engineer.md
       - job: content/jobs/senior-frontend-engineer.md
     _template: careersOverview
@@ -36,6 +37,7 @@ blocks:
     imgSrc: /uploads/sf-icon.svg
     _template: contactCta
 ---
+
 
 
 
