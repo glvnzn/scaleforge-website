@@ -16,6 +16,7 @@ const Employees = (props: EmployeeConnectionQuery) => {
                 data-tina-field={item.node && tinaField(item.node, "name")}
               >
                 <Image
+                  unoptimized
                   src={`${item.node?.image}`}
                   width={256}
                   height={296}
