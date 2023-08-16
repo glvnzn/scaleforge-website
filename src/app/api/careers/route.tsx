@@ -36,7 +36,7 @@ export async function POST(req: Request) {
 
     const emailData = {
       from: "onboarding@resend.dev",
-      to: formData.email as string,
+      to: "hiring@scaleforge.tech",
       subject: "ScaleForge - Job Application",
       react: <ApplyFormEmail emailData={formData} />,
       attachments: [

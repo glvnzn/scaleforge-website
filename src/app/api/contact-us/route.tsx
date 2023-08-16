@@ -13,7 +13,7 @@ export async function POST(request: Request) {
     try {
       const data = await resend.emails.send({
         from: "onboarding@resend.dev",
-        to: dataObject.email,
+        to: "support@scaleforge.tech",
         subject: "ScaleForge - Contact Form",
         react: <ContactUsEmail emailData={dataObject} />,
       });
