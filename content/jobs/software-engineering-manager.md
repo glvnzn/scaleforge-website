@@ -14,7 +14,7 @@ author: content/employees/rodaliza-paner.md
 
 As an Engineering Manager, you will play a pivotal role in translating product requirements into technical solutions, ensuring seamless project execution, and nurturing the growth of our engineering team.
 
-##### **Your Role:**
+**Your Role:**
 
 * Utilize your exceptional communication skills to bridge the gap between the product team and engineering, overcoming challenges such as language barriers and translating technical concepts for non-technical stakeholders
 * Leverage your in-depth product knowledge to propose innovative solutions that align with functional requirements, driving the realization of project goals
