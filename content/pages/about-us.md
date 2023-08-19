@@ -38,13 +38,15 @@ blocks:
     featuredEmployees:
       - employee: content/employees/roger-madjos.md
       - employee: content/employees/christopher-clint-pacillos.md
-      - employee: content/employees/john-michael-roa.md
-      - employee: content/employees/leo-malaya-jr..md
-      - employee: content/employees/faithtrex-brigole.md
-      - employee: content/employees/arriele-ancheta.md
+      - employee: content/employees/khem-arvin-oco.md
       - employee: content/employees/arjay-sitoy.md
+      - employee: content/employees/john-michael-roa.md
+      - employee: content/employees/faithtrex-brigole.md
+      - employee: content/employees/leo-malaya-jr..md
+      - employee: content/employees/arriele-ancheta.md
     _template: aboutUsTeam
 ---
+
 
 
 
