@@ -35,7 +35,7 @@ export async function POST(req: Request) {
     applyFormSchema.parse(formData);
 
     const emailData = {
-      from: "onboarding@resend.dev",
+      from: "no-reply@scaleforge.site",
       to: "hiring@scaleforge.tech",
       subject: "ScaleForge - Job Application",
       react: <ApplyFormEmail emailData={formData} />,
