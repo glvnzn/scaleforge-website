@@ -9,6 +9,9 @@ blocks:
       innovative technology solutions. We believe that our success is built upon
       the collective brilliance and dedication of our diverse team.
 
+      \
+
+      \
 
       If you are driven by the desire to create meaningful impact, we invite you
       to explore exciting career opportunities with us.
@@ -67,6 +70,7 @@ blocks:
         author: content/employees/alres-arena.md
     _template: stories
 ---
+
 
 
 
