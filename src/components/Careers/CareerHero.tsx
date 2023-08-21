@@ -7,7 +7,7 @@ const CareerHero = (props: PageBlocksCareersHero) => {
   return (
     <section
       id="careers-hero-section"
-      className="my-[64px] md:my-[80px] lg:my-[128px] px-6"
+      className="relative py-[64px] md:py-[80px] lg:py-[128px] px-6"
     >
       <div
         data-tina-field={tinaField(props, "message")}
@@ -69,6 +69,15 @@ const CareerHero = (props: PageBlocksCareersHero) => {
             }
           })}
         </div>
+      </div>
+      <div className="absolute bottom-0 left-0 hidden md:block flex-none z-[-1]">
+        <Image
+          src={"/sf-icon.svg"}
+          height={577}
+          width={715}
+          alt="Overlay logo"
+          className="opacity-20 max-w-[715px] max-h-[577px]"
+        />
       </div>
     </section>
   );
