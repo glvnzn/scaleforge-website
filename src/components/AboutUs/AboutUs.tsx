@@ -6,7 +6,7 @@ const AboutUs = (props: PageBlocksAboutUsHero) => {
   return (
     <section
       id="about-us-hero-section"
-      className="my-[64px] md:my-[80px] lg:my-[128px]"
+      className="py-[64px] md:py-[80px] lg:py-[128px] border-b-[1px] border-b-[#ffffff33]"
     >
       <div
         className="flex flex-col text-center items-center max-w-[1106px] mx-auto"
