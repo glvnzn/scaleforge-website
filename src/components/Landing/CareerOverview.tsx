@@ -7,7 +7,7 @@ const CareerOverview = (props: PageBlocksCareersOverview) => {
   return (
     <section
       id="career-overview-section"
-      className="relative min-h-auto py-[64px] md:py-[80px] lg:py-[128px] px-6"
+      className="relative min-h-auto py-[64px] md:py-[80px] lg:py-[128px] px-6 border-b-[1px] border-b-[#ffffff33]"
     >
       <div
         className="md:max-w-[1120px] mx-auto"

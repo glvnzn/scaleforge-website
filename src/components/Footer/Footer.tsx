@@ -18,7 +18,7 @@ const Footer = (props: {
 
   return (
     <footer className="mt-[64px] px-6">
-      <div className="flex flex-col md:flex-row justify-between max-w-[1120px] mx-auto mb-[80px]">
+      <div className="flex flex-col md:flex-row justify-between max-w-[1120px] mx-auto mb-[80px] border-b-[1px] border-b-[#ffffff33]">
         <div className="flex flex-col mb-16">
           <Image
             data-tina-field={
@@ -67,15 +67,17 @@ const Footer = (props: {
                     href={`${item.href}`}
                     data-tina-field={tinaField(item)}
                   >
-                    <p className="font-rubik font-semibold text-[20px] leading-[24px]">
-                      {item.label}
+                    <p className="font-rubik font-semibold text-[20px] leading-[24px] ">
+                      <span className="hover:border-b-white hover:border-b-[1px] pb-2">
+                        {item.label}
+                      </span>
                     </p>
                   </Link>
                 );
               }
             })}
           </div>
-          <div className="flex flex-col gap-y-[24px]">
+          <div className="flex flex-col gap-y-[24px] ">
             {data.global.footer?.nav?.map((item) => {
               if (item) {
                 return (
@@ -84,8 +86,10 @@ const Footer = (props: {
                     href={`${item.href}`}
                     data-tina-field={tinaField(item)}
                   >
-                    <p className="font-rubik font-semibold text-[20px] leading-[24px]">
-                      {item.label}
+                    <p className="font-rubik font-semibold text-[20px] leading-[24px] ">
+                      <span className="hover:border-b-white hover:border-b-[1px] pb-2">
+                        {item.label}
+                      </span>
                     </p>
                   </Link>
                 );

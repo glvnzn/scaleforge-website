@@ -18,7 +18,7 @@ const ContactCta = (props: {
   return (
     <section
       id="contact-cta-section"
-      className="py-[64px] md:py-[128px] overflow-hidden px-6"
+      className="py-[64px] md:py-[128px] overflow-hidden px-6 border-b-[1px] border-b-[#ffffff33]"
     >
       <div className="flex flex-row gap-[0px] items-center md:max-w-[1120px] md:mx-auto">
         <div

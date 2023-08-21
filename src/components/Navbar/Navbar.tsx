@@ -33,7 +33,10 @@ const Navbar = (props: {
   const { data } = useTina(props);
 
   return (
-    <Disclosure as="nav" className="bg-black">
+    <Disclosure
+      as="nav"
+      className="bg-black border-b-[1px] border-b-[#ffffff33]"
+    >
       {({ open }) => (
         <>
           <div className="mx-auto max-w-[1120px]">
