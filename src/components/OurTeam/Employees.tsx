@@ -5,7 +5,10 @@ import { EmployeeConnectionQuery } from "../../../tina/__generated__/types";
 
 const Employees = (props: EmployeeConnectionQuery) => {
   return (
-    <section id="our-team-section" className="mb-[128px]">
+    <section
+      id="our-team-section"
+      className="pb-[128px] border-b-[1px] border-b-[#ffffff33]"
+    >
       <div className="flex flex-wrap justify-center gap-x-[32px] gap-y-[80px] max-w-[1120px] mx-auto my-[80px]">
         {props.employeeConnection.edges?.map((item) => {
           if (item) {

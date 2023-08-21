@@ -82,7 +82,7 @@ const ApplyForm = (props: { jobTitle?: string }) => {
   }
 
   return (
-    <section className="flex flex-col items-center mt-[80px]">
+    <section className="flex flex-col items-center mt-[80px] pb-[128px] border-b-[1px] border-b-[#ffffff33]">
       <div className="w-[604px] mx-auto">
         <form
           className="flex flex-col justify-center items-left gap-y-[20px]"

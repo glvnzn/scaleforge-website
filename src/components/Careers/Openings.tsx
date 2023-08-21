@@ -71,12 +71,13 @@ const Openings = (props: { jobs: JobConnectionQuery["jobConnection"] }) => {
                           href={`/careers/${job.node?._sys.breadcrumbs.join(
                             "/"
                           )}`}
+                          className="h-[40px] w-[40px]"
                         >
                           <Image
                             src={`/chevron-right-icon.svg`}
                             height={20}
                             width={10}
-                            className="w-[20px] h-[40px] md:w-[10px] md:h-[20px]"
+                            className="w-[20px] h-[20px] md:w-[auto] md:h-[auto]"
                             alt="Chevron Right Icon"
                           />
                         </Link>

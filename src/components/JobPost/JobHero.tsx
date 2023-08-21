@@ -70,7 +70,7 @@ const JobHero = (props: { jobData: JobQuery; viewApplyForm: boolean }) => {
         </div>
         {!props.viewApplyForm && (
           <p
-            className="font-sf-mono font-normal text-[16px] leading-[24px] md:text-[24px] md:leading-[36px] mt-[64px]"
+            className="font-sf-mono font-normal text-[16px] leading-[24px] md:text-[20px] md:leading-[30px] mt-[64px]"
             data-tina-field={tinaField(props.jobData.job, "description")}
           >
             {props.jobData.job.description}

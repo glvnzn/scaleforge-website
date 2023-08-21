@@ -5,7 +5,7 @@ import { TinaMarkdown } from "tinacms/dist/rich-text";
 
 const TeamHero = (props: PageBlocksOurTeamHero) => {
   return (
-    <section id="our-team-section" className="mt-[128px] mb-[80px]">
+    <section id="our-team-section" className="mt-[128px]">
       <div
         className="flex flex-col text-center items-center max-w-[956px] mx-auto"
         data-tina-field={tinaField(props, "message")}

@@ -14,7 +14,7 @@ const Testimonials = (props: PageBlocksStories) => {
   return (
     <section id="careers-testimonials-section" className="bg-white text-black">
       <div className="flex flex-col text-center items-center max-w-[788px] md:mx-auto py-[64px] md:py-[80px] lg:py-[128px] ">
-        <div data-tina-field={tinaField(props, "heading")} className="prose">
+        <div data-tina-field={tinaField(props, "heading")}>
           <TinaMarkdown
             content={props.heading}
             components={{
