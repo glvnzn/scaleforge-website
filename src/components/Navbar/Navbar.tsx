@@ -35,28 +35,25 @@ const Navbar = (props: {
         <>
           <div className="mx-auto max-w-[1120px]">
             <div className="relative flex h-[56px] lg:h-[104px] items-center justify-between">
-              <div className="flex items-center justify-between sm:items-stretch sm:justify-start">
-                <div
-                  className="flex flex-shrink-0 items-center"
-                  data-tina-field={
-                    data.global.header &&
-                    tinaField(data.global.header, "imgSrc")
-                  }
-                >
-                  <label className="block lg:hidden font-rubik font-semibold text-[20px] leading-[24px] pl-5">
-                    Menu
-                  </label>
-                  <Link href="/">
-                    <span className="sr-only">{data.global.header?.name}</span>
-                    <Image
-                      src={`${data.global.header?.imgSrc}`}
-                      width={286}
-                      height={37}
-                      className="hidden lg:block max-h-[37px]"
-                      alt="ScaleForge Logo"
-                    />
-                  </Link>
-                </div>
+              <div
+                className="flex flex-row"
+                data-tina-field={
+                  data.global.header && tinaField(data.global.header, "imgSrc")
+                }
+              >
+                <label className="block lg:hidden font-rubik font-semibold text-[20px] leading-[24px] pl-5">
+                  Menu
+                </label>
+                <Link href="/">
+                  <span className="sr-only">{data.global.header?.name}</span>
+                  <Image
+                    src={`${data.global.header?.imgSrc}`}
+                    width={286}
+                    height={37}
+                    className="hidden lg:block max-h-[37px] object-contain object-left"
+                    alt="ScaleForge Logo"
+                  />
+                </Link>
               </div>
               <div className="hidden md:hidden lg:block">
                 <div className="flex font-rubik gap-x-[40px] items-center">
