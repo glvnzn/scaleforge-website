@@ -135,12 +135,6 @@ const Navbar = (props: {
                           ? "text-center !py-[10px] !min-h-[44px] !max-h-[44px] m-4 rounded bg-rosso-red border-[1px] border-rosso-red hover:bg-[rgba(215,13,1,.8)] hover:border-[1px] hover:border-[rgba(215,13,1,.8)] focus:bg-rosso-red focus:border-[2px] focus:border-[rgba(255,255,255,.6)]"
                           : ""
                       )}
-                      // className={classNames(
-                      //   item.current
-                      //     ? "bg-[rgba(255,255,255,.2)] text-white border-l-rosso-red border-l-4"
-                      //     : " hover:bg-[rgba(255,255,255,.2)] hover:text-white hover:border-l-rosso-red hover:border-l-4",
-                      //   "block pl-4 min-h-[56px] font-medium py-[16px]"
-                      // )}
                     >
                       {item.label}
                     </Disclosure.Button>
