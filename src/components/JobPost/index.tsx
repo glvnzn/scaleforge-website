@@ -33,37 +33,37 @@ const JobPost = (props: {
               components={{
                 h1: (props) => (
                   <h1
-                    className="font-rubik font-semibold	text-[80px] leading-[88px]"
+                    className="font-sf-mono font-bold	text-[80px] leading-[88px]"
                     {...props}
                   />
                 ),
                 h2: (props) => (
                   <h2
-                    className="font-rubik font-semibold	text-[72px] leading-[84px]"
+                    className="font-sf-mono font-bold	text-[72px] leading-[84px]"
                     {...props}
                   />
                 ),
                 h3: (props) => (
                   <h3
-                    className="font-rubik font-semibold	text-[64px] leading-[76px]"
+                    className="font-sf-mono font-bold	text-[64px] leading-[76px]"
                     {...props}
                   />
                 ),
                 h4: (props) => (
                   <h4
-                    className="font-rubik font-medium	text-[56px] leading-[66px]"
+                    className="font-sf-mono font-bold	text-[56px] leading-[66px]"
                     {...props}
                   />
                 ),
                 h5: (props) => (
                   <h5
-                    className="font-rubik font-medium	text-[48px] leading-[56px]"
+                    className="font-sf-mono font-bold	text-[48px] leading-[56px]"
                     {...props}
                   />
                 ),
                 h6: (props) => (
                   <h6
-                    className="font-rubik font-semibold	text-[40px] leading-[48px]"
+                    className="font-sf-mono font-bold	text-[40px] leading-[48px]"
                     {...props}
                   />
                 ),
