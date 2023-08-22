@@ -6,6 +6,7 @@ import { TinaMarkdown } from "tinacms/dist/rich-text";
 import { JobQuery } from "../../../tina/__generated__/types";
 import ApplyForm from "./ApplyForm";
 import JobHero from "./JobHero";
+import { animateScroll as scroll } from "react-scroll";
 
 const JobPost = (props: {
   data: JobQuery;
@@ -78,7 +79,10 @@ const JobPost = (props: {
           <button
             type="button"
             className="text-white font-rubik font-semibold	text-[20px] leading-[24px] rounded py-[12px] px-[20px]  bg-rosso-red border-[1px] border-rosso-red hover:bg-[rgba(215,13,1,.8)] hover:border-[1px] hover:border-[rgba(215,13,1,.8)] focus:bg-rosso-red focus:border-[2px] focus:border-[rgba(255,255,255,.6)]"
-            onClick={() => setViewApplyForm(true)}
+            onClick={() => {
+              setViewApplyForm(true);
+              scroll.scrollTo(100);
+            }}
           >
             Apply now
           </button>
