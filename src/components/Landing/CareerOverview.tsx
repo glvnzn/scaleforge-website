@@ -39,7 +39,7 @@ const CareerOverview = (props: PageBlocksCareersOverview) => {
             </Link>
           </div>
         </div>
-        <div className="flex flex-wrap gap-[32px] text-black">
+        <div className="flex flex-wrap justify-center gap-[32px] text-black">
           {props.featuredJobs?.map((jobInfo) => {
             if (jobInfo) {
               return (
