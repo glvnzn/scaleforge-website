@@ -7,12 +7,6 @@ import { usePathname } from "next/navigation";
 import { tinaField, useTina } from "tinacms/dist/react";
 import { GlobalQuery } from "../../../tina/__generated__/types";
 
-const navigation = [
-  { name: "About us", href: "/about-us", current: true, type: "link" },
-  { name: "Careers", href: "/careers", current: false, type: "link" },
-  { name: "Contact us", href: "/contact-us", current: false, type: "button" },
-];
-
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
