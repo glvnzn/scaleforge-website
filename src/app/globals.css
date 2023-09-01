@@ -19,3 +19,12 @@ input:checked + div {
 input:checked + div svg {
   @apply block;
 }
+
+@media (max-width: 425px) {
+  .swiper-button-prev {
+    display: none !important;
+  }
+  .swiper-button-next {
+    display: none !important;
+  }
+}
