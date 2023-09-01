@@ -11,7 +11,7 @@ const Values = (props: PageBlocksCoreValues) => {
       <div className="relative md:max-w-[1120px] md:mx-auto">
         <div className="flex flex-col text-center items-center min-w-[1106px] mx-auto">
           <h1
-            className="font-rubik font-semibold	text-[40px] leading-[48px] md:text-[80px] md:leading-[88px] mb-[48px]"
+            className="font-rubik font-semibold	text-[40px] leading-[48px] md:text-[64px] md:leading-[76px] mb-[48px]"
             data-tina-field={tinaField(props, "title")}
           >
             {props.title}
