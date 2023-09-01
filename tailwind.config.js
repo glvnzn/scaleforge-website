@@ -7,9 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
-      screens: {     // Small screens
-        'md': '426px',      // Medium screens
-        'lg': '1440px',
+      screens: {
+        'md': '426px',      // Min value for tablet size
+        'lg': '1024px', // Min value for web size
       },
       typography: (theme) => ({
         DEFAULT: {
