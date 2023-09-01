@@ -39,7 +39,7 @@ const Openings = (props: { jobs: JobConnectionQuery["jobConnection"] }) => {
                         <h6 className="font-rubik font-medium text-[32px] leading-[40px] md:text-[40px] md:leading-[48px]">
                           {job.node?.title}
                         </h6>
-                        <p className="font-sf-mono font-normal text-[16px] leading-[24px] md:text-[24px] md:leading-[36px] mb-[44px]">
+                        <p className="font-sf-mono font-normal text-[16px] leading-[24px] md:text-[24px] md:leading-[36px] mb-[44px] opacity-80">
                           {job.node?.level}
                         </p>
                         <div className="flex flex-row gap-4">

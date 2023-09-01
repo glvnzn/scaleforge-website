@@ -11,6 +11,7 @@ description: >-
   robust server-side applications, and collaborate with cross-functional teams
   to deliver high-quality software solutions.
 author: content/employees/glevinzon-dapal.md
+level: Any
 ---
 
 #### Requirements

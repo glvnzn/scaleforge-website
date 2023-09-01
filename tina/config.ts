@@ -378,6 +378,7 @@ export default defineConfig({
             label: "Experience Level",
             type: "string",
             options: [
+              "Any",
               "Entry",
               "Junior",
               "Mid-level",
