@@ -189,7 +189,7 @@ const ContactForm = (props: { recaptchaSiteKey: string }) => {
           )}
         </div>
         <div className="flex flex-row gap-[24px]">
-          <input type="checkbox" required />
+          <input type="checkbox" required className="accent-rosso-red" />
           <span className="font-sf-mono font-normal text-[16px] leading-[20px] text-white opacity-80">
             By submitting this form, you agree to&nbsp;
             <u>ScaleForge’s Privacy Policy</u>&nbsp;and&nbsp;
