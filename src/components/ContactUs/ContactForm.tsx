@@ -188,13 +188,41 @@ const ContactForm = (props: { recaptchaSiteKey: string }) => {
             <p className="text-red-500">{errors.message.message}</p>
           )}
         </div>
-        <div className="flex flex-row gap-[24px]">
-          <input type="checkbox" required className="accent-rosso-red" />
-          <span className="font-sf-mono font-normal text-[16px] leading-[20px] text-white opacity-80">
-            By submitting this form, you agree to&nbsp;
-            <u>ScaleForge’s Privacy Policy</u>&nbsp;and&nbsp;
-            <u>Terms & Conditions</u>.
-          </span>
+        <div className="flex flex-row gap-[24px] items-center">
+          <input
+            type="checkbox"
+            value="yes"
+            required
+            className="opacity-0 absolute h-6 w-6"
+          />
+          <div className="bg-white border-2 rounded-md border-rosso-red w-6 h-6 flex flex-shrink-0 justify-center items-center focus-within:border-rosso-red">
+            <svg
+              className="fill-current hidden w-3 h-3 text-rosso-red pointer-events-none"
+              version="1.1"
+              viewBox="0 0 17 12"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g fill="none" fill-rule="evenodd">
+                <g
+                  transform="translate(-9 -11)"
+                  fill="#D70D01"
+                  fill-rule="nonzero"
+                >
+                  <path d="m25.576 11.414c0.56558 0.55188 0.56558 1.4439 0 1.9961l-9.404 9.176c-0.28213 0.27529-0.65247 0.41385-1.0228 0.41385-0.37034 0-0.74068-0.13855-1.0228-0.41385l-4.7019-4.588c-0.56584-0.55188-0.56584-1.4442 0-1.9961 0.56558-0.55214 1.4798-0.55214 2.0456 0l3.679 3.5899 8.3812-8.1779c0.56558-0.55214 1.4798-0.55214 2.0456 0z" />
+                </g>
+              </g>
+            </svg>
+          </div>
+          <label className="select-none">
+            <span className="font-sf-mono font-normal text-[16px] leading-[20px] text-white opacity-80">
+              By submitting this form, you agree to&nbsp;
+              <u>ScaleForge’s Privacy Policy</u>&nbsp;and&nbsp;
+              <u>Terms & Conditions</u>.
+            </span>
+          </label>
+        </div>
+        <div className="p-2">
+          <div className="flex items-center mr-4 mb-2"></div>
         </div>
         <div className="flex justify-center">
           <ReCAPTCHA

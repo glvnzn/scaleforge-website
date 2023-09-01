@@ -12,3 +12,10 @@
   -webkit-background-clip: text;
   color: transparent;
 }
+
+input:checked + div {
+  @apply border-rosso-red;
+}
+input:checked + div svg {
+  @apply block;
+}
