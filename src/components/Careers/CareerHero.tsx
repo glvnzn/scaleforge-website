@@ -70,7 +70,7 @@ const CareerHero = (props: PageBlocksCareersHero) => {
           })}
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 hidden md:block flex-none z-[-1]">
+      <div className="absolute bottom-0 -left-[10%] hidden md:block flex-none z-[-1]">
         <Image
           src={"/sf-icon.svg"}
           height={577}
