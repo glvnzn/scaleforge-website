@@ -21,7 +21,7 @@ const Openings = (props: { jobs: JobConnectionQuery["jobConnection"] }) => {
         <p className="font-sf-mono font-normal text-[16px] leading-[24px] md:text-[24px] md:leading-[36px] mb-[64px] md:mb-[80px]">
           Explore our current openings below:
         </p>
-        <div className="md:w-[976px] lg:w-[1120px] text-black">
+        <div className="w-[100%] md:min-w-[426px] md:max-w-[1023px] lg:min-w-[1024px] lg:max-w-[1120px] text-black">
           <div className="flex flex-col gap-y-[40px]">
             {props.jobs.edges?.map((job) => {
               if (job) {
