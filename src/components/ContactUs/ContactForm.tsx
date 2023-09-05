@@ -7,6 +7,7 @@ import { Controller, useForm } from "react-hook-form";
 import { contactFormSchema } from "./ContactFormSchema";
 import { toast } from "react-hot-toast";
 import Alert from "@/components/Alert";
+import cn from "classnames";
 
 interface IFormData {
   firstName: string;
@@ -28,6 +29,7 @@ const ContactForm = (props: { recaptchaSiteKey: string }) => {
   });
   const [isSubmitSuccess, setIsSubmitSuccess] = useState(false);
   const [isRecaptchaOkay, setIsRecaptchaOkay] = useState(false);
+  const [elFocused, setElFocused] = useState<string>();
 
   useEffect(() => {
     reset({
@@ -83,14 +85,25 @@ const ContactForm = (props: { recaptchaSiteKey: string }) => {
             <Controller
               name="firstName"
               control={control}
-              render={({ field }) => (
-                <input
-                  placeholder="First name"
-                  {...field}
-                  type="text"
-                  className="text-black rounded-[8px] py-[10px] px-[14px]"
-                />
-              )}
+              render={({ field }) => {
+                return (
+                  <div
+                    className={cn("p-[2px] rounded-[8px] max-w-sm ", {
+                      "bg-gradient-to-r from-[#d70d01] to-[#fd5303]":
+                        elFocused === field.name,
+                    })}
+                  >
+                    <input
+                      placeholder="First name"
+                      {...field}
+                      type="text"
+                      onFocus={() => setElFocused(field.name)}
+                      onBlur={() => setElFocused(undefined)}
+                      className="text-black rounded-[8px] py-[10px] px-[14px] p-3 w-full focus:outline-none"
+                    />
+                  </div>
+                );
+              }}
             />
             {errors.firstName && (
               <p className="text-red-500">{errors.firstName.message}</p>
@@ -102,14 +115,25 @@ const ContactForm = (props: { recaptchaSiteKey: string }) => {
             <Controller
               name="lastName"
               control={control}
-              render={({ field }) => (
-                <input
-                  placeholder="Last name"
-                  {...field}
-                  type="text"
-                  className="text-black rounded-[8px] py-[10px] px-[14px]"
-                />
-              )}
+              render={({ field }) => {
+                return (
+                  <div
+                    className={cn("p-[2px] rounded-[8px] max-w-sm ", {
+                      "bg-gradient-to-r from-[#d70d01] to-[#fd5303]":
+                        elFocused === field.name,
+                    })}
+                  >
+                    <input
+                      placeholder="Last name"
+                      {...field}
+                      type="text"
+                      onFocus={() => setElFocused(field.name)}
+                      onBlur={() => setElFocused(undefined)}
+                      className="text-black rounded-[8px] py-[10px] px-[14px] p-3 w-full focus:outline-none"
+                    />
+                  </div>
+                );
+              }}
             />
             {errors.lastName && (
               <p className="text-red-500">{errors.lastName.message}</p>
@@ -121,14 +145,25 @@ const ContactForm = (props: { recaptchaSiteKey: string }) => {
           <Controller
             name="email"
             control={control}
-            render={({ field }) => (
-              <input
-                placeholder="Email address"
-                {...field}
-                type="text"
-                className="text-black rounded-[8px] py-[10px] px-[14px]"
-              />
-            )}
+            render={({ field }) => {
+              return (
+                <div
+                  className={cn("p-[2px] rounded-[8px]", {
+                    "bg-gradient-to-r from-[#d70d01] to-[#fd5303]":
+                      elFocused === field.name,
+                  })}
+                >
+                  <input
+                    placeholder="Email address"
+                    {...field}
+                    type="text"
+                    onFocus={() => setElFocused(field.name)}
+                    onBlur={() => setElFocused(undefined)}
+                    className="text-black rounded-[8px] py-[10px] px-[14px] p-3 w-full focus:outline-none"
+                  />
+                </div>
+              );
+            }}
           />
           {errors.email && (
             <p className="text-red-500">{errors.email.message}</p>
@@ -139,14 +174,25 @@ const ContactForm = (props: { recaptchaSiteKey: string }) => {
           <Controller
             name="phoneNumber"
             control={control}
-            render={({ field }) => (
-              <input
-                placeholder="Phone number"
-                {...field}
-                type="text"
-                className="text-black rounded-[8px] py-[10px] px-[14px]"
-              />
-            )}
+            render={({ field }) => {
+              return (
+                <div
+                  className={cn("p-[2px] rounded-[8px]", {
+                    "bg-gradient-to-r from-[#d70d01] to-[#fd5303]":
+                      elFocused === field.name,
+                  })}
+                >
+                  <input
+                    placeholder="Phone number"
+                    {...field}
+                    type="text"
+                    onFocus={() => setElFocused(field.name)}
+                    onBlur={() => setElFocused(undefined)}
+                    className="text-black rounded-[8px] py-[10px] px-[14px] p-3 w-full focus:outline-none"
+                  />
+                </div>
+              );
+            }}
           />
           {errors.phoneNumber && (
             <p className="text-red-500">{errors.phoneNumber.message}</p>
@@ -157,14 +203,25 @@ const ContactForm = (props: { recaptchaSiteKey: string }) => {
           <Controller
             name="organization"
             control={control}
-            render={({ field }) => (
-              <input
-                placeholder="Organization"
-                {...field}
-                type="text"
-                className="text-black rounded-[8px] py-[10px] px-[14px]"
-              />
-            )}
+            render={({ field }) => {
+              return (
+                <div
+                  className={cn("p-[2px] rounded-[8px]", {
+                    "bg-gradient-to-r from-[#d70d01] to-[#fd5303]":
+                      elFocused === field.name,
+                  })}
+                >
+                  <input
+                    placeholder="Organization"
+                    {...field}
+                    type="text"
+                    onFocus={() => setElFocused(field.name)}
+                    onBlur={() => setElFocused(undefined)}
+                    className="text-black rounded-[8px] py-[10px] px-[14px] p-3 w-full focus:outline-none"
+                  />
+                </div>
+              );
+            }}
           />
           {errors.organization && (
             <p className="text-red-500">{errors.organization.message}</p>
@@ -175,14 +232,25 @@ const ContactForm = (props: { recaptchaSiteKey: string }) => {
           <Controller
             name="message"
             control={control}
-            render={({ field }) => (
-              <textarea
-                placeholder="Message"
-                {...field}
-                rows={5}
-                className="text-black rounded-[8px] py-[10px] px-[14px]"
-              />
-            )}
+            render={({ field }) => {
+              return (
+                <div
+                  className={cn("p-[2px] rounded-[8px]", {
+                    "bg-gradient-to-r from-[#d70d01] to-[#fd5303]":
+                      elFocused === field.name,
+                  })}
+                >
+                  <textarea
+                    placeholder="Message"
+                    {...field}
+                    rows={5}
+                    onFocus={() => setElFocused(field.name)}
+                    onBlur={() => setElFocused(undefined)}
+                    className="block text-black rounded-[8px] py-[10px] px-[14px] pt-3 w-full focus:outline-none"
+                  />
+                </div>
+              );
+            }}
           />
           {errors.message && (
             <p className="text-red-500">{errors.message.message}</p>
