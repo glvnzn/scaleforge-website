@@ -2,7 +2,10 @@ import ContactForm from "./ContactForm";
 
 const ContactHero = () => {
   return (
-    <section id="contact-hero-section" className="my-[128px]">
+    <section
+      id="contact-hero-section"
+      className="py-[128px] border-b-[1px] border-b-[#ffffff33]"
+    >
       <div className="flex flex-col text-center items-center max-w-[847px] mx-auto mb-[100px]">
         <h1 className="font-rubik font-semibold	text-[80px] leading-[88px] mb-[32px]">
           Connect with Our Expert Team
