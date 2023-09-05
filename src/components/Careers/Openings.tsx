@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { tinaField } from "tinacms/dist/react";
 import { JobConnectionQuery } from "../../../tina/__generated__/types";
+import RightChevIcon from "./RightChevIcon";
 
 const Openings = (props: { jobs: JobConnectionQuery["jobConnection"] }) => {
   return (
@@ -76,13 +77,7 @@ const Openings = (props: { jobs: JobConnectionQuery["jobConnection"] }) => {
                           )}`}
                           className="h-[40px] w-[40px]"
                         >
-                          <Image
-                            src={`/chevron-right-icon.svg`}
-                            height={20}
-                            width={10}
-                            className="w-[20px] h-[20px] md:w-[auto] md:h-[auto]"
-                            alt="Chevron Right Icon"
-                          />
+                          <RightChevIcon className="stroke-2 md:stroke-[4]" />
                         </Link>
                       </div>
                     </div>
