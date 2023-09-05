@@ -263,7 +263,7 @@ const ContactForm = (props: { recaptchaSiteKey: string }) => {
             required
             className="opacity-0 absolute h-6 w-6"
           />
-          <div className="bg-white border-2 rounded-md border-rosso-red w-6 h-6 flex flex-shrink-0 justify-center items-center focus-within:border-rosso-red">
+          <div className="bg-white border-2 rounded-md w-6 h-6 flex flex-shrink-0 justify-center items-center focus-within:border-rosso-red">
             <svg
               className="fill-current hidden w-3 h-3 text-rosso-red pointer-events-none"
               version="1.1"
