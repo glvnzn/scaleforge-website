@@ -74,12 +74,12 @@ const ContactForm = (props: { recaptchaSiteKey: string }) => {
   }
 
   return (
-    <div className="w-[604px] mx-auto">
+    <div className="w-auto md:w-[604px] mx-auto p-4">
       <form
         className="flex flex-col justify-center items-left gap-y-[20px]"
         onSubmit={onSubmit}
       >
-        <div className="flex gap-[32px]">
+        <div className="flex flex-col md:flex-row gap-[20px] md:gap-[32px]">
           <div className="flex flex-1 flex-col font-sf-mono font-normal text-[16px] leading-[24px] gap-y-[8px]">
             <label htmlFor="name">First Name</label>
             <Controller
@@ -88,10 +88,13 @@ const ContactForm = (props: { recaptchaSiteKey: string }) => {
               render={({ field }) => {
                 return (
                   <div
-                    className={cn("p-[2px] rounded-[8px] max-w-sm ", {
-                      "bg-gradient-to-r from-[#d70d01] to-[#fd5303]":
-                        elFocused === field.name,
-                    })}
+                    className={cn(
+                      "p-[2px] rounded-[8px] max-w-auto md:max-w-sm ",
+                      {
+                        "bg-gradient-to-r from-[#d70d01] to-[#fd5303]":
+                          elFocused === field.name,
+                      }
+                    )}
                   >
                     <input
                       placeholder="First name"
@@ -118,10 +121,13 @@ const ContactForm = (props: { recaptchaSiteKey: string }) => {
               render={({ field }) => {
                 return (
                   <div
-                    className={cn("p-[2px] rounded-[8px] max-w-sm ", {
-                      "bg-gradient-to-r from-[#d70d01] to-[#fd5303]":
-                        elFocused === field.name,
-                    })}
+                    className={cn(
+                      "p-[2px] rounded-[8px] max-w-auto md:max-w-sm ",
+                      {
+                        "bg-gradient-to-r from-[#d70d01] to-[#fd5303]":
+                          elFocused === field.name,
+                      }
+                    )}
                   >
                     <input
                       placeholder="Last name"
