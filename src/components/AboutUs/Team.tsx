@@ -14,7 +14,7 @@ const Team = (props: { teamBlock: PageBlocksAboutUsTeam }) => {
     >
       <div className="flex flex-col text-center items-center max-w-[956px] mx-auto ">
         <h1
-          className="font-rubik font-semibold	text-[64px] leading-[76px] md:text-[80px] md:leading-[88px] mb-[48px]"
+          className="font-rubik font-semibold	text-[48px] leading-[56px] md:text-[80px] md:leading-[88px] mb-[48px]"
           data-tina-field={tinaField(props.teamBlock, "title")}
         >
           {props.teamBlock.title}

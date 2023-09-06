@@ -17,7 +17,7 @@ const Footer = (props: {
   const { getImgUrlLightByName } = useSocialLogo();
 
   return (
-    <footer className="pt-[64px] px-6 md:px-0">
+    <footer className="pt-[64px] px-4">
       <div className="flex flex-col md:flex-row justify-between max-w-[1120px] mx-auto mb-[80px]">
         <div className="flex flex-col mb-16">
           <Image

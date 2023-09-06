@@ -8,7 +8,7 @@ const Openings = (props: { jobs: JobConnectionQuery["jobConnection"] }) => {
   return (
     <section
       id="careers-openings-section"
-      className="bg-black text-white px-6 md:px-0 border-b-[1px] border-b-[#ffffff33]"
+      className="bg-black text-whiteborder-b-[1px] border-b-[#ffffff33]"
     >
       <div className="flex flex-col text-center items-center max-w-[994px] mx-auto py-[128px]">
         <h1 className="font-rubik font-semibold	text-[48px] leading-[56px] md:text-[80px] md:leading-[88px] mb-[32px]">
@@ -22,7 +22,7 @@ const Openings = (props: { jobs: JobConnectionQuery["jobConnection"] }) => {
         <p className="font-sf-mono font-normal text-[16px] leading-[24px] md:text-[24px] md:leading-[36px] mb-[64px] md:mb-[80px]">
           Explore our current openings below:
         </p>
-        <div className="w-[100%] md:min-w-[426px] md:max-w-[1023px] lg:min-w-[1024px] lg:max-w-[1120px] text-black">
+        <div className="w-[100%] md:min-w-[426px] md:max-w-[1023px] lg:min-w-[1024px] lg:max-w-[1120px] text-black px-4 ">
           <div className="flex flex-col gap-y-[40px]">
             {props.jobs.edges?.map((job) => {
               if (job) {

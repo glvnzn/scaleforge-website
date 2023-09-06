@@ -69,7 +69,7 @@ const JobPost = (props: {
                 ),
                 p: (props) => (
                   <p
-                    className="font-sf-mono font-normal text-[16px] leading-[24px] md:text-[20px] md:leading-[30px]"
+                    className="font-sf-mono font-normal text-[20px] leading-[30px]"
                     {...props}
                   />
                 ),

@@ -13,7 +13,7 @@ description: >-
 author: content/employees/glevinzon-dapal.md
 ---
 
-### Requirements
+## Requirements
 
 * At least 3 years of hands-on experience with ReactJS
 * Proficiency in NodeJS and Typescript
@@ -27,7 +27,7 @@ author: content/employees/glevinzon-dapal.md
 * Experience collaborating with designers within a customer-centric design process and a passion for building amazing user-facing products.
 * Familiar with GIT flow and other SCM systems
 
-### Nice to Have
+## Nice to Have
 
 * ChakraUI, TailwindCSS, and UI/UX experiences
 * Experience in converting Figma designs to rich-quality code
@@ -43,7 +43,7 @@ author: content/employees/glevinzon-dapal.md
 * Have a good knowledge of UI, responsive design, and cross-browser compatibility.
 * Knowledge of other frontend frameworks and paradigms (Svelte and SvelteKit, React Native/Flutter)
 
-### Key Responsibilities
+## Key Responsibilities
 
 * Lead projects and initiatives with different and competing timelines and requirements.
 * Collaborate with product managers, designers, and backend engineers to design and implement user-facing features
@@ -63,7 +63,7 @@ author: content/employees/glevinzon-dapal.md
 * Contribute to ongoing maintenance of existing and future projects.
 * Foster a transparent and collaborative environment within the development team and throughout the entire organization.
 
-### Why Choose ScaleForge?
+## Why Choose ScaleForge?
 
 * Competitive salary and comprehensive benefits package
 * Remote work flexibility
