@@ -74,7 +74,7 @@ const ContactForm = (props: { recaptchaSiteKey: string }) => {
   }
 
   return (
-    <div className="w-auto md:w-[604px] mx-auto p-4">
+    <div className="w-auto md:w-[604px] mx-auto px-6">
       <form
         className="flex flex-col justify-center items-left gap-y-[20px]"
         onSubmit={onSubmit}

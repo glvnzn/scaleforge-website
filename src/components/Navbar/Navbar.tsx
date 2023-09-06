@@ -33,7 +33,7 @@ const Navbar = (props: {
     >
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-full lg:max-w-[1120px] lg:px-4">
+          <div className="mx-auto max-w-full lg:max-w-[1120px] lg:px-6">
             <div className="relative flex h-[56px] lg:h-[104px] items-center justify-between">
               <div
                 className="flex flex-row"

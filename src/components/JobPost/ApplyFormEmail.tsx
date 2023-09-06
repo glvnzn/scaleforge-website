@@ -17,9 +17,9 @@ interface IContactFormData {
   phoneNumber?: string;
   organization?: string;
   coverLetter?: string;
-  resume?: Buffer
-  fileName?: string
-  jobTitle?: string
+  resume?: Buffer;
+  fileName?: string;
+  jobTitle?: string;
 }
 
 const baseUrl = process.env.VERCEL_URL
@@ -27,8 +27,15 @@ const baseUrl = process.env.VERCEL_URL
   : "";
 
 export const ApplyFormEmail = (props: { emailData?: IContactFormData }) => {
-  const { firstName, lastName, email, phoneNumber, organization, coverLetter, jobTitle } =
-    props.emailData || {};
+  const {
+    firstName,
+    lastName,
+    email,
+    phoneNumber,
+    organization,
+    coverLetter,
+    jobTitle,
+  } = props.emailData || {};
   return (
     <Tailwind>
       <Html>
@@ -36,7 +43,7 @@ export const ApplyFormEmail = (props: { emailData?: IContactFormData }) => {
         <Preview>
           Empower Your Business With Our Expert Scalability Solutions
         </Preview>
-        <Body className="bg-gray-100 p-4">
+        <Body className="bg-gray-100 px-6">
           <Container className="max-w-md mx-auto bg-white shadow-md rounded">
             <Section className="bg-black p-8 rounded-t">
               <Img

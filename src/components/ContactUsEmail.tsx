@@ -33,7 +33,7 @@ export const ContactUsEmail = (props: { emailData: IContactFormData }) => {
         <Preview>
           Empower Your Business With Our Expert Scalability Solutions
         </Preview>
-        <Body className="bg-gray-100 p-4">
+        <Body className="bg-gray-100 px-6">
           <Container className="max-w-md mx-auto bg-white shadow-md rounded">
             <Section className="bg-black p-8 rounded-t">
               <Img

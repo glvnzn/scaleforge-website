@@ -85,7 +85,7 @@ const ApplyForm = (props: { jobTitle?: string }) => {
 
   return (
     <section className="flex flex-col items-center mt-[24px] md:mt-[80px] pb-[64px] md:pb-[128px] border-b-[1px] border-b-[#ffffff33]">
-      <div className="w-auto md:w-[604px] mx-auto p-4">
+      <div className="w-auto md:w-[604px] mx-auto px-6">
         <form
           className="flex flex-col justify-center items-left gap-y-[20px]"
           onSubmit={onSubmit}
