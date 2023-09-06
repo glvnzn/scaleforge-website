@@ -10,7 +10,7 @@ const Team = (props: { teamBlock: PageBlocksAboutUsTeam }) => {
   return (
     <section
       id="about-us-team-section"
-      className="py-[64px] md:py-[80px] lg:py-[128px] border-b-[1px] border-b-[#ffffff33]"
+      className="py-[64px] md:py-[80px] lg:py-[128px] border-b-[1px] border-b-[#ffffff33] px-4"
     >
       <div className="flex flex-col text-center items-center max-w-[956px] mx-auto ">
         <h1

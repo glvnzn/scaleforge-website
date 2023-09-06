@@ -20,7 +20,7 @@ const AboutUsPage = (props: {
   const { data } = useTina(props);
 
   return (
-    <div className="px-4">
+    <div className="">
       {data.page.blocks?.map((block) => {
         switch (block?.__typename) {
           case "PageBlocksAboutUsHero": {

@@ -8,7 +8,7 @@ const Openings = (props: { jobs: JobConnectionQuery["jobConnection"] }) => {
   return (
     <section
       id="careers-openings-section"
-      className="bg-black text-whiteborder-b-[1px] border-b-[#ffffff33]"
+      className="bg-black text-white border-b-[1px] border-b-[#ffffff33]"
     >
       <div className="flex flex-col text-center items-center max-w-[994px] mx-auto py-[128px]">
         <h1 className="font-rubik font-semibold	text-[48px] leading-[56px] md:text-[80px] md:leading-[88px] mb-[32px]">

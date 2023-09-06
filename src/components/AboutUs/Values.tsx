@@ -6,7 +6,7 @@ const Values = (props: PageBlocksCoreValues) => {
   return (
     <section
       id="about-us-values-section"
-      className="py-[64px] md:py-[80px] lg:py-[128px]"
+      className="py-[64px] md:py-[80px] lg:py-[128px] px-4"
     >
       <div className="relative md:max-w-[1120px] md:mx-auto">
         <div className="flex flex-col text-center items-center lg:max-w-[1106px] mx-auto">
