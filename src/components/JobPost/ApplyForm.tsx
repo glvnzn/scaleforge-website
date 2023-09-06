@@ -84,13 +84,13 @@ const ApplyForm = (props: { jobTitle?: string }) => {
   }
 
   return (
-    <section className="flex flex-col items-center mt-[80px] pb-[128px] border-b-[1px] border-b-[#ffffff33]">
-      <div className="w-[604px] mx-auto">
+    <section className="flex flex-col items-center mt-[24px] md:mt-[80px] pb-[64px] md:pb-[128px] border-b-[1px] border-b-[#ffffff33]">
+      <div className="w-auto md:w-[604px] mx-auto p-4">
         <form
           className="flex flex-col justify-center items-left gap-y-[20px]"
           onSubmit={onSubmit}
         >
-          <div className="flex gap-[32px]">
+          <div className="flex flex-col md:flex-row gap-[20px] md:gap-[32px]">
             <div className="flex flex-1 flex-col font-sf-mono font-normal text-[16px] leading-[24px] gap-y-[8px]">
               <label htmlFor="firstName">First Name</label>
               <Controller
@@ -99,10 +99,13 @@ const ApplyForm = (props: { jobTitle?: string }) => {
                 render={({ field }) => {
                   return (
                     <div
-                      className={cn("p-[2px] rounded-[8px] max-w-sm ", {
-                        "bg-gradient-to-r from-[#d70d01] to-[#fd5303]":
-                          elFocused === field.name,
-                      })}
+                      className={cn(
+                        "p-[2px] rounded-[8px] max-w-auto md:max-w-sm",
+                        {
+                          "bg-gradient-to-r from-[#d70d01] to-[#fd5303]":
+                            elFocused === field.name,
+                        }
+                      )}
                     >
                       <input
                         placeholder="First name"
@@ -129,10 +132,13 @@ const ApplyForm = (props: { jobTitle?: string }) => {
                 render={({ field }) => {
                   return (
                     <div
-                      className={cn("p-[2px] rounded-[8px] max-w-sm ", {
-                        "bg-gradient-to-r from-[#d70d01] to-[#fd5303]":
-                          elFocused === field.name,
-                      })}
+                      className={cn(
+                        "p-[2px] rounded-[8px] max-w-auto md:max-w-sm",
+                        {
+                          "bg-gradient-to-r from-[#d70d01] to-[#fd5303]":
+                            elFocused === field.name,
+                        }
+                      )}
                     >
                       <input
                         placeholder="Last name"
@@ -272,7 +278,7 @@ const ApplyForm = (props: { jobTitle?: string }) => {
             )}
           </div>
 
-          <div className="flex flex-col font-sf-mono font-normal text-[16px] leading-[24px] gap-y-[8px] mb-[80px]">
+          <div className="flex flex-col font-sf-mono font-normal text-[16px] leading-[24px] gap-y-[8px] mb-[44px] md:mb-[80px]">
             <label htmlFor="resume">Resume</label>
             <FileUpload
               onFileUpload={(file) => {
@@ -296,7 +302,7 @@ const ApplyForm = (props: { jobTitle?: string }) => {
             <button
               disabled={isSubmitting || !isRecaptchaOkay}
               type="submit"
-              className="mt-[40px] font-rubik font-semibold	text-[20px] leading-[24px] rounded py-[12px] px-[20px] disabled:opacity-50 disabled:pointer-events-none  bg-rosso-red border-[1px] border-rosso-red hover:bg-[rgba(215,13,1,.8)] hover:border-[1px] hover:border-[rgba(215,13,1,.8)] focus:bg-rosso-red focus:border-[2px] focus:border-[rgba(255,255,255,.6)]"
+              className="w-full md:w-auto mt-[40px] font-rubik font-semibold	text-[20px] leading-[24px] rounded py-[12px] px-[20px] disabled:opacity-50 disabled:pointer-events-none  bg-rosso-red border-[1px] border-rosso-red hover:bg-[rgba(215,13,1,.8)] hover:border-[1px] hover:border-[rgba(215,13,1,.8)] focus:bg-rosso-red focus:border-[2px] focus:border-[rgba(255,255,255,.6)]"
             >
               {isSubmitting ? "Submitting..." : "Submit"}
             </button>

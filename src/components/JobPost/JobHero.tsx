@@ -16,7 +16,7 @@ const JobHero = (props: { jobData: JobQuery; viewApplyForm: boolean }) => {
           {props.jobData.job.title}
         </h1>
         <div className="flex flex-row justify-between items-center ">
-          <div className="flex flex-row gap-[24px]">
+          <div className="flex flex-wrap flex-row gap-[24px] justify-center">
             <div
               className="flex flex-row gap-[8px]"
               data-tina-field={tinaField(props.jobData.job, "company")}
@@ -48,7 +48,7 @@ const JobHero = (props: { jobData: JobQuery; viewApplyForm: boolean }) => {
               </p>
             </div>
             <div
-              className="flex flex-row gap-[8px]"
+              className="flex basis-1/2 flex-1 flex-row gap-[8px] justify-center"
               data-tina-field={tinaField(props.jobData.job, "location")}
             >
               <Image
