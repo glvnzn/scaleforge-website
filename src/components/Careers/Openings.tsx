@@ -14,7 +14,7 @@ const Openings = (props: { jobs: JobConnectionQuery["jobConnection"] }) => {
         <h1 className="font-rubik font-semibold	text-[48px] leading-[56px] md:text-[80px] md:leading-[88px] mb-[32px]">
           Open Positions
         </h1>
-        <p className="font-sf-mono font-normal text-[24px] leading-[36px] max-w-[792px]">
+        <p className="font-sf-mono font-normal text-[16px] leading-[24px] md:text-[24px] md:leading-[36px] max-w-[792px]">
           We are actively seeking talented individuals who share our passion for
           technology and innovation.
         </p>
