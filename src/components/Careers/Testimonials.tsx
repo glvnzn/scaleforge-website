@@ -25,7 +25,10 @@ const Testimonials = (props: PageBlocksStories) => {
   }, []);
 
   return (
-    <section id="careers-testimonials-section" className="bg-white text-black">
+    <section
+      id="careers-testimonials-section"
+      className="bg-white text-black px-6"
+    >
       <div className="flex flex-col text-center items-center max-w-[788px] md:mx-auto pt-[64px] md:pt-[80px] lg:pt-[128px] ">
         <div data-tina-field={tinaField(props, "heading")}>
           <TinaMarkdown
