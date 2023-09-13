@@ -29,7 +29,7 @@ const Navbar = (props: {
   return (
     <Disclosure
       as="nav"
-      className="bg-black border-b-[1px] border-b-[#ffffff33]"
+      className="bg-black border-b-[1px] border-b-[#ffffff33] sticky top-0 z-50"
     >
       {({ open }) => (
         <>
