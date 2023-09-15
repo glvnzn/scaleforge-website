@@ -6,3 +6,4 @@ image: /team/lord-1.png
 status: Full-Time
 ---
 
+
