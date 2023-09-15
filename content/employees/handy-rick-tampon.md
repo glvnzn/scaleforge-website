@@ -6,3 +6,4 @@ image: /team/rick.png
 status: Full-Time
 ---
 
+
