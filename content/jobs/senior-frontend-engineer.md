@@ -13,6 +13,7 @@ description: >-
 author: content/employees/glevinzon-dapal.md
 ---
 
+
 ## Requirements
 
 * At least 3 years of hands-on experience with ReactJS
