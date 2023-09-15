@@ -14,6 +14,7 @@ author: content/employees/glevinzon-dapal.md
 level: Any
 ---
 
+
 #### Requirements
 
 * Proficiency in NodeJS and Typescript
