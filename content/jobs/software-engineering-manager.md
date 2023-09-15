@@ -12,6 +12,7 @@ description: >-
 author: content/employees/rodaliza-paner.md
 ---
 
+
 As an Engineering Manager, you will play a pivotal role in translating product requirements into technical solutions, ensuring seamless project execution, and nurturing the growth of our engineering team.
 
 ###### **Your Role:**
