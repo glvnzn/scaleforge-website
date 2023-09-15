@@ -6,9 +6,20 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { tinaField, useTina } from "tinacms/dist/react";
 import { GlobalQuery } from "../../../tina/__generated__/types";
+import { useRef, useEffect } from "react";
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
+}
+
+function revealOnScrollUp(elem: HTMLElement) {
+  let prevScrollpos = window.pageYOffset;
+
+  window.addEventListener("scroll", () => {
+    const currentScrollPos = window.pageYOffset;
+    elem.style.top = prevScrollpos > currentScrollPos ? "0" : "-100%";
+    prevScrollpos = currentScrollPos;
+  });
 }
 
 const Navbar = (props: {
@@ -26,10 +37,17 @@ const Navbar = (props: {
 
   const { data } = useTina(props);
 
+  const navbarRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (navbarRef.current) revealOnScrollUp(navbarRef.current);
+  }, []);
+
   return (
     <Disclosure
       as="nav"
-      className="bg-black border-b-[1px] border-b-[#ffffff33] sticky top-0 z-50"
+      ref={navbarRef}
+      className={`bg-black border-b-[1px] border-b-[#ffffff33] z-50 lg:sticky lg:top-0 transition-all ease-in-out duration-300`}
     >
       {({ open }) => (
         <>
