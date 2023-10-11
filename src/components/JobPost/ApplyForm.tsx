@@ -15,7 +15,7 @@ interface IFormData {
   lastName: string;
   email: string;
   phoneNumber: string;
-  organization: string;
+  // organization: string;
   coverLetter: string;
   resume: File | undefined;
 }
@@ -40,7 +40,7 @@ const ApplyForm = (props: { jobTitle?: string }) => {
       lastName: "",
       email: "",
       phoneNumber: "",
-      organization: "",
+      // organization: "",
       coverLetter: "",
       resume: undefined,
     });
@@ -52,7 +52,7 @@ const ApplyForm = (props: { jobTitle?: string }) => {
     formData.append("lastName", data.lastName);
     formData.append("email", data.email);
     formData.append("phoneNumber", data.phoneNumber);
-    formData.append("organization", data.organization);
+    // formData.append("organization", data.organization);
     formData.append("coverLetter", data.coverLetter);
     formData.append("jobTitle", `${props.jobTitle}`);
 
@@ -218,7 +218,7 @@ const ApplyForm = (props: { jobTitle?: string }) => {
             )}
           </div>
 
-          <div className="flex flex-col font-sf-mono font-normal text-[16px] leading-[24px] gap-y-[8px]">
+          {/* <div className="flex flex-col font-sf-mono font-normal text-[16px] leading-[24px] gap-y-[8px]">
             <label htmlFor="organization">Organization</label>
             <Controller
               name="organization"
@@ -246,7 +246,7 @@ const ApplyForm = (props: { jobTitle?: string }) => {
             {errors.organization && (
               <p className="text-red-500">{errors.organization.message}</p>
             )}
-          </div>
+          </div> */}
 
           <div className="flex flex-col font-sf-mono font-normal text-[16px] leading-[24px] gap-y-[8px]">
             <label htmlFor="coverLetter">Cover Letter</label>

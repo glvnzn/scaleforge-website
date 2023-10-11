@@ -15,7 +15,7 @@ interface IContactFormData {
   lastName?: string;
   email?: string;
   phoneNumber?: string;
-  organization?: string;
+  // organization?: string;
   coverLetter?: string;
   resume?: Buffer;
   fileName?: string;
@@ -32,7 +32,7 @@ export const ApplyFormEmail = (props: { emailData?: IContactFormData }) => {
     lastName,
     email,
     phoneNumber,
-    organization,
+    // organization,
     coverLetter,
     jobTitle,
   } = props.emailData || {};
@@ -67,9 +67,9 @@ export const ApplyFormEmail = (props: { emailData?: IContactFormData }) => {
               <Text className="mb-4">
                 <strong>Phone Number:</strong> {phoneNumber}
               </Text>
-              <Text className="mb-4">
+              {/* <Text className="mb-4">
                 <strong>Organization:</strong> {organization}
-              </Text>
+              </Text> */}
               <Text className="mb-4">
                 <strong>Cover Letter:</strong> {coverLetter}
               </Text>

@@ -14,7 +14,7 @@ export const applyFormSchema = z.object({
     .string()
     .min(3, "Contact number must be at least 3 characters")
     .max(50),
-  organization: z.string(),
+  // organization: z.string(),
   coverLetter: z
     .string()
     .min(3, "Cover letter must be at least 3 characters")
