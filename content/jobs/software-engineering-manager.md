@@ -1,51 +1,46 @@
 ---
-title: Software Engineering Manager
+title: Sr. Software Engineer (Tech Lead)
 company: ScaleForge
-level: Experienced
+level: Senior
 location: 100% Remote
 type: Full-time
 description: >-
-  Are you an experienced and dynamic Engineering Manager with a passion for
-  leading teams, fostering collaboration, and delivering exceptional results?
-  ScaleForge is seeking a talented individual to drive our engineering projects
-  to success.
+  Are you a code-savvy individual with a deep understanding of software
+  implementation? Are you a solutions architect at heart, capable of providing
+  strong technical guidance to our engineering team? If so, we're looking for
+  you!
 author: content/employees/rodaliza-paner.md
 ---
 
-As an Engineering Manager, you will play a pivotal role in translating product requirements into technical solutions, ensuring seamless project execution, and nurturing the growth of our engineering team.
+Responsibilities:
 
-###### **Your Role:**
+* Lead and actively participate in software development, primarily utilizing TypeScript and Node.js.
+* Collaborate with senior team members to understand emerging problems and formulate innovative solutions.
+* Provide technical direction and mentorship to the engineering team, ensuring the successful delivery of projects.
+* Architect robust and scalable software solutions, and oversee their implementation.
+* Perform code reviews to maintain high code quality standards and best practices.
+* Stay up-to-date with industry trends and emerging technologies, integrating them into our development process where applicable.
+* Troubleshoot complex technical issues and provide guidance to resolve them swiftly.
+* Continuously optimize and improve existing software systems to enhance performance and maintainability.
+* Foster a collaborative and positive working environment within the engineering team.
+* Communicate effectively with stakeholders, translating technical concepts into understandable terms.
 
-* Utilize your exceptional communication skills to bridge the gap between the product team and engineering, overcoming challenges such as language barriers and translating technical concepts for non-technical stakeholders
-* Leverage your in-depth product knowledge to propose innovative solutions that align with functional requirements, driving the realization of project goals
-* Transform complex functional requirements into actionable epics and story cards, fostering a smooth and iterative development process
-* Clearly define project scopes and ensure a shared understanding among all parties involved
+Requirements:
 
-###### **Responsibilities:**
+* Proficient in coding, with a strong foundation in TypeScript/Node.js
+* Experienced in software implementation
+* Solutions architect experience is a huge plus
+* Capable of providing strong technical direction to our engineering team
+* Collaborative problem solver, working with senior team members to devise and execute solutions to emerging challenges
 
-Project Lead:
+If you're passionate about coding, a tech-savvy solutions architect, and ready to lead our engineering team to success, we want to hear from you. Join us and be part of a dynamic, forward-thinking environment where your skills will make a difference.
 
-* Demonstrate strong technical proficiency, particularly in backend development, to assess functional requirements and outline high-level solutions for both frontend and backend aspects
-* Break down high-level solutions into manageable backend and frontend tasks, facilitating efficient development processes
-* Lead the technical direction of projects, collaborating seamlessly with senior team members to implement non-functional solutions that enhance infrastructure, design, and technology usage
+Job Type: Full-time
 
-Project Management:
+Salary: Php70,000.00 - Php100,000.00 per month
 
-* Establish clear agreements with the product team regarding project scope and delivery timelines
-* Operate and optimize the development workflow, enforcing established software development standards and ensuring optimal task allocation
-* Manage the team's workload, task prioritization, and resource allocation, while effectively mitigating risks and setbacks
-* Maintain a keen eye on timelines, ensuring the team stays on track to meet project milestones
-
-###### **Qualifications:**
-
-* Bachelor's degree in Information Technology, Computer Science or any related field
-* Proven experience as an Engineering Manager or similar role, with a track record of successful project delivery.
-* Strong technical background, especially in backend development
-* Excellent communication skills, enabling effective collaboration across teams and stakeholders
-* Demonstrated leadership abilities, including team management and mentorship
-
-To apply, please submit your resume to hiring@scaleforge.tech or click "Apply Now" button below. We will review applications on a rolling basis and contact qualified candidates for interviews.
+To apply, please submit your resume to [hiring@scaleforge.tech](mailto:hiring@scaleforge.tech) or click "Apply Now" button below. We will review applications on a rolling basis and contact qualified candidates for interviews.
 
 ScaleForge is an equal opportunity employer and values diversity in the workplace. We encourage all qualified individuals to apply.
 
-🌐: www.scaleforge.tech 📩: hiring@scaleforge.tech
+🌐: [www.scaleforge.tech](http://www.scaleforge.tech) 📩: [hiring@scaleforge.tech](mailto:hiring@scaleforge.tech)
