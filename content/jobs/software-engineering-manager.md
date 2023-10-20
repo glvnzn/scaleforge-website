@@ -12,7 +12,7 @@ description: >-
 author: content/employees/rodaliza-paner.md
 ---
 
-Responsibilities:
+**Responsibilities**:
 
 * Lead and actively participate in software development, primarily utilizing TypeScript and Node.js.
 * Collaborate with senior team members to understand emerging problems and formulate innovative solutions.
@@ -25,7 +25,7 @@ Responsibilities:
 * Foster a collaborative and positive working environment within the engineering team.
 * Communicate effectively with stakeholders, translating technical concepts into understandable terms.
 
-Requirements:
+**Requirements**:
 
 * Proficient in coding, with a strong foundation in TypeScript/Node.js
 * Experienced in software implementation
