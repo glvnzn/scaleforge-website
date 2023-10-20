@@ -11,11 +11,11 @@ description: >-
 author: content/employees/rodaliza-paner.md
 ---
 
-Job Overview:
+**Job Overview:**
 
 As an IT Product Manager at ScaleForge, you will be responsible for planning, requirements gathering, and project execution while ensuring that they are completed on time and within scope. You will work closely with cross-functional teams, stakeholders, and clients to deliver high-quality technology solutions that meet business objectives.
 
-Key Responsibilities:
+**Key Responsibilities:**
 
 * Project Planning: Define project scope, objectives, and deliverables. Develop detailed project plans, including timelines, budgets, and resource allocation.
 * Requirements Gathering: Coordinate with the client in gathering the requirements of the desired systems.
@@ -24,7 +24,7 @@ Key Responsibilities:
 * Change Management: Manage changes to project scope, schedule, and budget while minimizing disruptions and ensuring client satisfaction.
 * Documentation: Maintain comprehensive project documentation, including project plans, status reports, and post-project evaluations.
 
-Qualifications:
+**Qualifications:**
 
 * Bachelor's degree in Information Technology, Computer Science, or a related field
 * Proven experience as an IT Product Manager, with a track record of successfully delivering complex IT projects.
@@ -34,3 +34,13 @@ Qualifications:
 * Proficiency in project management software tools (Jira, ClickUp).
 * In-depth knowledge of IT infrastructure, software development, and technology trends.
 * Ability to work in a fast-paced, dynamic environment and adapt to changing priorities.
+
+Job Type: Full-time
+
+Salary: Php70,000.00 - Php100,000.00 per month
+
+To apply, please submit your resume to [hiring@scaleforge.tech](mailto:hiring@scaleforge.tech) or click "Apply Now" button below. We will review applications on a rolling basis and contact qualified candidates for interviews.
+
+ScaleForge is an equal opportunity employer and values diversity in the workplace. We encourage all qualified individuals to apply.
+
+🌐: [www.scaleforge.tech](http://www.scaleforge.tech) 📩: [hiring@scaleforge.tech](mailto:hiring@scaleforge.tech)
