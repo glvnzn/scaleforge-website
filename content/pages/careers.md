@@ -35,7 +35,7 @@ blocks:
     _template: careersHero
   - heading: "# **Success**\_Stories\n\nHear from our team members about their rewarding experiences working with us.\n"
     stories:
-      - body: "ScaleForge has completely transformed my work-life balance in the most remarkable way!I had often found myself under stress, with work intruding on my own time and contributing to tension and burnout prior to discovering the company.\_ However, since embracing ScaleForge's innovative solutions, such as their intelligent task prioritization and time management tools, I have work efficiently. Thanks to ScaleForge I've been able to get back on schedule, find a reasonable balance of work and personal life, experience new joy and satisfaction in the two parts of my world."
+      - body: "ScaleForge has completely transformed my work-life balance in the most remarkable way! I had often found myself under stress, with work intruding on my own time and contributing to tension and burnout prior to discovering the company.\_ However, since embracing ScaleForge's innovative solutions, such as their intelligent task prioritization and time management tools, I have work efficiently. Thanks to ScaleForge I've been able to get back on schedule, find a reasonable balance of work and personal life, experience new joy and satisfaction in the two parts of my world."
         author: content/employees/jaymark-caton-.md
       - body: >-
           With Scaleforge, the emphasis on learning has allowed me to
@@ -57,16 +57,7 @@ blocks:
           work arrangements and a supportive culture, I have been able to excel
           in my role while still having time for my family and personal
           pursuits. ScaleForge's dedication to enhancing my technical skills has
-          been truly remarkable. Through continuous learning opportunities,
-          workshops, and access to cutting-edge technologies, I have grown both
-          personally and professionally. The encouragement to explore new areas
-          of expertise has empowered me to take on more challenging projects
-          with confidence. I am immensely grateful to be part of the ScaleForge
-          family, where work is more than just a job; it's a fulfilling journey
-          of growth and self-discovery. Thank you, ScaleForge, for prioritizing
-          work-life balance and investing in your employees' technical
-          development. It has been an invaluable experience that I wouldn't
-          trade for anything.
+          been truly remarkable. 
         author: content/employees/alres-arena.md
     _template: stories
 ---
