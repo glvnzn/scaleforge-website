@@ -17,12 +17,12 @@ As an IT Product Manager at ScaleForge, you will be responsible for planning, re
 
 **Key Responsibilities:**
 
-* **Project Planning: **Define project scope, objectives, and deliverables. Develop detailed project plans, including timelines, budgets, and resource allocation.
-* **Requirements Gathering:** Coordinate with the client in gathering the requirements of the desired systems.
-* **Risk Management: **Identify project risks and develop mitigation strategies. Proactively manage issues that may arise during the project lifecycle.
-* **Stakeholder Communication: **Maintain effective communication with project stakeholders, providing regular updates on project progress, milestones, and any potential issues.
-* **Change Management:** Manage changes to project scope, schedule, and budget while minimizing disruptions and ensuring client satisfaction.
-* **Documentation**: Maintain comprehensive project documentation, including project plans, status reports, and post-project evaluations.
+* Project Planning: Define project scope, objectives, and deliverables. Develop detailed project plans, including timelines, budgets, and resource allocation.
+* Requirements Gathering: Coordinate with the client in gathering the requirements of the desired systems.
+* Risk Management: Identify project risks and develop mitigation strategies. Proactively manage issues that may arise during the project lifecycle.
+* Stakeholder Communication: Maintain effective communication with project stakeholders, providing regular updates on project progress, milestones, and any potential issues.
+* Change Management: Manage changes to project scope, schedule, and budget while minimizing disruptions and ensuring client satisfaction.
+* Documentation: Maintain comprehensive project documentation, including project plans, status reports, and post-project evaluations.
 
 **Qualifications:**
 
