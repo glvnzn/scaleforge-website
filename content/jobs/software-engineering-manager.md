@@ -1,5 +1,5 @@
 ---
-title: Sr. Software Engineer (Tech Lead)
+title: Engineering Lead
 company: ScaleForge
 level: Senior
 location: 100% Remote
@@ -23,7 +23,7 @@ author: content/employees/rodaliza-paner.md
 * Troubleshoot complex technical issues and provide guidance to resolve them swiftly.
 * Continuously optimize and improve existing software systems to enhance performance and maintainability.
 * Foster a collaborative and positive working environment within the engineering team.
-* Communicate effectively with stakeholders, translating technical concepts into understandable terms.
+* Communicate effectively with stakeholders, translating business concepts into technical requirements
 
 **Requirements**:
 
