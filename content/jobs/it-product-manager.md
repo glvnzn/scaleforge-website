@@ -34,6 +34,7 @@ As an IT Product Manager at ScaleForge, you will be responsible for planning, re
 * Proficiency in project management software tools (Jira, ClickUp).
 * In-depth knowledge of IT infrastructure, software development, and technology trends.
 * Ability to work in a fast-paced, dynamic environment and adapt to changing priorities.
+* Strong understanding of Node.js or TypeScript, preferred
 
 Job Type: Full-time
 
