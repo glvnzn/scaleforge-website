@@ -33,6 +33,19 @@ author: content/employees/rodaliza-paner.md
 * Capable of providing strong technical direction to our engineering team
 * Collaborative problem solver, working with senior team members to devise and execute solutions to emerging challenges
 
+Nice to Have:
+
+* Experience with Next.js for server-side rendering
+* Familiarity with PostgreSQL as a relational database
+* Knowledge of containerization and orchestration technologies, such as Kubernetes
+* Familiarity with infrastructure-as-code tools, like Terraform
+* Understanding of application performance monitoring using tools like New Relic and Elastic Stack
+* Experience with cloud platforms (e.g., AWS, Azure, GCP)
+* Familiarity with message queues or event-driven architectures
+* Understanding of authentication and authorization mechanisms (e.g., OAuth, JWT)
+* Proficiency in SQL and database query optimization
+* Experience with agile software development methodologies
+
 If you're passionate about coding, a tech-savvy solutions architect, and ready to lead our engineering team to success, we want to hear from you. Join us and be part of a dynamic, forward-thinking environment where your skills will make a difference.
 
 Job Type: Full-time
