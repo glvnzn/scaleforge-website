@@ -22,7 +22,6 @@ blocks:
       extraordinary results.
     action: See all job positions
     featuredJobs:
-      - job: content/jobs/it-product-manager.md
       - job: content/jobs/backend-engineer.md
       - job: content/jobs/senior-frontend-engineer.md
     _template: careersOverview
