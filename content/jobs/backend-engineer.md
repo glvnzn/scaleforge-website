@@ -4,7 +4,7 @@ company: ScaleForge
 level: Any
 location: 100% Remote
 type: Full-time
-description: 'ScaleForge is seeking talented and motivated Backend Engineers to join our growing organization. We welcome individuals who are enthusiastic about learning and have a passion for backend development. As a Backend Engineer, you will have the opportunity to work on exciting projects, build scalable and robust server-side applications, and collaborate with cross-functional teams to deliver high-quality software solutions.'
+description: 'ScaleForge is seeking talented and motivated Senior Backend Engineers to join our growing organization. We welcome individuals who are enthusiastic about learning and have a passion for backend development. As a Backend Engineer, you will have the opportunity to work on exciting projects, build scalable and robust server-side applications, and collaborate with cross-functional teams to deliver high-quality software solutions.'
 author: content/employees/glevinzon-dapal.md
 ---
 
