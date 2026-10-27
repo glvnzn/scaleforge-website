@@ -23,8 +23,6 @@ blocks:
     _template: careersHero
   - heading: "# **Success**\_Stories\n\nHear from our team members about their rewarding experiences working with us.\n"
     stories:
-      - body: 'With Scaleforge, the emphasis on learning has allowed me to continuously improve my skills and stay updated with the latest advancements in the software testing field. Scaleforge''s commitment to providing various learning resources, such as workshops, and training sessions, has empowered me to enhance my knowledge and bring innovative testing approaches to the table. This not only benefits my personal growth but also positively impacts the quality of the software we deliver to our clients.'
-        author: content/employees/carmella-joy-ventanilla.md
       - body: 'I am thrilled to share my experience with ScaleForge, a company that has not only elevated my technical skills but has also redefined my understanding of work-life balance. From the very start, I noticed ScaleForge''s commitment to creating a harmonious work-life balance for its employees. They understand that a well-rested and fulfilled workforce leads to greater productivity and creativity. With flexible work arrangements and a supportive culture, I have been able to excel in my role while still having time for my family and personal pursuits. ScaleForge''s dedication to enhancing my technical skills has been truly remarkable. '
         author: content/employees/alres-arena.md
     _template: stories
