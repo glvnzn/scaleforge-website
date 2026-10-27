@@ -6,62 +6,24 @@ blocks:
   - title: Values That Keep Us Together
     values:
       - label: Infinite Curiosity
-        description: >-
-          We have an insatiable thirst for knowledge and growth. We embrace
-          curiosity, seeking new perspectives and continuously expanding our
-          horizons.
+        description: 'We have an insatiable thirst for knowledge and growth. We embrace curiosity, seeking new perspectives and continuously expanding our horizons.'
       - label: Unwavering Integrity
-        description: >-
-          We hold ourselves to the highest ethical standards. Our actions are
-          guided by integrity, building trust with our clients, partners, and
-          colleagues.
+        description: 'We hold ourselves to the highest ethical standards. Our actions are guided by integrity, building trust with our clients, partners, and colleagues.'
       - label: Relentless Innovation
-        description: >-
-          We embrace a culture of continuous innovation, constantly seeking new
-          possibilities and pushing the boundaries of what is possible.
+        description: 'We embrace a culture of continuous innovation, constantly seeking new possibilities and pushing the boundaries of what is possible.'
       - label: Adaptive Resilience
-        description: >-
-          We embrace change with adaptability and resilience, proactively
-          seeking opportunities for growth and embracing challenges as catalysts
-          for transformation.
+        description: 'We embrace change with adaptability and resilience, proactively seeking opportunities for growth and embracing challenges as catalysts for transformation.'
       - label: Masterful Craftmanship
-        description: >-
-          We take great pride in our work, approaching every project with a
-          commitment to excellence and meticulous attention to detail.
+        description: 'We take great pride in our work, approaching every project with a commitment to excellence and meticulous attention to detail.'
     _template: coreValues
   - title: Our Team
-    description: >-
-      Meet our dedicated team of experienced professionals who will bring deep
-      expertise and a passion for excellence to every project. We take pride in
-      our commitment to continuous learning and staying at the forefront of
-      industry trends.
+    description: Meet our dedicated team of experienced professionals who will bring deep expertise and a passion for excellence to every project. We take pride in our commitment to continuous learning and staying at the forefront of industry trends.
     featuredEmployees:
       - employee: content/employees/roger-madjos.md
       - employee: content/employees/christopher-clint-pacillos.md
       - employee: content/employees/khem-arvin-oco.md
       - employee: content/employees/arjay-sitoy.md
-      - employee: content/employees/john-michael-roa.md
-      - employee: content/employees/faithtrex-brigole.md
       - employee: content/employees/leo-malaya-jr..md
-      - employee: content/employees/arriele-ancheta.md
     _template: aboutUsTeam
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
